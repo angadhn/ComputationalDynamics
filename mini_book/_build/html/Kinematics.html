@@ -1,0 +1,1100 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction &#8212; Computational Dynamics</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Learn More" href="docs/learn_more.html" />
+    <link rel="prev" title="Scientific Python QuickStart" href="docs/index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/qe-logo-large.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Computational Dynamics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  Kinematics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Other parts
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="docs/learn_more.html">
+   Learn More
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Kinematics.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Introduction
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#two-parts">
+     Two parts
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fi">
+       fi
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#l">
+     l
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#az-be-is">
+       az be Is
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id1">
+         4
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#i">
+     i
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-adgiby-5-but-adak">
+     E AdgIby^5 but Adak
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-by-adgiba-by-iz">
+     B by AdgIba By Iz
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     i
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#e3">
+   8 E3
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wit-aig-big">
+     wit Aig Big
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bxbzltn">
+       Bxbzltn
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>In the most general sense, <span class="math notranslate nohighlight">\('\text{dynamics}'\)</span> is the study of properties or parameters that evolve or change with respect to some other parameter. For example, the field of population dynamics studies the change of animal or human populations.</p>
+<p>In the context of this text and class, we will study the parameters the describe the motion of bodies. More often than not, the changes in these parameters with respect to time will be of interest.</p>
+<p>At a physical level, our focus will be on the motion of bodies, which we assume can be categorized under two classes:</p>
+<ol class="simple">
+<li><p><strong>Particles</strong> : These are objects that can be modelled as point masses. They have negligible dimension.</p></li>
+<li><p><strong>Rigid bodies</strong> : These objects that have some shape. Also, these objects do not deform when a force is applied to them.</p></li>
+</ol>
+<p>This module could also be called Rigid Body Dynamics.</p>
+<div class="section" id="two-parts">
+<h2>Two parts<a class="headerlink" href="#two-parts" title="Permalink to this headline">¶</a></h2>
+<p>Studying the dynamics involving the motion of particles and bodies has two distinct parts:</p>
+<ol class="simple">
+<li><p><strong>Kinematics</strong> : the study of the geometry or mathematics of motion,</p></li>
+</ol>
+<p>without taking into consideration any forces that cause</p>
+<p>motion. The parameters of interest here are positions,</p>
+<p>velocities, and accelerations. This is also called <em>rigid</em></p>
+<p><em>body motion</em> or <em>rigid body kinematics</em>.</p>
+<ol class="simple">
+<li><p><strong>Kinetics</strong> : the study of motion while accounting for any forces</p></li>
+</ol>
+<p>causing the motion by using Newton’s laws.</p>
+<p>Kinematics</p>
+<hr class="docutils" />
+<p><strong>4T</strong></p>
+<p><strong>pin</strong></p>
+<p><strong>Useful fundamental concepts</strong></p>
+<p>The following definitions are used in kinematics:</p>
+<ol class="simple">
+<li><p><strong>Particles</strong> : Objects that can be modelled as point masses, having</p></li>
+</ol>
+<p>negligible dimension.</p>
+<ol class="simple">
+<li><p><strong>Point</strong> : A massless particle.</p></li>
+<li><p><strong>Rigid bodies</strong> : Objects that have some shape. They can have a mass or</p></li>
+</ol>
+<p>be massless. Also, these objects do not deform when a</p>
+<p>force is applied to them.</p>
+<ol class="simple">
+<li><p><strong>Reference frame</strong> : A massless rigid body with respect to which an</p></li>
+</ol>
+<p>analyst observes and measures motion of objects.</p>
+<p><strong>Pictorial representation of these newly defined quantities</strong></p>
+<p>P is a particle of mass <em>m</em></p>
+<p>B is a rigid body of mass <em>M</em></p>
+<p>R is a reference frame</p>
+<ul class="simple">
+<li><p><strong>Goal</strong> : In rigid body kinematics, we aim to mathematically describe the motion of B and P in R.</p></li>
+<li><p>This requires pre-requiste knowledge on: - (i) <strong>vectors</strong> : unit vector, general vector, component form (ii) <strong>vector algebra</strong> : addition of vectors multiplication of vectors (iii) <strong>vector calculus</strong> : vector differentiation</p></li>
+</ul>
+<hr class="docutils" />
+<p>or</p>
+<p>an</p>
+<p>or of</p>
+<p>a O N</p>
+<p>a O</p>
+<p><strong><a class="reference external" href="http://www.C">http://www.C</a></strong></p>
+<p>so</p>
+<p>NOTE</p>
+<p>DEN 4108 preferred notation</p>
+<p><strong>Revision: Vectors Fundamentals</strong></p>
+<ul class="simple">
+<li><p><strong>scalar</strong> : A quantity described purely by a number. e.g. 1, 2, 3….; one pint of beer</p></li>
+<li><p><strong>vector</strong> : a quantity characterised by both magnitude and direction.     ‣ <strong>Notation</strong> : commonly, written using Letters from the English and Greek alphabets.</p></li>
+</ul>
+<p>Conversely, by the same rule, a clockwise vector will have a negative direction and points into the plane of the paper. The convention is shown below for a vector :</p>
+<ul class="simple">
+<li><p><strong>REPRESENTATION:</strong> Vectors are drawn as a directed line segment (i.e., a line segment with an     arrow at one end). They are typically represented for two cases:</p></li>
+</ul>
+<p>Case 2: is a vector pointing out of the plane of the paper, by using right hand rule. The direction is counter clockwise, which is the positive direction by right hand rule, as shown below:</p>
+<p>Case 1: is a vector in the plane of the paper at angle with horizontal:</p>
+<p>The inclination of clockwise and counterclockwise vectors is with respect to the plane of the paper.</p>
+<hr class="docutils" />
+<p>NOTATION r n b n Hill o</p>
+<p>I JE</p>
+<p>R</p>
+<p>Dar f i</p>
+<p>Ix’T I</p>
+<p>j I i Iti J R</p>
+<p><strong>Unit vector</strong> A vector of unit magnitude (i.e., its magnitude is 1).</p>
+<p>Unit vectors are commonly written with a caret (^) over a letter in the alphabet.</p>
+<p>Z</p>
+<p>For example, is a unit vector and says that magnitude of is.</p>
+<p>X-Y-Z</p>
+<p>X</p>
+<p>Y</p>
+<p>The set of unit vectors are right-handed (also known as a “dextral set”), which means the following relationships hold true:</p>
+<p>The set of unit vector form a reference frame</p>
+<p>Reference frames are useful for studying moving objects. This will become apparent in the coming weeks of lectures.</p>
+<p><strong>Reference Frame-</strong> Is a set of three unit vectors that are mutually orthogonal.</p>
+<p>In the figure below, form a Cartesian coordinate system. are a set of unit vectors that are mutually orthogonal and directed along respectively.</p>
+<hr class="docutils" />
+<p>e r ax nay</p>
+<p>In</p>
+<p>any az</p>
+<p>A a tenXdy Az r a n ay Az</p>
+<p>an or a azXage ay n au Xaz ay na x n a ay an a n ay x an az Componentformofwritingavector</p>
+<p>orn asbc</p>
+<p>r c I</p>
+<p>i a b</p>
+<p>abc</p>
+<p>rn e a n or autbJtck</p>
+<p>Z</p>
+<p>An alternate notation for unit vectors that make up a reference frame commonly used for dynamics is shown in the figure below; it makes use of subscripts in x, y, and z directions to make it explicit along which coordinate axis the unit vectors are aligned. We will (almost always) see (and use) such subscript-based notations in these notes for sake of clarity.</p>
+<p>Y</p>
+<p>Y</p>
+<p>X</p>
+<p>This is a dextral set of unit vectors, which form a reference frame</p>
+<p>is the unit vector along the X-direction. is the unit vector along the Y-direction. is the unit vector along the Z-direction.</p>
+<p>In the figure below, is a vector with coordinates in X-Y-Z,^ respectively.</p>
+<p>X</p>
+<p>Z</p>
+<p>are scalars.</p>
+<p>The component form of is given by:</p>
+<p>This is the “component form” of expressing vectors, which makes use of scalars and unit vectors.</p>
+<hr class="docutils" />
+<p>Please review addition andmultiplication of</p>
+<p>vetoes</p>
+<p>Cis</p>
+<p>ii p typed code</p>
+<p><strong>Vector algebra using a CAS (Computer Algebra Systems)</strong></p>
+<p>In this module on dynamics, we will exploit a computer algebra system (CAS, for short) to perform some key vector algebra operations. A CAS is a software that allows manipulation of non-numerical as well as numerical mathematical expressions in a manner similar to that done manually, by humans.</p>
+<p>SymPy (logo to the left) is a free CAS that we will use in studying dynamics. It has many advanced features that are particularly useful in studying rigid body dynamics.</p>
+<p>This set of notes is accompanied by an “interactive textbook” that you can utilise on a web browser; this is enabled by Porject Jupyter.</p>
+<p>The textbook has activities that are to be performed on JupyterLab; these activities have the Jupyter icon next to them:</p>
+<p>Written content: This similar to any textbook. The textbook style portion is rendered on the browser as shown to the right:</p>
+<p>Code cells : Within this one performs relevant computations by writing “line of code”. A code cell appears on the browser as shown below:</p>
+<p>When using the JupyterLab interface, you can type click within the code cell to enter some text.</p>
+<p>This interactive textbook on the JupyterLab platform has two types of content:</p>
+<hr class="docutils" />
+<p>Your coursework will be assigned on this platform by instructors. You will complete and submit all your coursework here.</p>
+<p>PLEASE PROCEED TO THE JUPYTER NOTEBOOK THAT REVIEWS VECTOR ALGEBRA.</p>
+<hr class="docutils" />
+<p>A 1 paz</p>
+<p>on</p>
+<p><strong>a</strong></p>
+<p>if A 1</p>
+<p>A</p>
+<p>A B O</p>
+<p>Y B</p>
+<p><strong>ggBB</strong></p>
+<p><strong>fBz</strong></p>
+<p>y B A I A B</p>
+<p>a Y O A</p>
+<p>O Y A</p>
+<p>GAO</p>
+<p>E</p>
+<p>B</p>
+<p>y</p>
+<p>O</p>
+<p>by E</p>
+<p>E o n E A B bu</p>
+<p>A B</p>
+<p>Y E</p>
+<p>In feting</p>
+<p>where v III</p>
+<p>e let</p>
+<p>Vectors and Reference Frames</p>
+<p>The figure shows a reference frame and vector</p>
+<p>is said to be fixed in the frame if and only ifnone of the characteristics of</p>
+<p>are seen to change when it is observed from</p>
+<p>is a wall and a door swings relative to it. The angle subtended by the door and wall is</p>
+<p>So, is fixed in</p>
+<p>is a vector along the top edge of the door.</p>
+<p>but it is not fixed when seen from</p>
+<p>and are reference frames.</p>
+<p>is said to be a vector function of the scalar variable</p>
+<p>in frame because one (or more) of its characteristics depends on when is observed from</p>
+<p>Example 1:</p>
+<p>Example 2:</p>
+<p>is a vector along the vertical edge of door</p>
+<p>Notice that the vector remains oriented in the same manner as the door swings. In other words, the vector is unrelated to (or unchanged by) the angle.</p>
+<p>Thus, is fixed in both and</p>
+<p>In summary, in Example 2 above, we have: two reference frames</p>
+<p>two vectors</p>
+<p>and</p>
+<p>By observation, we can also write the component form of these two vectors as:</p>
+<p>and</p>
+<hr class="docutils" />
+<p>In Toy B Tsa Tn By</p>
+<p>A kn dyandz</p>
+<p>jae</p>
+<p>GAO</p>
+<p>n r so a v by n Y E</p>
+<p>na n BO n bu</p>
+<p>vO e A B Y E</p>
+<p>Notice that I have introduced the unit vectors and for the reference frame but is not shown though it is orthogonal to both and</p>
+<p>For sake of developing subsequent discussions, we will now also introduce a dextral set of unit vectors for frame</p>
+<p>and and and</p>
+<p>PRACTICE ACTIVITY 1 (L2PA1) For the illustrated example above, do the following:</p>
+<ul class="simple">
+<li><p>Create symbols for</p></li>
+<li><p>Create the reference frames</p></li>
+<li><p>Create the vectors in their component as given in</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>if</strong></p>
+<p>t</p>
+<p><strong>og</strong></p>
+<p>i</p>
+<p>Cii</p>
+<p>h aw no M ifw r I</p>
+<p>n un ME</p>
+<p>Kinematics or Rigid body kinematics is the study of motion while ignoring the cause of motion.</p>
+<p>In kinematics, we are interested in “position”, “velocity ” , and “acceleration” and the relationship between them.</p>
+<p>In other words, using the figure below, we are interested in describing the motion of B in A.</p>
+<p>Classification of Rigid Body Motion</p>
+<p>Rigid body motion</p>
+<p>Translation</p>
+<p>Rotation</p>
+<p>General 3-D Rotation Simple Rotation</p>
+<p><strong>Translation:</strong> the motion of B in A is a translation if and only if any straight line segment embedded in B remains parallel to itself when observed from A when B moves in A. If this condition is not met, then we have to consider the motion as rotation.</p>
+<p><strong>Simple rotation:</strong> the motion of B in A is a simple rotation if and only if there exists a unit vector that remains fined in both B and A, as B moves in A. Examples in figures below:</p>
+<p>Rolling disk: Rotating shaft:</p>
+<p><strong>Rigid Body Kinematics: Orientations</strong></p>
+<hr class="docutils" />
+<p>iii</p>
+<p><strong>jaz</strong></p>
+<p><strong>FA</strong></p>
+<p>n s O n n</p>
+<p>r v a by Y E</p>
+<p>n n a</p>
+<p>an bn</p>
+<p>by by A</p>
+<p>h by</p>
+<p>a</p>
+<p>ri aj</p>
+<p>r n</p>
+<p>by ay</p>
+<p>y E o</p>
+<p>Te i To i firn y^2</p>
+<p>ai Ii</p>
+<p>Coming back to our old example of a door hinged to a wall.</p>
+<p>Here, is a unit vector that is fixed in both B and A.’ Using our definition for simple rotation tells us that is. So, in mathematical notation, we can say:</p>
+<p>But we must now pause to ask ourselves if there is any other unit vector that is also fixed in both B and A? It turns out that there is, indeed, another one fixed in both B and A:</p>
+<p>So we can now also write:</p>
+<p>So, from and , we get:</p>
+<p>Why is establishing useful and critical?</p>
+<p>So far, we have written the vectors and in terms of the B frame. As a result, they were not functions of Expressing the vectors in the unit vectors attached to the A frame requires us to derive relationships between and</p>
+<p>allows us to derive a relationship between and</p>
+<p>which then provides a basis for developing the rigid body kinematics.</p>
+<hr class="docutils" />
+<p>E I</p>
+<p><strong>jaz</strong></p>
+<p><strong>FA</strong></p>
+<p>r so V a by Y E n n a an bn</p>
+<p>q ebay</p>
+<p>q edy</p>
+<p>O</p>
+<p>v</p>
+<p>Y Vfa</p>
+<p>n</p>
+<p>r n d r <strong>IA</strong> n Vaz osC9oO r^10 oi by^1 <strong>IL</strong></p>
+<p>in tan coso y E cosC9oto n a or an bn n n a bn coolant since az Plvaine from n singa t cosotz 70 top bz An</p>
+<p>a 5 an y <a class="reference external" href="http://vfosoointsino.az">vfosoointsino.az</a> lo n O n be bn n n a az by y</p>
+<p>From the second of Equations in , we have</p>
+<p>From we also get</p>
+<p>in the prior example is an angle that describes the orientation of B relative to A (and vice versa). Thus, it is also called an angular position. Other common ways of referring to it are orientation angle or attitude angle.</p>
+<p>Now, we come to a more involved example, where we will express in terms of the unit vectors of the A frame using the first of Equations as the starting point.</p>
+<p>We can now examine the relationships between the unit vectors by drawing only the unit vectors with the vector out of the plane (see figure below this passage).</p>
+<p>we have</p>
+<p>Let us explore how to derive these relationships for the vectors and in the doorwall example (figure is shown again below):</p>
+<p>We can then derive the following relationships by examining the lower figure, comprising only unit vectors:</p>
+<p>Therefore from</p>
+<p>Also from</p>
+<hr class="docutils" />
+<p>In coso since ein</p>
+<p>b <strong><a class="reference external" href="http://ocfoff.at">ocfoff.at</a></strong></p>
+<p>Iz Sind</p>
+<p>coso Iz</p>
+<p>a a</p>
+<div class="section" id="fi">
+<h3>fi<a class="headerlink" href="#fi" title="Permalink to this headline">¶</a></h3>
+<p><strong><a class="reference external" href="http://osoooo.si">osoooo.si</a> 7</strong></p>
+</div>
+</div>
+<div class="section" id="l">
+<h2>l<a class="headerlink" href="#l" title="Permalink to this headline">¶</a></h2>
+<p>a n bye Sind</p>
+<p>Cosa az</p>
+<p>by Ey</p>
+<p>by Ey</p>
+<p>We can take this work one step further and write the relationships in matrix form as follows:</p>
+<p>Now, we have derived the complete relationships between the unit vectors that make up the B frame in terms of the unit vectors of the A frame.</p>
+<p>PRACTICE ACTIVITY 2</p>
+<p>In Practice Activity 1 , you used sympy to write out the vectors in the B-frame’s unit vectors. Now, write the same vectors in the A-frame. Compare their magnitudes of in the 2 frames. Are they different?</p>
+<p>Let’s focus on the second row of the above matrix equation (this is highlighted in yellow below):</p>
+<p>This tells us that</p>
+<p>Visually, this can be interpreted to mean that the door B swings relative to the wall A about the axis, which also coincides with the <a class="reference external" href="http://axis.In">axis.In</a> other words, this represents what is know an simple rotation about the y-axis. Similar relationships can also be derived for simple rotations about x-axis or z-axis.</p>
+<hr class="docutils" />
+<p>go g</p>
+<p>sin</p>
+<p>L tea</p>
+<p>so</p>
+<p>bz sin</p>
+<p>0 Cosa of</p>
+<p>BCA</p>
+<p><strong>Bca oil</strong></p>
+<p>BCA too</p>
+<p>final</p>
+<p>sin^0 Cosa</p>
+<p>In cosdoint cosC9o O Iz</p>
+<p>In cosdoint since</p>
+<p>daz</p>
+<p>In Tainanin Badyraytda oh t cos^90 O</p>
+<p><strong>Direction cosine matrix (abbreviated as DCM)</strong></p>
+<p>This serves as the foundation for a more general description of orientations for General 3-D Rotation.</p>
+<p>Continuing with the matrix representation of the door-wall example, the 3×3 matrix (highlighted in green above) relates the B-frame’s unit vectors to the A-frame’s unit vectors. It is called the direction cosine matrix of A in B. The symbolic notation of it is. This is for a rotation about y-axis, as mentioned on the previous page.</p>
+<p>Simple notations about z-axis would result in the following DCM</p>
+<p>Simple notations about x-axis would result in the following DCM:</p>
+<p>Why does the term DCM have “cosine” in it?</p>
+<p>Return to Equations and , you can observe that they were derived purely using the cosine of angles between different unit vectors. For example, consider the x-unit vector of the B-frame as represented in the A-frame:</p>
+<p>can be written in a more generic form using only dot products (as this product is defined using cosine terms), as shown below:</p>
+<p>which then becomes</p>
+<hr class="docutils" />
+<p><strong>i</strong></p>
+<p>a n n n na</p>
+<p>in</p>
+<p>am but an byt anby</p>
+<p><strong>Y</strong></p>
+<p>n r</p>
+<p>ai int</p>
+<p>n r az but byte</p>
+<p>be</p>
+<p>In an</p>
+<p>Te n by anbz bn</p>
+<div class="section" id="az-be-is">
+<h3>az be Is<a class="headerlink" href="#az-be-is" title="Permalink to this headline">¶</a></h3>
+<p><strong>act</strong></p>
+<p>Note ACB BCA</p>
+<p><strong>General 3-D Rotation and DCM</strong></p>
+<p>Below, body B is moving freely relative To frame A.</p>
+<p>From the preceding discussion on dot products and DCM (direction cosine matrices), we can write the following relationships between two reference frame A and B.</p>
+<p>can then also be written in the matrix form as shown below:</p>
+<p>which can also be written more succinctly as:</p>
+<p>is the direction cosine matrix of B in A.</p>
+<p>is different from</p>
+<hr class="docutils" />
+<p>m <strong>T</strong> EM <strong>I</strong></p>
+<p><strong>I</strong></p>
+<p><a class="reference external" href="http://t.no">t.no</a> it</p>
+<p>ca rsI</p>
+<p>A key property of DCM:</p>
+<p>A very important property of DCM is that it is an orthogonal matrix. Mathematically, this means that the inverse of the DCM is the same as the transpose of the matrix. In other words, if the DCM is given by a matrix M, then:</p>
+<p>This is a very useful result because it is considerably easier to compute the transpose of a matrix than it is to compute its inverse.</p>
+<p>How is this property useful? At this point, we two that we can express the same vector in different reference frames. This property allows us to do so in a very easy manner. Below we show how you can easily convert (or express) a vector given in the B-frame to its equivalent in the Aframe.</p>
+<p>In fact, when one compares to one sees that</p>
+<hr class="docutils" />
+<p>Nn s</p>
+<p>N</p>
+<p><strong>Igf</strong></p>
+<p>a a n ng a ant nu ay^1 Nz Az</p>
+<p>AdgokEffmJant</p>
+<p><strong>oafaytfgzagaa.d</strong></p>
+<p><strong>jaz</strong></p>
+<p>f</p>
+<p>A</p>
+<p>NOTATION l n so</p>
+<p>d dE V DE a by hi y E</p>
+<p>na n BO E Lbj hay n b u</p>
+<p>d de haj Q F fewvector</p>
+<p>C</p>
+<p>The area of calculus we are concerned with is the time derivatives of vectors which result in velocities and accelerations.</p>
+<p>In the case of vector, it is critical to consider the reference frame when computing derivatives. This is not the case for scalars.</p>
+<p>Computing the time derivative from frame A of any arbitrary vector we must express the vector in unit vectors attached</p>
+<p>RULE:</p>
+<p>If the component form of is given in the frame A by:</p>
+<p>then</p>
+<p>Door-wall example:</p>
+<p>is the time derivative of the vector</p>
+<p>when observed from the reference frame A. So,</p>
+<p>Therefore,</p>
+<p>So, how can we compute the derivative of a vector using SymPy?</p>
+<p>Step 1: Create the vector</p>
+<p>Step 2: Call a method on it that allows you to take a time derivative.</p>
+<p>Vector Calculus</p>
+<hr class="docutils" />
+<p>az A O C DandP I r O l p nD lo i</p>
+<p>by</p>
+<p>C h CidAdf CiiBdnf y r It It I o n bn</p>
+<p>adf nci .se dt</p>
+<p>I</p>
+<p>L <strong>dat</strong> L^7 any <strong>Ta z</strong></p>
+<p>I Of Oft CND DI</p>
+<p>honey C (^1) bit tan hdytC^1 cosointsinced than <strong>AdI</strong> lO sindoin Cosonaz At Barn <strong>Iii</strong> dt I C <strong>Int</strong> C <strong>Igt</strong> C Tsz <strong>Lbj</strong> e <strong>Intlfosiba</strong> <a class="reference external" href="http://sin.bg">sin.bg</a> B dI L <strong>Of</strong> sincebn Coso <strong>Tz</strong> At are points as shown in the figure. ‘l’ and ‘h’ are the length and height of the door. is timevarying. You are asked to find (i.e., compute symbolic expressions) the following: All final answers are to be expressed in unit vectors attached to the A-frame. Computing Then, we can compute the time derivative quite simply as: Another example: This is done through the following steps: requires expressing the vector in the A-frame unit vectors. In other words: which is given by: requires expressing the vector in B-frame unit vectors. In other words: So, we can get:</p>
+<hr class="docutils" />
+<p>byAy n n a a bn bag be</p>
+<p>(^10) In coso 0 since o a na o o</p>
+<div class="section" id="id1">
+<h4>4<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>Tfkkmof be Bu Y Iz Iz sino o coso Equation</p>
+<p>B o DI n ft</p>
+<p>LO az</p>
+<p>aibnk</p>
+<p>Qd2,8 t</p>
+<p>Ddgffqtkf</p>
+<p><strong><a class="reference external" href="http://Ddggatddgkciicda.ua">Ddggatddgkciicda.ua</a></strong></p>
+<p><strong>E antifdatan</strong></p>
+<p>Ciii <a class="reference external" href="http://ddzlq.ba">ddzlq.ba</a> Edgar but g Edggh</p>
+<p>Civ otdcaxk <a class="reference external" href="http://fjd.am">fjd.am</a> xktax k</p>
+<p>D8^8</p>
+<p>D8</p>
+<p>Thus, we get:</p>
+<p>The above example demonstrated the difference between taking time derivatives of the same vector from two frames.</p>
+<p>are scalars.</p>
+<p><strong>Properties of Vector Derivatives</strong></p>
+<p>In the following, are arbitrary vectors.</p>
+<p>is scalar time.</p>
+<hr class="docutils" />
+<p>jaz</p>
+<p>FA l p n r</p>
+<p>D lo a by C w Y r</p>
+<p>I o n bn</p>
+<p>i tdrCiiBdq It It</p>
+<p>0</p>
+<p><strong>Practice Activity 3:</strong> Implement the preceding door-wall example in SymPy. Figure is provided below for reference:</p>
+<p>You can use some of your prior work in Practice Activity 2 as a starting point for this activity.</p>
+<p>Find:</p>
+<p>HINT: You will use a new feature to make a time-varying function. This feature is called dynamicsymbols.</p>
+<hr class="docutils" />
+<p>AwB</p>
+<p>rA</p>
+<p><strong>it</strong></p>
+<p>h</p>
+<p>O itwB I8n t in^0</p>
+<p>i</p>
+<p>AwgD <strong>8h</strong></p>
+<p>to A</p>
+<p>WAKE</p>
+<p>Cii</p>
+<p>4 I.heradls r r</p>
+<p>I un AwB 4n</p>
+<p><strong>Rigid Body Kinematics:</strong></p>
+<p><strong>Angular Velocity and Angular Acceleration</strong></p>
+<p>Rotating shaft</p>
+<p>Angular velocity:</p>
+<p>Notation:</p>
+<p>This is defined as the time rate of change of orientation.</p>
+<p>Case 1: Simple Rotation</p>
+<p>REVIEW : the motion of B in A is a simple rotation if and only if there exists a unit vector that remains fixed in both B and A as B moves in A. Mathematically, simple rotation leads to</p>
+<p>if</p>
+<p>if</p>
+<p>rotation of B in A increases rotation of B in A decreases</p>
+<p>Rolling disk</p>
+<p>Angular velocity is denoted using the greek letter omega. For example, in the figure below, is the angular velocity of B in A</p>
+<p>Examples</p>
+<hr class="docutils" />
+<p>r A WBO</p>
+</div>
+</div>
+</div>
+<div class="section" id="i">
+<h2>i<a class="headerlink" href="#i" title="Permalink to this headline">¶</a></h2>
+<p>TsaToy be</p>
+<p>Wu</p>
+<p>B</p>
+</div>
+<div class="section" id="e-adgiby-5-but-adak">
+<h2>E AdgIby^5 but Adak<a class="headerlink" href="#e-adgiby-5-but-adak" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="b-by-adgiba-by-iz">
+<h2>B by AdgIba By Iz<a class="headerlink" href="#b-by-adgiba-by-iz" title="Permalink to this headline">¶</a></h2>
+<p>n n n</p>
+<p>AWB Wa</p>
+<p>bn t Wy</p>
+<p>by t wz bz</p>
+<p>Wn wywz</p>
+</div>
+<div class="section" id="id2">
+<h2>i<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<div class="section" id="e3">
+<h1>8 E3<a class="headerlink" href="#e3" title="Permalink to this headline">¶</a></h1>
+<p>Nw</p>
+<p>N</p>
+<div class="section" id="wit-aig-big">
+<h2>wit Aig Big<a class="headerlink" href="#wit-aig-big" title="Permalink to this headline">¶</a></h2>
+<p><strong>Case 2: General 3-D Rotation</strong></p>
+<p>Below, body B is moving freely relative to frame A.</p>
+<p>are rigidly fixed to B.</p>
+<p>The angular velocity of body B in frame A is mathematically defined as</p>
+<p>which can then be written in a more compressed form as:</p>
+<p>where are scalar components of the angular velocity vector in the x, y, and zdirections respectively.</p>
+<p>CHAIN RULE FOR ANGULAR VELOCITY</p>
+<hr class="docutils" />
+<p>r A WBO</p>
+<p>As B N</p>
+<p>A B Ad_Aw</p>
+<p>B</p>
+<p>at</p>
+<p>kz C g</p>
+<p>A</p>
+<p><strong>f</strong></p>
+<p>n r p^0</p>
+<p>ay by yo n r an b p n f B</p>
+<p>Asa Iie DE</p>
+<p>Angular acceleration is the time rate of change of angular velocity vector.</p>
+<p>In the figure above, B is moving freely in A. The angular acceleration of B in A is denoted as</p>
+<p>Notation: We use the greek letter alpha (lower-case) to represent angular acceleration.</p>
+<p>It is defined as</p>
+<p>Indeed, one must be careful to express the angular velocity in the appropriate reference frame prior to computing its time derivative. Unfortunately, it is not always convenient (or desirable and might even be impossible) to switch between reference frames before computing the derivative. So, some special results are presented to tackle such scenarios, which are presented after the next example.</p>
+<p>The door-wall example is modified to have an additional object: a cat flap C which makes an angle with the door’s y-axis.</p>
+<p>You are asked to compute the angular acceleration of the cat flap C with respect to A. The angular acceleration of the cat flap C with respect to A is given by</p>
+<p>Example</p>
+<p>Solution:</p>
+<p>This means we have to first determine the angular velocity of C in A. Then we can take its time derivative from frame A. This angular velocity of C in A can be computed using the chain rule given by Equation 6.1 as:</p>
+<hr class="docutils" />
+<p>Auge</p>
+<p>Aw <strong>BE</strong> 6.1</p>
+<p>Cag</p>
+<p>A B</p>
+<p>w (^8) <strong>by E dy</strong> N lb A <strong>Bwc</strong> of bn Of sonant since d A C Age <strong>AEE</strong> DE cosoint sinceiz Of since’antcoso Iz O <strong>dy</strong> di Ci ny y r A WBO ricin a w I y t vBatVz bytb Bdq O Vi VzY 3 I dt Aday AwBxy B is in simple rotation relative to A. So, C is in simple rotation relative to B. So, Then, we compute the angular acceleration as: <strong>Special results involving time derivatives</strong> are the scalar components of As before, A is a fixed reference frame with unit vectors rigidly attached to it, i.e., <strong>KEY RESULT 1</strong> Likewise, B is a rigid body with unit vectors rigidly attached to it, i.e., is an arbitrary vector that is fixed in B and given in its component form by: in frame B and as it is fixed in B it follows From examining the figure, we can easily say that:</p>
+<hr class="docutils" />
+<p>GUEN Naz v</p>
+<p>by</p>
+<p>A WBO</p>
+<p>i a’iCi my^2 an af bz n <a class="reference external" href="http://bicix.y.ec">bicix.y.ec</a> bn</p>
+<p>Aw B Iz</p>
+<p>n I I Vibe A</p>
+<p>Few</p>
+<p>AwB y</p>
+<p>on</p>
+<p>Y Vibe V antSinay</p>
+<p>Itb riff sinoantcosoayJAW</p>
+<p>BXY</p>
+<p><a class="reference external" href="http://O.az">O.az</a> Yc Lo s 0 a n t s i n d ay v8fsinoa Costas</p>
+<p>We will prove key result 1 (boxed in red above) is true for a trivial case: simple rotation.</p>
+<p>Likewise, B is a rigid body with unit vectors rigidly attached to it, i.e.,</p>
+<p>B is hinged to A such that it is in simple rotation, such that:</p>
+<p>is an arbitrary vector that is fixed in B and given in its component form by:</p>
+<p>Prove that:</p>
+<p>So</p>
+<p>And</p>
+<p>Hence, proved.</p>
+<p>As before, A is a fixed reference frame with unit vectors rigidly attached to it, i.e.,</p>
+<p>Solution:</p>
+<hr class="docutils" />
+<p><a class="reference external" href="http://ai.ci">ai.ci</a></p>
+<p>n ToiCi xy^2</p>
+<p>V N</p>
+<p>Y</p>
+<p>E VBa</p>
+<p><strong><a class="reference external" href="http://tvzbytvzbzaaa.vn">tvzbytvzbzaaa.vn</a></strong></p>
+<p>Bday t wBx if</p>
+<p>Addzy A A A VBatikby tibbett d <a class="reference external" href="http://batvzd.by">batvzd.by</a> Vzdbz dt dt dt</p>
+<p>d Bd I flywe</p>
+<p>use keyresul</p>
+<p>dt</p>
+<p>vtwBxbatvzwBxbytvgtw</p>
+<div class="section" id="bxbzltn">
+<h3>Bxbzltn<a class="headerlink" href="#bxbzltn" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://w.by">w.by</a> Ba^1 VzbytVzbz</p>
+<p>11 v AugBy V N</p>
+<p>As before, A is a fixed reference frame with unit vectors rigidly attached to it, i.e.,</p>
+<p>KEY RESULT 2</p>
+<p>Likewise, B is a rigid body with unit vectors rigidly attached to it, i.e.,</p>
+<p>is an arbitrary vector that is moves relative to both A and B. It is given in its component form by:</p>
+<p>Proof:</p>
+<p>This is a very powerful formula. However, it relies on our ability to derive an expression for the angular velocity vector in an appropriate frame. We will now use it in our cat flap example.</p>
+<hr class="docutils" />
+<p>a z C f</p>
+<p>A</p>
+<p>r l O T</p>
+<p><strong>ay</strong></p>
+<p>by yo</p>
+<p>n r g an b u</p>
+<p>B</p>
+<p>A C</p>
+<p>Age <strong>ADE</strong></p>
+<p>dE</p>
+<p>B A C A C</p>
+<p>Age</p>
+<p>d Wn the’t</p>
+<p>Wa</p>
+<p>de</p>
+<p>Auge</p>
+<p>Aw <strong>BE</strong>^6</p>
+<p>i</p>
+<p>Awf Oi by of <strong>Tn</strong></p>
+<p>Oo A o a</p>
+<p>Age O by lobn^88152</p>
+<p>Example</p>
+<p>You are asked to find angular acceleration of the cat flap C with respect to A <strong>using key result 2</strong>. <strong>Solution:</strong></p>
+<p>we may then invoke KEY RESULT 2 to rewrite the right hand-side as</p>
+<p>This angular velocity of C in A can be computed using the chain rule given by Equation 6.1 as:</p>
+<hr class="docutils" />
+<p><strong>jaz</strong></p>
+<p>C IA</p>
+<p>n n^70 a by y f</p>
+<p>na n a n buy B</p>
+<p><strong>Practice Activity 4</strong></p>
+<hr class="docutils" />
+<p>we</p>
+<p><strong>To</strong></p>
+<p>a</p>
+<p><strong><a class="reference external" href="http://go.PT">go.PT</a></strong></p>
+<p>of</p>
+<p>A P</p>
+<p>N</p>
+<p><strong>Ayp Adf</strong> 7.1</p>
+<p>At</p>
+<p>w</p>
+<p>I E</p>
+<p>t I E I</p>
+<p>7 I</p>
+<p>to</p>
+<p>deadass E z</p>
+<p>40 T. i s</p>
+<p><strong>E IE</strong></p>
+<p><strong>Particle Kinematics: Position, Velocity, Acceleration</strong></p>
+<p>So far, we have analyzed changes in orientations of reference frames and the resulting parameters of angular velocity and angular acceleration. In other words, these parameters measure the changes in angles (or angular positions). Now, we will study changes in positions of points. This topic is also called <strong>translational kinematics</strong>. A pictorial representation of the problem is shown and then described below.</p>
+<p>We utilize a position vector to locate Pthe vector has its tail fixed in A and its tip (or head) tracks P.</p>
+<p><strong>Position of P in A</strong></p>
+<p>O is a point rigidly attached to the reference frame A.</p>
+<p>P is a particle of mass m and is moving along the dashed path. It is said to be translating relative to frame A.</p>
+<p>Note: From the figure to the right, it easy to infer:</p>
+<p>From the definition of velocity (Equation )</p>
+<p>Therefore,</p>
+<p><strong>Velocity of P in A</strong></p>
+<p>Mathematically, this velocity of P in A is defined as</p>
+<p>Notation</p>
+<hr class="docutils" />
+<p>A p a n</p>
+<p>AA p Aap</p>
+<p>de d I 7. 2 n at</p>
+<p>w</p>
+<p>m</p>
+<p>o</p>
+<p>o a pgp n lo</p>
+<p>n n an ay 0 Oz</p>
+<p>i up App N N</p>
+<p>ciYYPndmiEgmirtnw <a class="reference external" href="http://A.mn">A.mn</a> dt</p>
+<p>So</p>
+<p>prop 109 q9P</p>
+<p>Therefore</p>
+<p><strong>hoist</strong></p>
+<p>R cosdiagsingian</p>
+<p><strong>IEEE</strong></p>
+<p><a class="reference external" href="http://iccosoiaysinoiadta.ie">iccosoiaysinoiadta.ie</a></p>
+<p>inqagcosoEa</p>
+<p>sinOz geckosG</p>
+<p>naatlicosaz Roisin nay</p>
+<p><strong>Acceleration of P in A</strong></p>
+<p>Mathematically, this acceleration of P in A is defined as</p>
+<p>N is a fixed reference frame to which link A is attached at a point O. B is a second link attached to A at point Q. This system is commonly called a double pendulum. We assume that both links are of the same length ‘l’.</p>
+<p>P is a particle that is sliding on B, the second link of the double pendulum. It is located from point Q by a scalar time-varying parameter.</p>
+<p>The two angles that describe the double pendulum’s two links are also shown in the figure, namely: and. You are to compute:</p>
+<p>Notation</p>
+<p><strong>Example</strong></p>
+<p>Solution</p>
+<hr class="docutils" />
+<p>Also NWA 8 I 2</p>
+<p>Therefore</p>
+<p>A q</p>
+<p>P E Iz X Lait</p>
+<p>x cosdiagSingen</p>
+<p>48</p>
+<p>too cosg in</p>
+<p>8 asindzaj</p>
+<p>So</p>
+<p>YP Is</p>
+<p>in Oz t k 2 cosOz</p>
+<p>(^8) Lt cos I In cos Oz 2e IesinOz b n since rag A p A p SP Lii if de de I <a class="reference external" href="http://sinceztnozcos.dz">sinceztnozcos.dz</a> ate or cos Oz a 82 since^2 ay</p>
+<hr class="docutils" />
+<p>w w g</p>
+<p>Ayp Ay’S AugB x <strong>IBP</strong> 7.3</p>
+<p>Age Aad ftp.BxqOP tLAwBxAwBxnf0P</p>
+<p>App</p>
+<p>Apd</p>
+<p>AWB</p>
+<p>p BP</p>
+<p>Aap</p>
+<p>Aad</p>
+<p>Afb</p>
+<p><strong>Two key velocity/acceleration transfer theorems</strong></p>
+<p>This theorem is useful for determining the velocity (and/or acceleration) of one point on a rigid body by using (or transferring to) another point on the same rigid body.</p>
+<p>In the adjoining figure, P and Q are two points that are rigidly fixed to the same rigid body, B. Further, B is in freemotion relative to A. In other words, B is moving freely in A; in other words, it is rotating and translating when viewed from A.</p>
+<p>In such a scenario, the following two relationships can be used to compute the velocity and acceleration of P in A.</p>
+<p>Notation in above equations</p>
+<p>is the velocity of P in A.</p>
+<p>is the velocity of Q in A.</p>
+<p>is the angular velocity of B in A.</p>
+<p>is the position vector with tail at Q and tip at P.</p>
+<p>is the acceleration of P in A.</p>
+<p>is the acceleration of Q in A.</p>
+<p>is the angular acceleration of B in A.</p>
+<p>There are two theorems that are useful in particle kinematics that allow us to compute velocities and accelerations by transferring them to another point. They are discussed below.</p>
+<p><strong>Theorem 1: Two-point theorem</strong></p>
+<hr class="docutils" />
+<p>AugB A</p>
+<p>B o</p>
+<p><strong>Ayp</strong> Ay’S</p>
+<p>A P A Q a a</p>
+<p>o</p>
+<p>w N p N NwnAxq v v</p>
+<p>P</p>
+<p>NqP</p>
+<p><strong>NIJtnf</strong> xq.HNwfxfNwnAxri9</p>
+<p>F NAO</p>
+<p>pp</p>
+<p>Pa on</p>
+<p>PB</p>
+<p><strong>Some special cases of theorem 1</strong></p>
+<p>Case 1: If B is purely in translation</p>
+<p>Thus, 7.3 reduces to</p>
+<p>and 7.6 reduces to</p>
+<p>Here, 7.3 reduces to</p>
+<p>and 7.6 reduces to</p>
+<p>Case 2: If B is in simple rotation about a fixed axis. E.g., a simple pendulum, (see figure).</p>
+<p>Case 3: Rolling without slip Consider the case shown in the adjoining figure containing two discs, A and B. The two discs are rolling on each other and maintain a single point of contact P. Their motion is observed from a fixed frame N.</p>
+<p>As the point P is clearly shared between the 2 bodies, we introduce the following notation:</p>
+<p>is the contact point belonging to body A.</p>
+<p>is the contact point belonging to body B.</p>
+<hr class="docutils" />
+<p>My</p>
+<p>PA NyPB</p>
+<p>Find <strong>Ay</strong></p>
+<p>P</p>
+<p>P</p>
+<p>r y w</p>
+<p>Oe</p>
+<p><strong>THE</strong></p>
+<p>Ay</p>
+<p>is AyesA</p>
+<p>SA</p>
+<p>Ay</p>
+<p>8D O AIS</p>
+<p>AY P Aye Aug</p>
+<p>D ISP</p>
+<p>If it is said that A rolls without slip on B, then the following assumption can be made in tackling a problem:</p>
+<p><strong>Common example for rolling without slip</strong></p>
+<p>In the figure below, the disk D rolls without slip on A. P is a point on the disk’s circumference.</p>
+<p><strong>Solution</strong></p>
+<p>Step 1: To solve this problem, you need to identify a special point shared between the bodies D and A; this is the contact point Q.</p>
+<p>Step 2: Then, because of the no-slip condition, we have:</p>
+<p>is a point on the ground, and is fixed to it. Thus it has zero velocity on the ground and, at that instant, it also has zero velocity on D. So, we have</p>
+<p>Step 3: Then we can use the two-point theorem to compute the velocity of P in A.</p>
+<hr class="docutils" />
+<p>we</p>
+<p>7.5</p>
+<p>Ay</p>
+<p>P By</p>
+<p>P A yd Aug</p>
+<p>B 19</p>
+<p>P 7 s</p>
+<p>B P v</p>
+<p>76</p>
+<p>A nap Bna AgathaEBx 10</p>
+<p>P</p>
+<p>tCtwxAwfx (^107) t2Awf <strong>xj</strong>^6 <strong>I</strong> BP A B BP a nap na AgathaEBx^10 P tCtwxAwfx 107 <strong>the</strong> x it <strong>r l Theorem 2: One-point theorem</strong> In the figure , P is a point that translates relative to body, B. Point Q is rigidly attached to B. The one-point theorem allows computation of the velocity and acceleration of P relative to the frame A, while accounting for the relative motion of P as seen from B. The velocity formula is given by Equation is the velocity of P in B. This term is also called relative velocity. The acceleration in this scenario is computed from Equation (also called five-term beast) The highlighted term is referred to as coincident point velocity. This highlighted set of terms are identical in form to that seen in the two-point theorem. transport acceleration relative acceleration Coriolis acceleration The terms in the acceleration equation have special terminology; these are shown below. Also, note that the ‘transport acceleration’ term below is identical in form to the two-point theorem acceleration formula.</p>
+<hr class="docutils" />
+<ol class="simple">
+<li></li>
+</ol>
+<p>7.3 7. 4</p>
+<p>as 76</p>
+<p><strong>f</strong></p>
+<p>Find y and.AYP</p>
+<p><strong>woo</strong></p>
+<p>o</p>
+<p>O ftp.s</p>
+<p>BO</p>
+<p><strong>G</strong> Oz</p>
+<ol class="simple">
+<li><p>Derive the relationships given by and using the figure below. You will need to draw TWO more position vectors for the derivation. In the figure, O is rigidly attached To A; Q is rigidly attached to B; P moves along a path on B; and B moves freely relative to A.</p></li>
+</ol>
+<p>Also, prove that if P were rigidly fixed to B, then the onepoint theorem relations result in the the two-point theorem relationships.</p>
+<p>for the particle sliding on the double pendulum using the relevant velocity transfer theorems, as appropriate.</p>
+<ol class="simple">
+<li><p>Derive relationships and. You need to make use of key result 2 (derivative theorem) and the definitions of velocities and accelerations.</p></li>
+</ol>
+<p><strong>Student Activities</strong></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="docs/index.html" title="previous page">Scientific Python QuickStart</a>
+    <a class='right-next' id="next-link" href="docs/learn_more.html" title="next page">Learn More</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Angadh Nanjangud<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

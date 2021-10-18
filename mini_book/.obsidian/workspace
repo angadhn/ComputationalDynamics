@@ -1,0 +1,109 @@
+{
+  "main": {
+    "id": "a4fb5cfa1002ed27",
+    "type": "split",
+    "children": [
+      {
+        "id": "8bccada141cadc1e",
+        "type": "leaf",
+        "state": {
+          "type": "pdf",
+          "state": {
+            "file": "1_Kinematics/1_Kinematics.pdf"
+          }
+        }
+      },
+      {
+        "id": "f01b1d18f57fba1c",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Kinematics.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9c7060491f21f961",
+    "type": "split",
+    "children": [
+      {
+        "id": "837d7e6a62be1ec1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ce38c3918ea905fa",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "413366a800c7b8e0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d97d0c7b3ab17264",
+    "type": "split",
+    "children": [
+      {
+        "id": "3375b92aefb1bdcf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b8edb68738bb7cd8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Kinematics.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "f01b1d18f57fba1c",
+  "lastOpenFiles": [
+    "Kinematics.md",
+    "docs/about_py.md",
+    "Kinematics_Part2.md",
+    "Untitled.md",
+    "Kinematics 1.md",
+    "1_Kinematics.md",
+    "1_Kinematics/1_Kinematics.pdf"
+  ]
+}

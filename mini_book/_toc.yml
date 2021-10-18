@@ -1,0 +1,15 @@
+format: jb-book
+root: docs/index
+parts:
+  - caption: Kinematics
+    #options:
+    #numbered: True
+    chapters:
+    - file: Kinematics
+      #sections:
+      #- file: docs/about_py
+    # - file: docs/getting_started
+    #- file: docs/python_by_example
+  - caption: Other parts
+    chapters:
+    - file: docs/learn_more
