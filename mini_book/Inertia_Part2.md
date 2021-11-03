@@ -1,4 +1,4 @@
-# Key Theorems for computing <span style="color:violet"> [I]<sup>S/O</sup> </span>
+# Key Theorems for computing <span style="color:violet"> $[I]^{S/O}$ </span>
 
 There are three useful theorems to compute moments of inertia. They are:
 
