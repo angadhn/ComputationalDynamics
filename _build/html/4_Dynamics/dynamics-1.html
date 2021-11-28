@@ -1,0 +1,701 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kinetics &#8212; Computational Dynamics</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Momentum: Linear and Angular" href="../3_ForcesMomentsAndMomenta/forces-2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Computational Dynamics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_Kinematics/introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Inertia/inertia-1.html">
+   Mass/Inertia Scalars
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Inertia/inertia-2.html">
+   Key Theorems for computing
+   <span class="math notranslate nohighlight">
+    \(\left[I\right]^{S/O}\)
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_ForcesMomentsAndMomenta/forces-1.html">
+   Forces, Moments, and Torques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_ForcesMomentsAndMomenta/forces-2.html">
+   Momentum: Linear and Angular
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Kinetics
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/4_Dynamics/dynamics-1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/4_Dynamics/dynamics-1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#key-concept-inertial-frame">
+   Key Concept: Inertial Frame
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equations-of-motion">
+   Equations of motion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#free-body-diagrams-to-determine-forces">
+   Free body diagrams to determine forces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-motion">
+   Types of motion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kinetics-of-a-single-particle-unconstrained-motion">
+   Kinetics of a Single Particle: Unconstrained Motion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generalized-newtons-second-law">
+   Generalized Newton’s Second Law
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rotational-dynamics">
+   Rotational dynamics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#translational-and-rotational-kinetics-of-a-rigid-body">
+   Translational and Rotational Kinetics of a Rigid Body
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="kinetics">
+<h1>Kinetics<a class="headerlink" href="#kinetics" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p>You may recall that dynamics has two main parts:
+kinematics and kinetics. In kinematics, we
+studied motion without considering the forces
+causing the motion. Then, we introduced you to
+concepts such as mass/inertia scalars; forces;
+moments; and momentum functions. This builds up
+to the second part: kinetics.</p></li>
+<li><p>Kinetics is the final piece of the puzzle that
+relates all forces acting on bodies to the
+resulting motion.</p></li>
+<li><p>The basic relation between force (all forces on
+a system) and acceleration is found in Newton’s
+second law:</p>
+<div class="math notranslate nohighlight">
+\[
+  \vec{F} = m\vec{a}
+  \]</div>
+</li>
+</ul>
+<div class="section" id="key-concept-inertial-frame">
+<h2>Key Concept: Inertial Frame<a class="headerlink" href="#key-concept-inertial-frame" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>In our discussions within kinematics, we have
+described positions in space of objects (i.e.,
+points and reference frames) relative to some
+other reference frame by means of linear and
+angular measurements. In many cases, we made use
+of reference frames that were fixed (i.e., the
+ground).</p></li>
+<li><p>Newton’s laws of mechanics are valid in a frame
+known as <strong>inertial reference frame</strong> (or <strong>inertial frame</strong> or <strong>Newtonian frame</strong>).</p>
+<ul>
+<li><p><em>Definition 1</em>: Textbooks often define
+something known as a primary inertial
+system, which is a reference frame that is
+neither translating nor rotating in space.
+The laws of Newton are said to hold in this
+frame; experiments show that the laws are
+valid in such a frame as long as the
+velocities involved are negligible compared
+with the speed of light, which is 300 000
+km/s. Consequently, for several engineering
+problems, the Earth can be approximated to
+an inertial frame in studying the motion of
+objects moving on it (like cars)
+and close to it (spacecraft in Low Earth
+Orbit).</p></li>
+<li><p><em>Definition 2</em>: It is also seen that
+Newton’s laws hold in any non-rotating
+reference frame that moves with a constant
+velocity; the time derivative of a constant
+velocity leads to zero acceleration. Thus,
+another definition emerges for an inertial
+frame as a frame which has zero
+acceleration (or is a non-accelerating
+reference frame).</p></li>
+<li><p>As a result of the two definitions above,
+you will also commonly see books define an
+inertial frame in a rather circuitous manner
+as a frame in which Newton’s second law (
+handwritten equation above) is valid. Now
+you know why.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="equations-of-motion">
+<h2>Equations of motion<a class="headerlink" href="#equations-of-motion" title="Permalink to this headline">¶</a></h2>
+<p>Newton’s second law (as stated above) is a vector equation; indeed, they can be written as 3 scalar equations:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \vec{F} = m\vec{a} \Longrightarrow
+    \begin{cases}
+      F_x = ma_x \\
+      F_y = ma_y \\
+      F_z = ma_z \\
+    \end{cases}       
+\end{split}\]</div>
+<ul class="simple">
+<li><p>The set of equations are what are called <strong>Equations of Motion</strong>.</p></li>
+<li><p>The above equations can be used to solve two types of problems:</p>
+<ul>
+<li><p><strong>Acceleration is known and we have to calculate the forces</strong>: Acceleration is either specified or can be determined directly from known kinematic conditions. The corresponding forces on the particle can then be directly determined from Newton’s Second Law.</p></li>
+<li><p><strong>Forces are known and motion needs to be determined</strong>:</p>
+<ul>
+<li><p><strong>Case 1</strong>: If the forces are constant, the acceleration is also constant and is easily found using the equations of motion.</p></li>
+<li><p><strong>Case 2</strong>: In the most general case, forces are functions of time, position, or velocity; so the above set of
+equations are differential equations. These are more challenging problems. Deriving these general
+equations with the aid of is the goal of this portion of the module.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="free-body-diagrams-to-determine-forces">
+<h2>Free body diagrams to determine forces<a class="headerlink" href="#free-body-diagrams-to-determine-forces" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Developing equations of motion requires that you account correctly for all forces acting on any object.</p></li>
+<li><p>The only reliable way to account for every force is to isolate the particle under consideration from all contacting and influencing bodies and replace the bodies removed by the forces they exert on the particle isolated.</p></li>
+<li><p>Note that not all the forces are known in terms of their magnitude e.g., reaction forces (this will become clearer later); but we need to account for all forces at a qualitative level in our free-body diagram.</p></li>
+<li><p>Types of forces to account for:</p></li>
+</ul>
+<p><strong>Gravitational forces</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+F = \frac{Gm_1m_2}{r^2}
+\]</div>
+<p><strong>Friction forces</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+   \mathrm{Dynamic} \\
+   \mathrm{Static} \\
+\end{cases}
+\end{split}\]</div>
+<p><strong>Spring forces</strong>:</p>
+<div class="figure align-default" id="spring-forces">
+<img alt="../_images/spring-forces.png" src="../_images/spring-forces.png" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Spring forces</span><a class="headerlink" href="#spring-forces" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="types-of-motion">
+<h2>Types of motion<a class="headerlink" href="#types-of-motion" title="Permalink to this headline">¶</a></h2>
+<p>There are two physically distinct types of motion:</p>
+<ul class="simple">
+<li><p>Unconstrained motion: where the moving object is free of mechanical guides and follows a path determined by its initial motion and by the forces which are applied to it from external sources. An example here is the motion of a satellite or a rocket in flight.</p></li>
+<li><p>Constrained motion: where the moving object is partially or totally restrained by guides. Thus, in addition to external forces, there are also reaction forces that emerge in this case. An example of fully constrained motion is of a train moving along a track. The motion of a car is another example as it is constrained to move on the horizontal plane.</p></li>
+</ul>
+</div>
+<div class="section" id="kinetics-of-a-single-particle-unconstrained-motion">
+<h2>Kinetics of a Single Particle: Unconstrained Motion<a class="headerlink" href="#kinetics-of-a-single-particle-unconstrained-motion" title="Permalink to this headline">¶</a></h2>
+<p>For a particle <span class="math notranslate nohighlight">\(P\)</span>, moving relative to a frame <span class="math notranslate nohighlight">\(N\)</span> under the influence of an external force <span class="math notranslate nohighlight">\(F\)</span>, we have Newton’s second law:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{F} = m^N\vec{a}^p
+\]</div>
+<p><strong>Practical example</strong>: The case of motion of a <span class="math notranslate nohighlight">\(S\)</span>, a spacecraft, about the Earth:</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p><strong>GOAL</strong>: To find the equations of motion of <span class="math notranslate nohighlight">\(S\)</span>.</p>
+</div>
+<div class="figure align-default" id="earth-sat-1">
+<img alt="../_images/earth-sat-1.png" src="../_images/earth-sat-1.png" />
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Using cartesian coordinates</p>
+</div>
+<div class="figure align-default" id="earth-sat-2">
+<img alt="../_images/earth-sat-2.png" src="../_images/earth-sat-2.png" />
+</div>
+<div class="figure align-default" id="earth-sat-3">
+<img alt="../_images/earth-sat-3.png" src="../_images/earth-sat-3.png" />
+</div>
+<div class="figure align-default" id="earth-sat-4">
+<img alt="../_images/earth-sat-4.png" src="../_images/earth-sat-4.png" />
+</div>
+<div class="figure align-default" id="earth-sat-5">
+<img alt="../_images/earth-sat-5.png" src="../_images/earth-sat-5.png" />
+</div>
+<div class="figure align-default" id="earth-sat-6">
+<img alt="../_images/earth-sat-6.png" src="../_images/earth-sat-6.png" />
+</div>
+<div class="figure align-default" id="earth-sat-7">
+<img alt="../_images/earth-sat-7.png" src="../_images/earth-sat-7.png" />
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Recall that, systems of particles have a fictitious point called the mass centre; let’s call it <span class="math notranslate nohighlight">\(G\)</span> in this case (see figure). In this scenario, we have the definition of the mass centre as:</p>
+</div>
+<div class="figure align-default" id="earth-sat-8">
+<img alt="../_images/earth-sat-8.png" src="../_images/earth-sat-8.png" />
+</div>
+<div class="figure align-default" id="earth-sat-9">
+<img alt="../_images/earth-sat-9.png" src="../_images/earth-sat-9.png" />
+</div>
+<p>So, what we have done in this second discussion is considered the motion of a system of two particles- one
+particle is the spacecraft and the second particle is the Earth. What we see is that we can study the motion of each
+particle from an inertial frame and then combine this information to study the motion of this two-particle system
+from its combined mass centre, <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<p>It turns out that this development of Newton’s second law for two-particles actually generalizes to a system
+comprising <span class="math notranslate nohighlight">\(n\)</span> particles and also to a rigid body. Let’s examine this further in the next section.</p>
+</div>
+<div class="section" id="generalized-newtons-second-law">
+<h2>Generalized Newton’s Second Law<a class="headerlink" href="#generalized-newtons-second-law" title="Permalink to this headline">¶</a></h2>
+<p>Consider a system of n particles and an inertial frame <span class="math notranslate nohighlight">\(N\)</span>. Each particle experiences an external resultant force and a
+set of internal forces. The internal forces are reaction forces applied by each particle on all other particles within the
+boundary.</p>
+<div class="figure align-default" id="earth-sat-10">
+<img alt="../_images/earth-sat-10.png" src="../_images/earth-sat-10.png" />
+</div>
+<div class="figure align-default" id="earth-sat-11">
+<img alt="../_images/earth-sat-11.png" src="../_images/earth-sat-11.png" />
+</div>
+<div class="figure align-default" id="earth-sat-12">
+<img alt="../_images/earth-sat-12.png" src="../_images/earth-sat-12.png" />
+</div>
+<p>So far, everything we have studied addresses the kinetics of a point mass; the point mass was either a particle
+(e.g., a satellite) or a mass centre of a system of particles. This only describes the translational motion or the
+translational dynamics, which is based on Newton’s second law (the time derivative of linear momentum is equal
+to forces acting on a system). So what about the rotational dynamics?</p>
+</div>
+<div class="section" id="rotational-dynamics">
+<h2>Rotational dynamics<a class="headerlink" href="#rotational-dynamics" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Much like how the translational dynamics inherently makes use of the concepts of linear momentum and forces, the rotational dynamics can be studied by making use of angular momentum (moment of linear momentum) and moments of forces.</p></li>
+<li><p>We will derive the relevant equations by again making use of the system of particles from before (also shown in figure below). We also introduce a point <span class="math notranslate nohighlight">\(O\)</span> as we know that the concept of a moment of a vector is defined relative to some point in space.</p></li>
+</ul>
+<div class="figure align-default" id="earth-sat-13">
+<img alt="../_images/earth-sat-13.png" src="../_images/earth-sat-13.png" />
+</div>
+<p>We now begin by considering the equation of translational motion for <span class="math notranslate nohighlight">\(P_1\)</span>:</p>
+<div class="figure align-default" id="earth-sat-14">
+<img alt="../_images/earth-sat-14.png" src="../_images/earth-sat-14.png" />
+</div>
+<p>We can cross multiply it on both the right and left sides by <span class="math notranslate nohighlight">\(\vec{r}_1\)</span>, the position vector from <span class="math notranslate nohighlight">\(O\)</span> to <span class="math notranslate nohighlight">\(P_1\)</span>:</p>
+<div class="figure align-default" id="earth-sat-15">
+<img alt="../_images/earth-sat-15.png" src="../_images/earth-sat-15.png" />
+</div>
+<p>In essence, what we have done is taken the moment about point O of vectors on the right hand side and left hand side.</p>
+<p>We can repeat these for the other particles <span class="math notranslate nohighlight">\(P_2, \ldots, P_i, \ldots, P_n\)</span> in other words, we can take the moment about point O of their translational equations which were given by equations <span class="math notranslate nohighlight">\(11.4, 11.5\)</span> and <span class="math notranslate nohighlight">\(11.6\)</span>.</p>
+<div class="figure align-default" id="earth-sat-16">
+<img alt="../_images/earth-sat-16.png" src="../_images/earth-sat-16.png" />
+</div>
+<div class="figure align-default" id="earth-sat-17">
+<img alt="../_images/earth-sat-17.png" src="../_images/earth-sat-17.png" />
+</div>
+<p>Let’s examine each term of <span class="math notranslate nohighlight">\(11.12\)</span>:</p>
+<div class="figure align-default" id="earth-sat-18">
+<img alt="../_images/earth-sat-18.png" src="../_images/earth-sat-18.png" />
+</div>
+<p>So, the time derivative of this system’s angular momentum vector taken from the inertial frame N is</p>
+<div class="figure align-default" id="earth-sat-19">
+<img alt="../_images/earth-sat-19.png" src="../_images/earth-sat-19.png" />
+</div>
+<div class="figure align-default" id="earth-sat-20">
+<img alt="../_images/earth-sat-20.png" src="../_images/earth-sat-20.png" />
+</div>
+<p>So, <span class="math notranslate nohighlight">\(11.13\)</span> can now be rewritten finally in a much simpler form as:</p>
+<div class="figure align-default" id="earth-sat-21">
+<img alt="../_images/earth-sat-21.png" src="../_images/earth-sat-21.png" />
+</div>
+<ul class="simple">
+<li><p>We began by examining the equations of motion of a single particle <span class="math notranslate nohighlight">\(P\)</span> by Newton’s second law:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\vec{F} = m^N\vec{a}^p
+\]</div>
+<ul class="simple">
+<li><p>Then, we looked at a system of two particles and used that as a stepping stone towards deriving a generalised Newton’s second law for a system of any number of particles. This resulted in:</p></li>
+</ul>
+<div class="figure align-default" id="earth-sat-22">
+<img alt="../_images/earth-sat-22.png" src="../_images/earth-sat-22.png" />
+</div>
+<ul class="simple">
+<li><p>We then used the generalized Newton’s second law to derive the rotational dynamics of the system relative to a frame <span class="math notranslate nohighlight">\(N\)</span> by taking the moment of the translational motion about some arbitrary point <span class="math notranslate nohighlight">\(O\)</span>. The equations for rotational motion were then found to be:</p></li>
+</ul>
+<div class="figure align-default" id="earth-sat-23">
+<img alt="../_images/earth-sat-23.png" src="../_images/earth-sat-23.png" />
+</div>
+<ul class="simple">
+<li><p>As this rotational equation was derived from the generalized Newton’s law, this result is also general. By that, we mean that this is for general <span class="math notranslate nohighlight">\(3D\)</span> rotational motion of a system of particles (<span class="math notranslate nohighlight">\(S\)</span>) relative to an inertial frame <span class="math notranslate nohighlight">\(N\)</span>. So, this can quite easily be used to study a more specific kind of planar motion (e.g., rotation about a fixed axis and general plane motion) can be studied by starting from this general set of equations and appropriate analysis of our given problem.</p></li>
+<li><p>Lastly, we saw that the above equation simplifies when the point <span class="math notranslate nohighlight">\(O\)</span> is either:</p>
+<ul>
+<li><p><strong>case 1</strong>: the mass centre; and/or</p></li>
+<li><p><strong>case 2</strong>: a point that is fixed in</p></li>
+</ul>
+</li>
+</ul>
+<p>In both cases, the last term involving cross products on the RHS of the rotational equation drop out.</p>
+</div>
+<div class="section" id="translational-and-rotational-kinetics-of-a-rigid-body">
+<h2>Translational and Rotational Kinetics of a Rigid Body<a class="headerlink" href="#translational-and-rotational-kinetics-of-a-rigid-body" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The generalized equations of translational and rotational motion that have been stated above for a
+system of particles are equally valid for the rigid body; shown below is a rigid body <span class="math notranslate nohighlight">\(B\)</span> in general <span class="math notranslate nohighlight">\(3D\)</span> rotation (see
+Lecture 4 rigid body <code class="docutils literal notranslate"><span class="pre">kinematics_</span> <span class="pre">orientations.pdf</span></code> for classification of types of motion). The equations of motion
+are also provided alongside for this body.</p>
+</div>
+<div class="figure align-default" id="earth-sat-24">
+<img alt="../_images/earth-sat-24.png" src="../_images/earth-sat-24.png" />
+</div>
+<p>Let’s briefly examine the rotational equation further. Now, we know that:</p>
+<div class="figure align-default" id="earth-sat-25">
+<img alt="../_images/earth-sat-25.png" src="../_images/earth-sat-25.png" />
+</div>
+<p>Now if the inertia scalars of <span class="math notranslate nohighlight">\(B\)</span> about <span class="math notranslate nohighlight">\(B^*\)</span> are defined in the <span class="math notranslate nohighlight">\(B\)</span> frame; for example:</p>
+<div class="figure align-default" id="earth-sat-26">
+<img alt="../_images/earth-sat-26.png" src="../_images/earth-sat-26.png" />
+</div>
+<div class="figure align-default" id="earth-sat-27">
+<img alt="../_images/earth-sat-27.png" src="../_images/earth-sat-27.png" />
+</div>
+<p>So, now we can look at what happens to the scalar equations of motion in each of the directions. We do so for two
+cases:</p>
+<div class="figure align-default" id="earth-sat-28">
+<img alt="../_images/earth-sat-28.png" src="../_images/earth-sat-28.png" />
+</div>
+<p><strong>Example 2</strong>:</p>
+<div class="figure align-default" id="earth-sat-29">
+<img alt="../_images/earth-sat-29.png" src="../_images/earth-sat-29.png" />
+</div>
+<p>The system shown in the figure above
+consists of a pulley constrained to rotate
+about its centre of mass <span class="math notranslate nohighlight">\(G\)</span>. A light cord
+is wrapped around the pulley and the
+free end is attached to a mass of <span class="math notranslate nohighlight">\(10\;kg\)</span>.
+The radius of the pulley is <span class="math notranslate nohighlight">\(0.15\;m\)</span> and its
+moment of inertia about <span class="math notranslate nohighlight">\(G\)</span> is <span class="math notranslate nohighlight">\(0.4\;kgm^2\)</span>.</p>
+<p>If the mass is released from rest what
+will be its velocity after one revolution of
+the pulley.</p>
+<div class="figure align-default" id="earth-sat-30">
+<img alt="../_images/earth-sat-30.png" src="../_images/earth-sat-30.png" />
+</div>
+<p>With reference to the free body diagram
+above, the pulley is constrained to rotate
+about its centre of mass, <span class="math notranslate nohighlight">\(G\)</span>. Therefore
+the only equation of motion of
+importance is the balance of moments
+about the pulleys centre of mass as
+follows:</p>
+<div class="math notranslate nohighlight">
+\[
+\sum|\mathrm{\boldsymbol{M}_G}| = \bar{I}\alpha = \bar{I}\ddot{\theta}
+\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[
+Tr=\bar{I}\ddot{\theta}
+\]</div>
+<p>And for the mass, motion is in the
+x-direction only with no rotation.</p>
+<div class="math notranslate nohighlight">
+\[
+Mg-T=M\ddot{x}
+\]</div>
+<p>Finally, from geometry,</p>
+<div class="math notranslate nohighlight">
+\[
+\theta = \frac{x}{r}
+\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[
+\dot{\theta} = \frac{\dot{x}}{r}
+\]</div>
+<p>And</p>
+<div class="math notranslate nohighlight">
+\[
+\ddot{\theta} = \frac{\ddot{x}}{r}
+\]</div>
+<p>Hence we have three equations and three unknowns, <span class="math notranslate nohighlight">\(T\)</span>, <span class="math notranslate nohighlight">\(\ddot{x}\)</span> and <span class="math notranslate nohighlight">\(\ddot{\theta}\)</span>.</p>
+<p>Eliminating <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(\ddot{\theta}\)</span> leaves:</p>
+<div class="math notranslate nohighlight">
+\[
+\ddot{x} = \frac{Mg}{\left(\frac{\bar{I}}{r^2} + M\right)} = \frac{10\times9.81}{\left(\frac{0.14}{0.15^2} + 10\right)} = 3.52 \;m/s^2 = \mathrm{constant}
+\]</div>
+<p>After one revolution, the mass will have
+traveled a distance, <span class="math notranslate nohighlight">\(s = 2\times S \times 0.15
+= 0.942\;m\)</span>. For constant acceleration
+and zero initial velocity,</p>
+<div class="math notranslate nohighlight">
+\[
+\nu = \sqrt{2as} = \sqrt{2 \times 3.53 \times 0.942} = 2.58\;m/s
+\]</div>
+<div class="figure align-default" id="earth-sat-31">
+<img alt="../_images/earth-sat-31.png" src="../_images/earth-sat-31.png" />
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./4_Dynamics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../3_ForcesMomentsAndMomenta/forces-2.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Momentum: Linear and Angular</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By SpaceHQ<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
