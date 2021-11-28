@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forces, Moments, and Torques &#8212; Computational Dynamics</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Momentum: Linear and Angular" href="forces-2.html" />
+    <link rel="prev" title="Key Theorems for computing \(\left[I\right]^{S/O}\)" href="../2_Inertia/inertia-2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Computational Dynamics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_Kinematics/introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Inertia/inertia-1.html">
+   Mass/Inertia Scalars
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Inertia/inertia-2.html">
+   Key Theorems for computing
+   <span class="math notranslate nohighlight">
+    \(\left[I\right]^{S/O}\)
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Forces, Moments, and Torques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="forces-2.html">
+   Momentum: Linear and Angular
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Dynamics/dynamics-1.html">
+   Kinetics
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/3_ForcesMomentsAndMomenta/forces-1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/3_ForcesMomentsAndMomenta/forces-1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bound-vector">
+   Bound vector
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#free-vector">
+   Free vector
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#moments">
+   Moments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resultant-of-a-set-of-vectors">
+   Resultant of a set of vectors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-key-theorem-on-moments">
+   A Key Theorem on Moments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#couple">
+   Couple
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#examples">
+     Examples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#torque-of-a-couple">
+     Torque of a couple
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equivalence">
+   Equivalence
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#replacement">
+   Replacement
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pictorial-example">
+     Pictorial example
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="forces-moments-and-torques">
+<h1>Forces, Moments, and Torques<a class="headerlink" href="#forces-moments-and-torques" title="Permalink to this headline">¶</a></h1>
+<p>Vectors may or may not have what is called a “line of actions”. This leads to two classifications of vectors:</p>
+<div class="section" id="bound-vector">
+<h2>Bound vector<a class="headerlink" href="#bound-vector" title="Permalink to this headline">¶</a></h2>
+<p><strong>Bound vector</strong> is bound to act along a certain line in space, it is said to be bound (to its line of action, of course). As a result, it is acting on a certain point in space. The figure below illustrates an example, the force <span class="math notranslate nohighlight">\(F\)</span> acts on the body B at a specific point <span class="math notranslate nohighlight">\(P\)</span>, which lies on the line of action of <span class="math notranslate nohighlight">\(F\)</span>. Thus, <span class="math notranslate nohighlight">\(F\)</span> is a bound vector.</p>
+<div class="figure align-default" id="id1">
+<img alt="../_images/112.png" src="../_images/112.png" />
+</div>
+</div>
+<div class="section" id="free-vector">
+<h2>Free vector<a class="headerlink" href="#free-vector" title="Permalink to this headline">¶</a></h2>
+<p><strong>Free (or unbound) vector</strong> is a vector that is not bound to a line of action. A good example of this is the angular velocity vector that acts on a body. The angular velocity of a body has a magnitude and direction but does not act at a specific point; this is because the angular velocity is the same at any location on a single rigid body.</p>
+<div class="figure align-default" id="id2">
+<img alt="../_images/210.png" src="../_images/210.png" />
+</div>
+</div>
+<div class="section" id="moments">
+<h2>Moments<a class="headerlink" href="#moments" title="Permalink to this headline">¶</a></h2>
+<p>If a vector is classified as a bounded one, then one can define a parameter called the moment for this bound vector about a specific point. For example, in the figure below, we can define a moment of the force, <span class="math notranslate nohighlight">\(F\)</span>, about the point <span class="math notranslate nohighlight">\(O\)</span>.</p>
+<div class="figure align-default" id="id3">
+<img alt="../_images/310.png" src="../_images/310.png" />
+</div>
+<p>where,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(r^{OP}\)</span> is the position vector from <span class="math notranslate nohighlight">\(O\)</span> to <span class="math notranslate nohighlight">\(P\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(M^{F/O}\)</span> is the moment of <span class="math notranslate nohighlight">\(F\)</span> about <span class="math notranslate nohighlight">\(O\)</span>.</p></li>
+</ul>
+<p>Also, the magnitude of the moment can be determined as:</p>
+<div class="figure align-default" id="id4">
+<img alt="../_images/412.png" src="../_images/412.png" />
+</div>
+<p>where,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(d\)</span> is the component of <span class="math notranslate nohighlight">\(r^{OP}\)</span> perpendicular to <span class="math notranslate nohighlight">\(F\)</span>.</p></li>
+</ul>
+<p>So, we can see that moment of a force yields a vector. It is obtained from the cross product between a position vector and a force. There is no such thing as a moment for free vectors.</p>
+</div>
+<div class="section" id="resultant-of-a-set-of-vectors">
+<h2>Resultant of a set of vectors<a class="headerlink" href="#resultant-of-a-set-of-vectors" title="Permalink to this headline">¶</a></h2>
+<p>Consider <span class="math notranslate nohighlight">\(S\)</span>, a set of vectors <span class="math notranslate nohighlight">\(&lt;v_{1}, v_{2}, \ldots, v_{n}&gt;\)</span>,</p>
+<div class="figure align-default" id="id5">
+<img alt="../_images/511.png" src="../_images/511.png" />
+</div>
+<p>the resultant of this set of vectors is the vector sum of the elements of the set.</p>
+<div class="figure align-default" id="id6">
+<img alt="../_images/611.png" src="../_images/611.png" />
+</div>
+<p>If the vectors are bounded, we can find the moment of the set of vectors about some point <span class="math notranslate nohighlight">\(P\)</span>:</p>
+<div class="figure align-default" id="id7">
+<img alt="../_images/711.png" src="../_images/711.png" />
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The set comprised any bound vectors and they were not necessarily a force. However, the developments do naturally apply to forces quite readily as they are bound vectors.</p>
+</div>
+</div>
+<div class="section" id="a-key-theorem-on-moments">
+<h2>A Key Theorem on Moments<a class="headerlink" href="#a-key-theorem-on-moments" title="Permalink to this headline">¶</a></h2>
+<p>Given the sets of vectors and the point <span class="math notranslate nohighlight">\(P\)</span> (as discussed in the preceding section), we can find the moment of the set of vectors about some other point <span class="math notranslate nohighlight">\(Q\)</span> (see figure below) using a theorem (shown below the figure) that makes  use of the resultant of the set <span class="math notranslate nohighlight">\(R\)</span>.</p>
+<div class="figure align-default" id="id8">
+<img alt="../_images/810.png" src="../_images/810.png" />
+</div>
+</div>
+<div class="section" id="couple">
+<h2>Couple<a class="headerlink" href="#couple" title="Permalink to this headline">¶</a></h2>
+<p>A set of bound vectors with zero resultant is said to be a couple. It is worth reminding yourself again that a couple is not a vector; it is a set of vectors. A couple can contain as many vectors as needed to satisfy the condition of zero resultant. The minimum number of vectors in a couple is two; this is called a <em>simple couple</em>, where the two components are equal in magnitude and oppositely directed.</p>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="id9">
+<img alt="../_images/92.png" src="../_images/92.png" />
+</div>
+</div>
+<div class="section" id="torque-of-a-couple">
+<h3>Torque of a couple<a class="headerlink" href="#torque-of-a-couple" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>It is the moment of a couple about an arbitrary point in space.</p></li>
+<li><p>A torque is a vector.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="equivalence">
+<h2>Equivalence<a class="headerlink" href="#equivalence" title="Permalink to this headline">¶</a></h2>
+<p>This is another important concept in dynamics that applies to sets of vectors. Two sets of vectors, <span class="math notranslate nohighlight">\(S_1\)</span> and <span class="math notranslate nohighlight">\(S_2\)</span>, are said to be equivalent if and only if:</p>
+<ul class="simple">
+<li><p>The resultant of <span class="math notranslate nohighlight">\(S_1\)</span> is identical to the resultant of <span class="math notranslate nohighlight">\(S_2\)</span>.</p></li>
+<li><p>The moment of <span class="math notranslate nohighlight">\(S_1\)</span> about some point <span class="math notranslate nohighlight">\(O\)</span> is identical to the moemnt of <span class="math notranslate nohighlight">\(S_2\)</span> about the same point <span class="math notranslate nohighlight">\(O\)</span>.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the sets have the same moments about <span class="math notranslate nohighlight">\(O\)</span>, they will have the same moments about any other point, as well.</p>
+</div>
+</div>
+<div class="section" id="replacement">
+<h2>Replacement<a class="headerlink" href="#replacement" title="Permalink to this headline">¶</a></h2>
+<p>If we have two sets of bound vectors that are equivalent (the conditions for this are discussed above), then in the context of rigid body dynamics one of the sets can always be <strong>replaced</strong> by the other <strong>equivalent</strong> set. In other words, either set of vectors can eb called a <strong>replacement</strong> of the other.</p>
+<p>If two couples have equal torques, then they are replacement of each other because:</p>
+<ul class="simple">
+<li><p>The resultant <span class="math notranslate nohighlight">\(s\)</span> of couples are zero; and</p></li>
+<li><p>They have the same moment (or torque) about any point.</p></li>
+</ul>
+<div class="section" id="pictorial-example">
+<h3>Pictorial example<a class="headerlink" href="#pictorial-example" title="Permalink to this headline">¶</a></h3>
+<p>Consider the body <span class="math notranslate nohighlight">\(B\)</span> with a point <span class="math notranslate nohighlight">\(P\)</span> with only a set of forces <span class="math notranslate nohighlight">\(&lt;F_{1}, F_{2}, F_{3}, F_{4}&gt;\)</span> acting on it as shown below:</p>
+<div class="figure align-default" id="id10">
+<img alt="../_images/102.png" src="../_images/102.png" />
+</div>
+<p>These forces can be replaced by another equivalent set; this set consists of:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(F\)</span> A single force through <span class="math notranslate nohighlight">\(P\)</span>, which has the same resultant as the above set of forces.</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span>: A torque of couple with the same moment about <span class="math notranslate nohighlight">\(P\)</span>, as the set of forces <span class="math notranslate nohighlight">\(F_{1}, F_{2}, F_{3}, F_{4}\)</span>.</p></li>
+</ul>
+<div class="figure align-default" id="id11">
+<img alt="../_images/113.png" src="../_images/113.png" />
+</div>
+<p>Though we have described everything above in the context of forces and moments of force, the developments apply to vectors more generally. In other words, one set of bound vectors can be replaced by another set; this second set consists of one bound vector (i.e., the resultant of the first set) and a torque of a couple.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./3_ForcesMomentsAndMomenta"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../2_Inertia/inertia-2.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Key Theorems for computing <span class="math notranslate nohighlight">\(\left[I\right]^{S/O}\)</span></p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="forces-2.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Momentum: Linear and Angular</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By SpaceHQ<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
