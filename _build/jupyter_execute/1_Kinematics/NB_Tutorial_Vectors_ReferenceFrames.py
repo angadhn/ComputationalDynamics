@@ -94,7 +94,7 @@ from sympy.physics.mechanics import ReferenceFrame
 # encourage SymPy to provide simpler results- this is why we have included
 # `real=True`.
 
-# In[ ]:
+# In[3]:
 
 
 v1, v2, v3 = symbols('v1, v2, v3', real=True)
@@ -103,7 +103,7 @@ v1, v2, v3 = symbols('v1, v2, v3', real=True)
 # Then, we create a reference frame- this provides the orthogonal unit vectors for
 # constructing general vectors such as $\bf v$.
 
-# In[ ]:
+# In[4]:
 
 
 A = ReferenceFrame('A')
@@ -113,19 +113,19 @@ A = ReferenceFrame('A')
 # frame $A$ can be accessed by appending either `.x`, `.y`, or `.z` to it. Let us
 # examine each of these.
 
-# In[ ]:
+# In[5]:
 
 
 A.x
 
 
-# In[ ]:
+# In[6]:
 
 
 A.y
 
 
-# In[ ]:
+# In[7]:
 
 
 A.z
@@ -137,7 +137,7 @@ A.z
 # variable
 # `v`.
 
-# In[ ]:
+# In[8]:
 
 
 v = v1*A.x + v2*A.y + v3*A.z
@@ -145,7 +145,7 @@ v = v1*A.x + v2*A.y + v3*A.z
 
 # The vectors stored in variable `v` can be displayed:
 
-# In[ ]:
+# In[9]:
 
 
 v
@@ -165,7 +165,7 @@ v
 # as
 # below:
 
-# In[ ]:
+# In[10]:
 
 
 get_ipython().run_line_magic('pinfo', 'v')
@@ -184,7 +184,7 @@ get_ipython().run_line_magic('pinfo', 'v')
 # magnitude and SymPy allows us to access this information easily.
 # The scalar magnitude of `v` can be found by:
 
-# In[ ]:
+# In[11]:
 
 
 v.magnitude()
@@ -192,7 +192,7 @@ v.magnitude()
 
 # A unit vector in the same direction as $\mathbf{v}$ can also be found with:
 
-# In[ ]:
+# In[12]:
 
 
 v.normalize()
@@ -200,7 +200,7 @@ v.normalize()
 
 # which is equivalent to:
 
-# In[ ]:
+# In[13]:
 
 
 v / v.magnitude()
@@ -212,7 +212,7 @@ v / v.magnitude()
 # To add a new vector, ${\bf w}= w_1 \hat{\bf{a}}_x + w_2 \hat{\bf{a}}_y
 # + w_3 \hat{\bf{a}}_z$, to the vector ${\bf v}$ that we created above, we have to do the following steps:
 
-# In[ ]:
+# In[14]:
 
 
 w1, w2, w3 = symbols("w1, w2, w3", real=True)
@@ -222,7 +222,7 @@ w
 
 # Then, the two vectors can be added:
 
-# In[ ]:
+# In[15]:
 
 
 v + w
@@ -231,7 +231,7 @@ v + w
 # ### Activity
 # 1. Can you write one line of code to add $\bf v$ to itself?
 
-# In[ ]:
+# In[16]:
 
 
 # Enter your code below
@@ -240,7 +240,7 @@ v+v
 
 # 2. Can you create a new vector $\bf u$ expressed in a new reference frame $B$?
 
-# In[ ]:
+# In[17]:
 
 
 # Enter your code below
@@ -251,7 +251,7 @@ u = u1*B.x + u2*B.y + u3 * B.z
 
 # 3. What is the result of adding $\bf u$ to $\bf v$? Does this make sense?
 
-# In[ ]:
+# In[18]:
 
 
 # Enter your code below
@@ -264,7 +264,7 @@ u + v
 # 
 # ### Scalar product
 
-# In[ ]:
+# In[19]:
 
 
 10 * v
@@ -273,7 +273,7 @@ u + v
 # ### Dot product
 # Compute the dot product between two vectors:
 
-# In[ ]:
+# In[20]:
 
 
 v.dot(v)
@@ -282,7 +282,7 @@ v.dot(v)
 # ### Cross product
 # Similarly, one can also take the cross products between two vectors:
 
-# In[ ]:
+# In[21]:
 
 
 v.cross(v)
@@ -292,7 +292,7 @@ v.cross(v)
 # Can you write code to compute the dot and cross products product between
 # $\bf v$ and $\bf w$?
 
-# In[ ]:
+# In[22]:
 
 
 # Enter your code below
@@ -303,7 +303,7 @@ v.cross(w)
 # 1. The matrix form of both vectors and dyadics can be found if the frame of
 # interest is provided.
 
-# In[ ]:
+# In[23]:
 
 
 v.to_matrix(A)
@@ -312,7 +312,7 @@ v.to_matrix(A)
 # 2. You can find all of the scalar variables present in a vector with
 # `free_symbols()`.
 
-# In[ ]:
+# In[24]:
 
 
 v.free_symbols(A)
@@ -321,7 +321,7 @@ v.free_symbols(A)
 # 3. Partial derivatives of vectors can be computed in the specified reference
 # frame.
 
-# In[ ]:
+# In[25]:
 
 
 v.diff(v2, A)
@@ -329,7 +329,7 @@ v.diff(v2, A)
 
 # 4. You can substitute numerical values for scalar expressions.
 
-# In[ ]:
+# In[26]:
 
 
 v.subs({v1: 1.34, v2: 5})
@@ -337,19 +337,19 @@ v.subs({v1: 1.34, v2: 5})
 
 # Note that this does not alter the vector or the scalars
 
-# In[ ]:
+# In[27]:
 
 
 v
 
 
-# In[ ]:
+# In[28]:
 
 
 v1
 
 
-# In[ ]:
+# In[29]:
 
 
 v2
@@ -359,7 +359,7 @@ v2
 # variable.
 # Let's call that `z`.
 
-# In[ ]:
+# In[30]:
 
 
 z = v.subs({v1: 1.34, v2: 5})
@@ -369,7 +369,7 @@ z.subs({5: v2})
 # ## Activity
 # Run the following code snippet
 
-# In[ ]:
+# In[31]:
 
 
 m = v.to_matrix(A)
@@ -379,7 +379,7 @@ m.subs({v1: 5})
 # Now, probe what type of object `m`. In other words, enter `m?` in the code cell
 # below and identify what its `Type`  says:
 
-# In[ ]:
+# In[32]:
 
 
 #Enter your code below

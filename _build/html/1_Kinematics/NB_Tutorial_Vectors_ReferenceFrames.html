@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,24 +33,24 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -72,14 +72,13 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
-      
       <h1 class="site-logo" id="site-title">Computational Dynamics</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -203,7 +202,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
@@ -319,13 +318,13 @@
               <div>
                 
   <h1>Table of Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Interactive-Textbook" data-toc-modified-id="Interactive-Textbook-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Interactive Textbook</a></span></li><li><span><a href="#How-to-interact-with-this-tutorial" data-toc-modified-id="How-to-interact-with-this-tutorial-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>How to interact with this tutorial</a></span></li><li><span><a href="#Pre-knowledge-for-this-tutorial" data-toc-modified-id="Pre-knowledge-for-this-tutorial-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Pre-knowledge for this tutorial</a></span></li><li><span><a href="#Reference-Frames-and-Vectors" data-toc-modified-id="Reference-Frames-and-Vectors-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Reference Frames and Vectors</a></span><ul class="toc-item"><li><span><a href="#Introduction" data-toc-modified-id="Introduction-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>Introduction</a></span></li><li><span><a href="#Initial-program-setup:-get-the-necessary-tools!" data-toc-modified-id="Initial-program-setup:-get-the-necessary-tools!-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>Initial program setup: get the necessary tools!</a></span></li><li><span><a href="#Create-the-vector-'v'" data-toc-modified-id="Create-the-vector-'v'-4.3"><span class="toc-item-num">4.3&nbsp;&nbsp;</span>Create the vector 'v'</a></span></li><li><span><a href="#Some-operations-on-vector-'v'" data-toc-modified-id="Some-operations-on-vector-'v'-4.4"><span class="toc-item-num">4.4&nbsp;&nbsp;</span>Some operations on vector 'v'</a></span></li></ul></li><li><span><a href="#Vector-algebra" data-toc-modified-id="Vector-algebra-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Vector algebra</a></span><ul class="toc-item"><li><span><a href="#Addition" data-toc-modified-id="Addition-5.1"><span class="toc-item-num">5.1&nbsp;&nbsp;</span>Addition</a></span><ul class="toc-item"><li><span><a href="#Activity" data-toc-modified-id="Activity-5.1.1"><span class="toc-item-num">5.1.1&nbsp;&nbsp;</span>Activity</a></span></li></ul></li><li><span><a href="#Multiplication" data-toc-modified-id="Multiplication-5.2"><span class="toc-item-num">5.2&nbsp;&nbsp;</span>Multiplication</a></span><ul class="toc-item"><li><span><a href="#Scalar-product" data-toc-modified-id="Scalar-product-5.2.1"><span class="toc-item-num">5.2.1&nbsp;&nbsp;</span>Scalar product</a></span></li><li><span><a href="#Dot-product" data-toc-modified-id="Dot-product-5.2.2"><span class="toc-item-num">5.2.2&nbsp;&nbsp;</span>Dot product</a></span></li><li><span><a href="#Cross-product" data-toc-modified-id="Cross-product-5.2.3"><span class="toc-item-num">5.2.3&nbsp;&nbsp;</span>Cross product</a></span><ul class="toc-item"><li><span><a href="#Activity:" data-toc-modified-id="Activity:-5.2.3.1"><span class="toc-item-num">5.2.3.1&nbsp;&nbsp;</span>Activity:</a></span></li></ul></li></ul></li></ul></li><li><span><a href="#Additional-useful-features" data-toc-modified-id="Additional-useful-features-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Additional useful features</a></span><ul class="toc-item"><li><span><a href="#Activity" data-toc-modified-id="Activity-6.1"><span class="toc-item-num">6.1&nbsp;&nbsp;</span>Activity</a></span></li></ul></li></ul></div><div class="tex2jax_ignore mathjax_ignore section" id="interactive-textbook">
+<div class="toc"><ul class="toc-item"><li><span><a href="#Interactive-Textbook" data-toc-modified-id="Interactive-Textbook-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Interactive Textbook</a></span></li><li><span><a href="#How-to-interact-with-this-tutorial" data-toc-modified-id="How-to-interact-with-this-tutorial-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>How to interact with this tutorial</a></span></li><li><span><a href="#Pre-knowledge-for-this-tutorial" data-toc-modified-id="Pre-knowledge-for-this-tutorial-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Pre-knowledge for this tutorial</a></span></li><li><span><a href="#Reference-Frames-and-Vectors" data-toc-modified-id="Reference-Frames-and-Vectors-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Reference Frames and Vectors</a></span><ul class="toc-item"><li><span><a href="#Introduction" data-toc-modified-id="Introduction-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>Introduction</a></span></li><li><span><a href="#Initial-program-setup:-get-the-necessary-tools!" data-toc-modified-id="Initial-program-setup:-get-the-necessary-tools!-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>Initial program setup: get the necessary tools!</a></span></li><li><span><a href="#Create-the-vector-'v'" data-toc-modified-id="Create-the-vector-'v'-4.3"><span class="toc-item-num">4.3&nbsp;&nbsp;</span>Create the vector 'v'</a></span></li><li><span><a href="#Some-operations-on-vector-'v'" data-toc-modified-id="Some-operations-on-vector-'v'-4.4"><span class="toc-item-num">4.4&nbsp;&nbsp;</span>Some operations on vector 'v'</a></span></li></ul></li><li><span><a href="#Vector-algebra" data-toc-modified-id="Vector-algebra-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Vector algebra</a></span><ul class="toc-item"><li><span><a href="#Addition" data-toc-modified-id="Addition-5.1"><span class="toc-item-num">5.1&nbsp;&nbsp;</span>Addition</a></span><ul class="toc-item"><li><span><a href="#Activity" data-toc-modified-id="Activity-5.1.1"><span class="toc-item-num">5.1.1&nbsp;&nbsp;</span>Activity</a></span></li></ul></li><li><span><a href="#Multiplication" data-toc-modified-id="Multiplication-5.2"><span class="toc-item-num">5.2&nbsp;&nbsp;</span>Multiplication</a></span><ul class="toc-item"><li><span><a href="#Scalar-product" data-toc-modified-id="Scalar-product-5.2.1"><span class="toc-item-num">5.2.1&nbsp;&nbsp;</span>Scalar product</a></span></li><li><span><a href="#Dot-product" data-toc-modified-id="Dot-product-5.2.2"><span class="toc-item-num">5.2.2&nbsp;&nbsp;</span>Dot product</a></span></li><li><span><a href="#Cross-product" data-toc-modified-id="Cross-product-5.2.3"><span class="toc-item-num">5.2.3&nbsp;&nbsp;</span>Cross product</a></span><ul class="toc-item"><li><span><a href="#Activity:" data-toc-modified-id="Activity:-5.2.3.1"><span class="toc-item-num">5.2.3.1&nbsp;&nbsp;</span>Activity:</a></span></li></ul></li></ul></li></ul></li><li><span><a href="#Additional-useful-features" data-toc-modified-id="Additional-useful-features-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Additional useful features</a></span><ul class="toc-item"><li><span><a href="#Activity" data-toc-modified-id="Activity-6.1"><span class="toc-item-num">6.1&nbsp;&nbsp;</span>Activity</a></span></li></ul></li></ul></div><div class="section" id="interactive-textbook">
 <h1>Interactive Textbook<a class="headerlink" href="#interactive-textbook" title="Permalink to this headline">¶</a></h1>
 <p>I’ve written this <span style="color: red;">interactive notebook</span> to help get you started using SymPy for use in DEN4108 Engineering Mechanics: Dynamics. This particular notebook is a tutorial and set of exercises for you to do that will gradually help you start to get the basics of vector algebra using SymPy.</p>
 <p>Each unit of the module has more such notebooks as well as other resources. Work through them at your own pace each week. I hope you enjoy learning to program.</p>
 <p>-Angadh Nanjangud</p>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="how-to-interact-with-this-tutorial">
+<div class="section" id="how-to-interact-with-this-tutorial">
 <h1>How to interact with this tutorial<a class="headerlink" href="#how-to-interact-with-this-tutorial" title="Permalink to this headline">¶</a></h1>
 <p>Execute a code cell (such as the one right below this line) by clicking on it
 and simultaneously pressing ‘Shift+Enter’. You will then see a new line appear,
@@ -349,7 +348,7 @@ which stores a <a class="reference external" href="NB_Tutorial_string.ipynb#Conc
 activities, you should type in your responses. This will help you assess your
 understanding.</p>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="pre-knowledge-for-this-tutorial">
+<div class="section" id="pre-knowledge-for-this-tutorial">
 <h1>Pre-knowledge for this tutorial<a class="headerlink" href="#pre-knowledge-for-this-tutorial" title="Permalink to this headline">¶</a></h1>
 <p>The concepts in computing that you should become familiar with before embarking on this tutorial are covered in three short notebooks on:</p>
 <ol class="simple">
@@ -357,7 +356,7 @@ understanding.</p>
 <li><p><span class="xref myst">Strings</span></p></li>
 </ol>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="reference-frames-and-vectors">
+<div class="section" id="reference-frames-and-vectors">
 <h1>Reference Frames and Vectors<a class="headerlink" href="#reference-frames-and-vectors" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
@@ -406,17 +405,6 @@ For this, we will use SymPy’s <code class="docutils literal notranslate"><span
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_38484</span><span class="o">/</span><span class="mf">2875602743.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">sympy.physics.mechanics</span> <span class="kn">import</span> <span class="n">ReferenceFrame</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sympy&#39;
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="create-the-vector-v">
@@ -450,6 +438,10 @@ examine each of these.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \mathbf{\hat{a}_x}\]</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -457,12 +449,20 @@ examine each of these.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \mathbf{\hat{a}_y}\]</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">.</span><span class="n">z</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 <p>Now, we can construct the vector <span class="math notranslate nohighlight">\(\bf v\)</span> by multiplying its scalars by the
@@ -483,6 +483,10 @@ variable
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle v_{1}\mathbf{\hat{a}_x} + v_{2}\mathbf{\hat{a}_y} + v_{3}\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 <p>Now, a little bit of Python and computer programming terminology.
@@ -522,6 +526,10 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sqrt{v_{1}^{2} + v_{2}^{2} + v_{3}^{2}}\]</div>
+</div>
 </div>
 <p>A unit vector in the same direction as <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> can also be found with:</p>
 <div class="cell docutils container">
@@ -529,6 +537,10 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">normalize</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{v_{1}}{\sqrt{v_{1}^{2} + v_{2}^{2} + v_{3}^{2}}}\mathbf{\hat{a}_x} + \frac{v_{2}}{\sqrt{v_{1}^{2} + v_{2}^{2} + v_{3}^{2}}}\mathbf{\hat{a}_y} + \frac{v_{3}}{\sqrt{v_{1}^{2} + v_{2}^{2} + v_{3}^{2}}}\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 <p>which is equivalent to:</p>
@@ -538,10 +550,14 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{v_{1}}{\sqrt{v_{1}^{2} + v_{2}^{2} + v_{3}^{2}}}\mathbf{\hat{a}_x} + \frac{v_{2}}{\sqrt{v_{1}^{2} + v_{2}^{2} + v_{3}^{2}}}\mathbf{\hat{a}_y} + \frac{v_{3}}{\sqrt{v_{1}^{2} + v_{2}^{2} + v_{3}^{2}}}\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="vector-algebra">
+</div>
+<div class="section" id="vector-algebra">
 <h1>Vector algebra<a class="headerlink" href="#vector-algebra" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="addition">
 <h2>Addition<a class="headerlink" href="#addition" title="Permalink to this headline">¶</a></h2>
@@ -557,6 +573,10 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle w_{1}\mathbf{\hat{a}_x} + w_{2}\mathbf{\hat{a}_y} + w_{3}\mathbf{\hat{a}_z}\]</div>
+</div>
 </div>
 <p>Then, the two vectors can be added:</p>
 <div class="cell docutils container">
@@ -564,6 +584,10 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">+</span> <span class="n">w</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle (v_{1} + w_{1})\mathbf{\hat{a}_x} + (v_{2} + w_{2})\mathbf{\hat{a}_y} + (v_{3} + w_{3})\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 <div class="section" id="activity">
@@ -577,6 +601,10 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 <span class="n">v</span><span class="o">+</span><span class="n">v</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 v_{1}\mathbf{\hat{a}_x} + 2 v_{2}\mathbf{\hat{a}_y} + 2 v_{3}\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 <ol class="simple">
@@ -602,6 +630,10 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle u_{1}\mathbf{\hat{b}_x} + u_{2}\mathbf{\hat{b}_y} + u_{3}\mathbf{\hat{b}_z} + v_{1}\mathbf{\hat{a}_x} + v_{2}\mathbf{\hat{a}_y} + v_{3}\mathbf{\hat{a}_z}\]</div>
+</div>
 </div>
 </div>
 </div>
@@ -616,6 +648,10 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 10 v_{1}\mathbf{\hat{a}_x} + 10 v_{2}\mathbf{\hat{a}_y} + 10 v_{3}\mathbf{\hat{a}_z}\]</div>
+</div>
 </div>
 </div>
 <div class="section" id="dot-product">
@@ -627,6 +663,10 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle v_{1}^{2} + v_{2}^{2} + v_{3}^{2}\]</div>
+</div>
 </div>
 </div>
 <div class="section" id="cross-product">
@@ -637,6 +677,10 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 0\]</div>
 </div>
 </div>
 <div class="section" id="id1">
@@ -650,12 +694,16 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle (v_{2} w_{3} - v_{3} w_{2})\mathbf{\hat{a}_x} + (- v_{1} w_{3} + v_{3} w_{1})\mathbf{\hat{a}_y} + (v_{1} w_{2} - v_{2} w_{1})\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="additional-useful-features">
+</div>
+<div class="section" id="additional-useful-features">
 <h1>Additional useful features<a class="headerlink" href="#additional-useful-features" title="Permalink to this headline">¶</a></h1>
 <ol class="simple">
 <li><p>The matrix form of both vectors and dyadics can be found if the frame of
@@ -667,6 +715,10 @@ interest is provided.</p></li>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}v_{1}\\v_{2}\\v_{3}\end{matrix}\right]\end{split}\]</div>
+</div>
 </div>
 <ol class="simple">
 <li><p>You can find all of the scalar variables present in a vector with
@@ -675,6 +727,11 @@ interest is provided.</p></li>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">free_symbols</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{v1, v2, v3}
 </pre></div>
 </div>
 </div>
@@ -689,6 +746,10 @@ frame.</p></li>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \mathbf{\hat{a}_y}\]</div>
+</div>
 </div>
 <ol class="simple">
 <li><p>You can substitute numerical values for scalar expressions.</p></li>
@@ -699,6 +760,10 @@ frame.</p></li>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1.34\mathbf{\hat{a}_x} + 5\mathbf{\hat{a}_y} + v_{3}\mathbf{\hat{a}_z}\]</div>
+</div>
 </div>
 <p>Note that this does not alter the vector or the scalars</p>
 <div class="cell docutils container">
@@ -707,6 +772,10 @@ frame.</p></li>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle v_{1}\mathbf{\hat{a}_x} + v_{2}\mathbf{\hat{a}_y} + v_{3}\mathbf{\hat{a}_z}\]</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -714,12 +783,20 @@ frame.</p></li>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle v_{1}\]</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v2</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle v_{2}\]</div>
 </div>
 </div>
 <p>Thus, we can make use of the new subsitutions by assigning it to a different
@@ -732,6 +809,10 @@ Let’s call that <code class="docutils literal notranslate"><span class="pre">z
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1.34\mathbf{\hat{a}_x} + v_{2}\mathbf{\hat{a}_y} + v_{3}\mathbf{\hat{a}_z}\]</div>
+</div>
 </div>
 <div class="section" id="id2">
 <h2>Activity<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
@@ -742,6 +823,10 @@ Let’s call that <code class="docutils literal notranslate"><span class="pre">z
 <span class="n">m</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">v1</span><span class="p">:</span> <span class="mi">5</span><span class="p">})</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}5\\v_{2}\\v_{3}\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Now, probe what type of object <code class="docutils literal notranslate"><span class="pre">m</span></code>. In other words, enter <code class="docutils literal notranslate"><span class="pre">m?</span></code> in the code cell
@@ -780,18 +865,14 @@ m<span class="o">?</span>
               </div>
               
         
+        <div class='prev-next-bottom'>
             
 
-
-
-<div class='prev-next-bottom'>
-    
-
-</div>
+        </div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
