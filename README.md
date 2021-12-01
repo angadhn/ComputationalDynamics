@@ -1,4 +1,4 @@
-# EMS418U: [Computational Dynamics book](https://angadhn.github.io/ComputationalDynamics/1_Kinematics/introduction.html)
+# EMS418U: [Computational Dynamics book](https://angadhn.github.io/ComputationalDynamics/kinematics/introduction.html)
 
 ## Introduction
 
@@ -24,10 +24,10 @@ problems as computational methods.
 
 ## Content
 
-- [Kinematics](https://angadhn.github.io/ComputationalDynamics/1_Kinematics/introduction.html)
-- [Inertia](https://angadhn.github.io/ComputationalDynamics/2_Inertia/inertia-1.html)
-- [Forces, Moments and Momenta](https://angadhn.github.io/ComputationalDynamics/3_ForcesMomentsAndMomenta/forces-1.html)
-- [Dynamics](https://angadhn.github.io/ComputationalDynamics/4_Dynamics/dynamics-1.html)
+- [Kinematics](https://angadhn.github.io/ComputationalDynamics/kinematics/introduction.html)
+- [Inertia](https://angadhn.github.io/ComputationalDynamics/inertia/inertia-1.html)
+- [Forces, Moments and Momenta](https://angadhn.github.io/ComputationalDynamics/forces-moments-momenta/forces-1.html)
+- [Dynamics](https://angadhn.github.io/ComputationalDynamics/dynamics/dynamics-1.html)
 
 ## Notes
 
