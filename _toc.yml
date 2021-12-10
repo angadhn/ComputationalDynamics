@@ -1,8 +1,0 @@
-format: jb-book
-root: kinematics/introduction
-chapters:
-- file: inertia/inertia-1
-- file: inertia/inertia-2
-- file: forces-moments-momenta/forces-1
-- file: forces-moments-momenta/forces-2
-- file: dynamics/dynamics-1
