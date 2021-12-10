@@ -5,7 +5,7 @@
 Welcome to Computational Dynamics. 👋
 
 This educational resource was built
-with [![Jupyter Book Badge](https://raw.githubusercontent.com/cooperrc/computational-mechanics/8789a7efef5b6178f6e4a1f05e69babdb1438fc4/images/badge.svg)](https://cooperrc.github.io/computational-mechanics/README.html)
+with [![Jupyter Book Badge](https://raw.githubusercontent.com/cooperrc/computational-mechanics/8789a7efef5b6178f6e4a1f05e69babdb1438fc4/images/badge.svg)](https://angadhn.github.io/ComputationalDynamics/kinematics/introduction.html)
 to support the study
 of [EMS418U: Computational Dynamics](https://www.sems.qmul.ac.uk/ugadmissions/programmes/2021/yr1modules/#Computational%20mathematical%20modelling%202)
 at
