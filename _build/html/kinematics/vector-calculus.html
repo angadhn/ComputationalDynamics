@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vector Calculus &#8212; Computational Dynamics</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Vectors and Reference Frames" href="reference-frame.html" />
+    <link rel="prev" title="Vectors Fundamentals" href="vectors-revision.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Computational Dynamics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Vectors
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vector.html">
+   Fundamental concepts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vectors-revision.html">
+   Vectors Fundamentals
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Vector Calculus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="reference-frame.html">
+   Vectors and Reference Frames
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="rigid-bodies.html">
+   Rigid Body Kinematics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rigid-bodies1.html">
+     Classification of Rigid Body Motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rigid-bodies2.html">
+     Rigid Body Kinematics: Angular Velocity and Angular Acceleration
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="particle-kinematics.html">
+   Particle Kinematics: Position, Velocity, Acceleration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="theorems.html">
+   Two key velocity/acceleration transfer theorems
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Inertia
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../inertia/inertia-1.html">
+   Mass/Inertia Scalars
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../inertia/inertia-2.html">
+   Key Theorems for computing
+   <span class="math notranslate nohighlight">
+    \(\left[I\right]^{S/O}\)
+   </span>
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Forces, Moments, and Momenta
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../forces-moments-momenta/forces-1.html">
+   Forces, Moments, and Torques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../forces-moments-momenta/forces-2.html">
+   Momentum: Linear and Angular
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Dynamics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamics/dynamics-1.html">
+   Kinetics
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/kinematics/vector-calculus.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/kinematics/vector-calculus.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classification-of-rigid-body-motion">
+   Classification of Rigid Body Motion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#doorwall-example">
+   Doorwall example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#properties-of-vector-derivatives">
+   Properties of Vector Derivatives
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="vector-calculus">
+<h1>Vector Calculus<a class="headerlink" href="#vector-calculus" title="Permalink to this headline">¶</a></h1>
+<p>Kinematics or Rigid body kinematics is the study of motion while ignoring the cause of motion.</p>
+<p>In kinematics, we are interested in “position”, “velocity”, and “acceleration” and the relationship between them.</p>
+<p>In other words, using the figure below, we are interested in describing the motion of <span class="math notranslate nohighlight">\(B\)</span> in <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<div class="figure align-default" id="id1">
+<img alt="../_images/132.png" src="../_images/132.png" />
+</div>
+<div class="section" id="classification-of-rigid-body-motion">
+<h2>Classification of Rigid Body Motion<a class="headerlink" href="#classification-of-rigid-body-motion" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="id2">
+<img alt="../_images/142.png" src="../_images/142.png" />
+</div>
+<p>Translation: the motion of <span class="math notranslate nohighlight">\(B\)</span> in <span class="math notranslate nohighlight">\(A\)</span> is a translation if and only if any straight line segment embedded in <span class="math notranslate nohighlight">\(B\)</span> remains parallel to itself when observed from <span class="math notranslate nohighlight">\(A\)</span> when <span class="math notranslate nohighlight">\(B\)</span> moves in <span class="math notranslate nohighlight">\(A\)</span>. If this condition is not met, then we have to consider the motion as rotation.</p>
+<p>Simple rotation: the motion of <span class="math notranslate nohighlight">\(B\)</span> in <span class="math notranslate nohighlight">\(A\)</span> is a simple rotation if and only if there exists a unit vector <span class="math notranslate nohighlight">\(\hat{n}\)</span> that remains fined in both <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(A\)</span>, as <span class="math notranslate nohighlight">\(B\)</span> moves in <span class="math notranslate nohighlight">\(A\)</span>. Examples in figures below:</p>
+<div class="figure align-default" id="id3">
+<img alt="../_images/152.png" src="../_images/152.png" />
+</div>
+<p>Coming back to our old example of a door hinged to a wall.</p>
+<div class="figure align-default" id="id4">
+<img alt="../_images/162.png" src="../_images/162.png" />
+</div>
+<p>Here, <span class="math notranslate nohighlight">\(\hat{b}_y\)</span> is a unit vector that is fixed in both <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(A\)</span>. Using our definition for simple rotation tells us that <span class="math notranslate nohighlight">\(\hat{b}_y\)</span> is <span class="math notranslate nohighlight">\(\hat{n}\)</span>. So, in mathematical notation, we can say:</p>
+<div class="figure align-default" id="id5">
+<img alt="../_images/172.png" src="../_images/172.png" />
+</div>
+<p>But we must now pause to ask ourselves if there is any other unit vector that is also fixed in both <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(A\)</span>? It turns out that there is, indeed, another one fixed in both <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(A\)</span>: <span class="math notranslate nohighlight">\(\hat{a}\)</span>.</p>
+<p>So we can now also write:</p>
+<div class="figure align-default" id="id6">
+<img alt="../_images/182.png" src="../_images/182.png" />
+</div>
+<p>So, from <span class="math notranslate nohighlight">\(2\)</span> and <span class="math notranslate nohighlight">\(3\)</span>, we get:</p>
+<div class="figure align-default" id="id7">
+<img alt="../_images/192.png" src="../_images/192.png" />
+</div>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Why is establishing <span class="math notranslate nohighlight">\(4\)</span> useful and critical?</p>
+<p>So far, we have written the vectors <span class="math notranslate nohighlight">\(\vec{v}\)</span> and <span class="math notranslate nohighlight">\(\vec{e}\)</span>, in terms of the <span class="math notranslate nohighlight">\(B\)</span> frame. As a result, they were not functions of <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
+<p>Expressing the vectors in the unit vectors attached to the A frame requires us to derive relationships between <span class="math notranslate nohighlight">\(\hat{a}_i\)</span> and  <span class="math notranslate nohighlight">\(\hat{b}_i\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+&lt;i = x,y,z&gt;
+\]</div>
+<p><span class="math notranslate nohighlight">\(4\)</span> allows us to derive a relationship between <span class="math notranslate nohighlight">\(\hat{a}_i\)</span> and <span class="math notranslate nohighlight">\(\hat{b}_i\)</span>, which then provides a basis for developing the rigid body kinematics.</p>
+</div>
+<p>Let us explore how to derive these relationships for the vectors <span class="math notranslate nohighlight">\(\vec{e}\)</span> and <span class="math notranslate nohighlight">\(\vec{v}\)</span> in the doorwall example (figure is shown again below):</p>
+<div class="figure align-default" id="id8">
+<img alt="../_images/162.png" src="../_images/162.png" />
+</div>
+<p>From the second of Equations in <span class="math notranslate nohighlight">\(1\)</span>, we have <span class="math notranslate nohighlight">\(\vec{e} = -e\hat{b}_y\)</span>.</p>
+<p>From <span class="math notranslate nohighlight">\(4\)</span> we also get <span class="math notranslate nohighlight">\(\vec{e} = -e\hat{a}_y \:\:\:(5)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\theta \)</span>in the prior example is an angle that describes the orientation of <span class="math notranslate nohighlight">\(B\)</span> relative to <span class="math notranslate nohighlight">\(A\)</span> (and vice versa). Thus, it is also called an angular position. Other common ways of referring to it are <em>orientation angle</em> or <em>attitude angle</em>.</p>
+<p>Now, we come to a more involved example, where we will express <span class="math notranslate nohighlight">\(\vec{v}\)</span> in terms of the unit vectors of the <span class="math notranslate nohighlight">\(A\)</span> frame using the first of Equations <span class="math notranslate nohighlight">\(1\)</span> as the starting point:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{v} = v\hat{b}_x
+\]</div>
+<p>We can now examine the relationships between the unit vectors by drawing only the unit vectors with the vector <span class="math notranslate nohighlight">\(\hat{n}\)</span> out of the plane (see figure below this passage). We can then derive the following relationships by examining the lower figure,  comprising only unit vectors:</p>
+<div class="figure align-default" id="id9">
+<img alt="../_images/202.png" src="../_images/202.png" />
+</div>
+<div class="figure align-default" id="id10">
+<img alt="../_images/212.png" src="../_images/212.png" />
+</div>
+<p>Therefore from <span class="math notranslate nohighlight">\(6\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{v} = v(\cos{\theta}\hat{a}_x + \sin{\theta}\hat{a}_z)
+\]</div>
+<p>Also from <span class="math notranslate nohighlight">\(5\)</span>, we have: <span class="math notranslate nohighlight">\(\hat{b}_y=\hat{a}_y\)</span></p>
+<p>Now, we have derived the complete relationships between the unit vectors that make up the <span class="math notranslate nohighlight">\(B\)</span> frame in terms of the unit vectors of the <span class="math notranslate nohighlight">\(A\)</span> frame.</p>
+<p>We can take this work one step further and write the relationships in matrix form as follows:</p>
+<div class="figure align-default" id="id11">
+<img alt="../_images/222.png" src="../_images/222.png" />
+</div>
+<p>Let’s focus on the second row of the above matrix equation (this is highlighted in yellow below):</p>
+<div class="figure align-default" id="id12">
+<img alt="../_images/232.png" src="../_images/232.png" />
+</div>
+<p>This tells us that: <span class="math notranslate nohighlight">\(\hat{b}_y=\hat{a}_y\)</span></p>
+<p>Visually, this can be interpreted to mean that the door B swings relative to the wall <span class="math notranslate nohighlight">\(A\)</span> about the <span class="math notranslate nohighlight">\(\hat{b}_y\)</span>-axis, which also coincides with the <span class="math notranslate nohighlight">\(\hat{a}_y\)</span>-axis. In other words, this represents what is know a simple rotation about the <span class="math notranslate nohighlight">\(y\)</span>-axis. Similar relationships can also be derived for simple rotations about <span class="math notranslate nohighlight">\(x\)</span>-axis or <span class="math notranslate nohighlight">\(z\)</span>-axis.</p>
+<p>The area of calculus we are concerned with is the time derivatives of vectors which result in velocities and accelerations.</p>
+<p>In the case of vector, it is critical to consider the reference frame when computing derivatives. This is not the case for scalars.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Computing the time derivative from frame <span class="math notranslate nohighlight">\(A\)</span> of any arbitrary vector <span class="math notranslate nohighlight">\(\vec{x}\)</span>, we must express the vector in unit vectors attached.</p>
+<p>If the component form of <span class="math notranslate nohighlight">\(\vec{x}\)</span> is given in the frame <span class="math notranslate nohighlight">\(A\)</span> by:</p>
+<div class="figure align-default" id="id13">
+<img alt="../_images/332.png" src="../_images/332.png" />
+</div>
+<div class="math notranslate nohighlight">
+\[
+\vec{x} = x_1\hat{a}_x + x_2\hat{y}_x + x_3\hat{a}_x
+\]</div>
+<p>then</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{{}^{A}d\vec{x}}{d\theta} \triangleq \left(\frac{d\hat{x_1}}{d\theta}\right)\hat{a}_x + \left(\frac{d\hat{x_2}}{d\theta}\right)\hat{a}_y + \left(\frac{d\hat{x_3}}{d\theta}\right)\hat{a}_z
+\]</div>
+</div>
+</div>
+<div class="section" id="doorwall-example">
+<h2>Doorwall example<a class="headerlink" href="#doorwall-example" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="id14">
+<img alt="../_images/162.png" src="../_images/162.png" />
+</div>
+<p><strong>Notation</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{{}^{A}d\vec{e}}{dt} = \text{is the time derivative of the vector } \vec{e} \text{ when observed from the }\\ \text{reference frame } A\text{. So, } \vec{e}= h\hat{b}_y = h\hat{a}_y
+\end{split}\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{{}^{A}d\vec{e}}{dt} = \frac{{}^{A}d(h\hat{a}_y)}{dt} = 0 \text{ (zero vector)}
+\]</div>
+<div class="tip dropdown admonition">
+<p class="admonition-title">So, how can we compute the derivative of a vector using <code class="docutils literal notranslate"><span class="pre">SymPy</span></code>?</p>
+<div class="figure align-default" id="id15">
+<a class="reference internal image-reference" href="../_images/352.png"><img alt="../_images/352.png" src="../_images/352.png" style="width: 600px;" /></a>
+</div>
+</div>
+<p><strong>Another example</strong>:</p>
+<div class="figure align-default" id="id16">
+<img alt="../_images/361.png" src="../_images/361.png" />
+</div>
+<p><span class="math notranslate nohighlight">\(O\)</span>, <span class="math notranslate nohighlight">\(C\)</span>, <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(P\)</span> are points as shown in the figure. <span class="math notranslate nohighlight">\(l\)</span> and <span class="math notranslate nohighlight">\(h\)</span> are the length and height of the door. <span class="math notranslate nohighlight">\(\theta\)</span> is timevarying. You are asked to find (i.e., compute symbolic expressions) for the following:</p>
+<div class="figure align-default" id="id17">
+<img alt="../_images/371.png" src="../_images/371.png" />
+</div>
+<p>All final answers are to be expressed in unit vectors attached to the <span class="math notranslate nohighlight">\(A\)</span>-frame.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="figure align-default" id="id18">
+<img alt="../_images/381.png" src="../_images/381.png" />
+</div>
+<div class="figure align-default" id="id19">
+<img alt="../_images/391.png" src="../_images/391.png" />
+</div>
+<p>The above example demonstrated the difference between taking time derivatives of the same vector from two frames.</p>
+</div>
+</div>
+<div class="section" id="properties-of-vector-derivatives">
+<h2>Properties of Vector Derivatives<a class="headerlink" href="#properties-of-vector-derivatives" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="id20">
+<img alt="../_images/401.png" src="../_images/401.png" />
+</div>
+<p>where,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\vec{a},\;\vec{b},\;\vec{c}\)</span> are arbitrary vectors.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta,\;\lambda,\;\alpha,\;\gamma\)</span> are scalars.</p></li>
+<li><p><span class="math notranslate nohighlight">\(t\)</span> is scalar time.</p></li>
+</ul>
+<div class="figure align-default" id="id21">
+<img alt="../_images/412.png" src="../_images/412.png" />
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./kinematics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="vectors-revision.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Vectors Fundamentals</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="reference-frame.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Vectors and Reference Frames</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Angadh Nanjangud<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

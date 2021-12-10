@@ -1,0 +1,513 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vectors Fundamentals &#8212; Computational Dynamics</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Vector Calculus" href="vector-calculus.html" />
+    <link rel="prev" title="Fundamental concepts" href="vector.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Computational Dynamics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Vectors
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vector.html">
+   Fundamental concepts
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Vectors Fundamentals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vector-calculus.html">
+   Vector Calculus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="reference-frame.html">
+   Vectors and Reference Frames
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="rigid-bodies.html">
+   Rigid Body Kinematics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rigid-bodies1.html">
+     Classification of Rigid Body Motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rigid-bodies2.html">
+     Rigid Body Kinematics: Angular Velocity and Angular Acceleration
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="particle-kinematics.html">
+   Particle Kinematics: Position, Velocity, Acceleration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="theorems.html">
+   Two key velocity/acceleration transfer theorems
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Inertia
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../inertia/inertia-1.html">
+   Mass/Inertia Scalars
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../inertia/inertia-2.html">
+   Key Theorems for computing
+   <span class="math notranslate nohighlight">
+    \(\left[I\right]^{S/O}\)
+   </span>
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Forces, Moments, and Momenta
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../forces-moments-momenta/forces-1.html">
+   Forces, Moments, and Torques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../forces-moments-momenta/forces-2.html">
+   Momentum: Linear and Angular
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Dynamics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamics/dynamics-1.html">
+   Kinetics
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/kinematics/vectors-revision.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/kinematics/vectors-revision.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#representation">
+   Representation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unit-vector">
+   Unit vector
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference-frames">
+   Reference frames
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#component-form">
+   Component form
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vector-algebra-using-a-cas-computer-algebra-systems">
+   Vector algebra using a CAS (Computer Algebra Systems)
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="vectors-fundamentals">
+<h1>Vectors Fundamentals<a class="headerlink" href="#vectors-fundamentals" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-default" id="id1">
+<img alt="../_images/213.png" src="../_images/213.png" />
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>In rigid body kinematics, we aim to mathematically describe the motion of <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(P\)</span> in <span class="math notranslate nohighlight">\(R\)</span>.</p>
+</div>
+<ul class="simple">
+<li><p>This requires pre-requiste knowledge on:<br>
+(i) <strong>vectors</strong>: unit vector, general vector, component form<br>
+(ii) <strong>vector algebra</strong>: addition of vectors multiplication of vectors<br>
+(iii) <strong>vector calculus</strong>: vector differentiation<br></p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>scalar</strong>: A quantity described purely by a number. <br>
+      e.g. <span class="math notranslate nohighlight">\(1, 2, 3\ldots\)</span>; one pint of beer<br></p></li>
+<li><p><strong>vector</strong>: a quantity characterised by both magnitude and direction.</p></li>
+<li><p><em>Notation</em>: commonly, written using letters from the English and Greek alphabets.</p></li>
+</ul>
+<div class="figure align-default" id="id2">
+<img alt="../_images/310.png" src="../_images/310.png" />
+</div>
+<div class="section" id="representation">
+<h2>Representation<a class="headerlink" href="#representation" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Vectors are drawn as a directed line segment (i.e., a line segment with an arrow at one end).</p>
+</div></blockquote>
+<p>They are typically represented for two cases:</p>
+<div class="figure align-default" id="id3">
+<img alt="../_images/410.png" src="../_images/410.png" />
+</div>
+<p>Conversely, by the same rule, a clockwise vector will have a negative direction and points into the plane of the paper. The convention is shown below for a vector <span class="math notranslate nohighlight">\(\vec{\mathcal{L}}\)</span>:</p>
+<div class="figure align-default" id="id4">
+<img alt="../_images/510.png" src="../_images/510.png" />
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The inclination of clockwise and counterclockwise vectors is <span class="math notranslate nohighlight">\(90^{\circ{}}\)</span> with respect to the plane of the paper.</p>
+</div>
+</div>
+<div class="section" id="unit-vector">
+<h2>Unit vector<a class="headerlink" href="#unit-vector" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>A vector of unit magnitude (i.e., its magnitude is <span class="math notranslate nohighlight">\(1\)</span>).</p>
+</div></blockquote>
+<p>Unit vectors are commonly written with a caret <span class="math notranslate nohighlight">\((\widehat{\ })\)</span> over a letter in the alphabet. For example, <span class="math notranslate nohighlight">\(\hat{i}\)</span> is a unit vector and <span class="math notranslate nohighlight">\(\left|\left|\hat{i}\right|\right|=1\)</span> says that magnitude of <span class="math notranslate nohighlight">\(\hat{i}\)</span> is <span class="math notranslate nohighlight">\(1\)</span>.</p>
+</div>
+<div class="section" id="reference-frames">
+<h2>Reference frames<a class="headerlink" href="#reference-frames" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>A set of three unit vectors that are mutually orthogonal.</p>
+</div></blockquote>
+<p>In the figure below, <span class="math notranslate nohighlight">\(X-Y-Z\)</span> form a Cartesian coordinate system. <span class="math notranslate nohighlight">\(\hat{i},\;\hat{j}\;\&amp; \;\hat{k}\)</span> are a set of unit vectors that are mutually orthogonal and directed along <span class="math notranslate nohighlight">\(X-Y-Z\)</span> respectively.</p>
+<div class="figure align-default" id="id5">
+<img alt="../_images/610.png" src="../_images/610.png" />
+</div>
+<p>The set of unit vectors are right-handed (also known as a “dextral set”), which means the following relationships hold true:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\hat{i} \times \hat{j} = \hat{k}  \\
+\hat{j} \times \hat{k} = \hat{i}  \\
+\hat{k} \times \hat{i} = \hat{j}  \\
+\end{split}\]</div>
+<p>The set of unit vector form a reference frame <span class="math notranslate nohighlight">\(R\)</span>.</p>
+<p>Reference frames are useful for studying moving objects. This will become apparent in the coming weeks of lectures.</p>
+<p>An alternate notation for unit vectors that make up a reference frame commonly used for dynamics is shown in the figure below; it makes use of subscripts in <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span> directions to make it explicit along which coordinate axis the unit vectors are aligned. We will (almost always) see (and use) such subscript-based notations in these notes for sake of clarity.</p>
+<div class="figure align-default" id="id6">
+<img alt="../_images/710.png" src="../_images/710.png" />
+</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\hat{a}_x\)</span> is the unit vector along the <span class="math notranslate nohighlight">\(X\)</span>-direction</p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{a}_y\)</span> is the unit vector along the <span class="math notranslate nohighlight">\(Y\)</span>-direction</p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{a}_z\)</span> is the unit vector along the <span class="math notranslate nohighlight">\(Z\)</span>-direction</p></li>
+</ul>
+<p>This is a dextral set of unit vectors, which form a reference frame <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\hat{a}_x \times \hat{a}_y =&amp; \hat{a}_z  \\
+\hat{a}_y \times \hat{a}_z =&amp; \hat{a}_x  \\
+\hat{a}_z \times \hat{a}_x =&amp; \hat{a}_y  \\
+\hat{a}_x \times \hat{a}_z =&amp; -\hat{a}_y  \\
+\hat{a}_z \times \hat{a}_y =&amp; -\hat{a}_x  \\
+\hat{a}_y \times \hat{a}_x =&amp; -\hat{a}_z  \\
+\end{align}
+\end{split}\]</div>
+</div>
+<div class="section" id="component-form">
+<h2>Component form<a class="headerlink" href="#component-form" title="Permalink to this headline">¶</a></h2>
+<p>In the figure below, <span class="math notranslate nohighlight">\(\vec{r}\)</span> is a vector with coordinates <span class="math notranslate nohighlight">\(a,\;b,\;c\)</span> in <span class="math notranslate nohighlight">\(X-Y-Z\)</span>, respectively.</p>
+<div class="figure align-default" id="id7">
+<img alt="../_images/89.png" src="../_images/89.png" />
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(a,\;b,\;c\)</span> are scalars.</p>
+</div>
+<p>The component form of <span class="math notranslate nohighlight">\(\vec{r}\)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{r} = a\hat{i} + b\hat{j} + c\hat{k}
+\]</div>
+<p>This is the “component form” of expressing vectors, which makes use of scalars and unit vectors.</p>
+</div>
+<div class="section" id="vector-algebra-using-a-cas-computer-algebra-systems">
+<h2>Vector algebra using a CAS (Computer Algebra Systems)<a class="headerlink" href="#vector-algebra-using-a-cas-computer-algebra-systems" title="Permalink to this headline">¶</a></h2>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Please review addition and multiplication of vectors.</p>
+</div>
+<p>In this module on dynamics, we will exploit a computer algebra system (CAS, for short) to perform some key vector algebra operations. A CAS is a software that allows manipulation of non-numerical as well as numerical mathematical expressions in a manner similar to that done manually, by humans.</p>
+<p><code class="docutils literal notranslate"><span class="pre">SymPy</span></code> is a free CAS that we will use in studying dynamics. It has many advanced features that are particularly useful in studying rigid body dynamics.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./kinematics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="vector.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Fundamental concepts</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="vector-calculus.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Vector Calculus</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Angadh Nanjangud<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
