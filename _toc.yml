@@ -1,0 +1,26 @@
+format: jb-book
+root: kinematics/introduction
+parts:
+  - caption: Vectors
+    chapters:
+    - file: kinematics/vector
+    - file: kinematics/vectors-revision
+    - file: kinematics/vector-calculus
+    - file: kinematics/reference-frame
+    - file: kinematics/rigid-bodies
+      sections:
+      - file: kinematics/rigid-bodies1
+      - file: kinematics/rigid-bodies2
+    - file: kinematics/particle-kinematics
+    - file: kinematics/theorems
+  - caption: Inertia
+    chapters:
+    - file: inertia/inertia-1
+    - file: inertia/inertia-2
+  - caption: Forces, Moments, and Momenta
+    chapters:
+    - file: forces-moments-momenta/forces-1
+    - file: forces-moments-momenta/forces-2
+  - caption: Dynamics
+    chapters:
+    - file: dynamics/dynamics-1
