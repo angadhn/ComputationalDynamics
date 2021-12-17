@@ -6,11 +6,11 @@ parts:
     - file: kinematics/vector
     - file: kinematics/vectors-revision
     - file: kinematics/reference-frame
-    - file: kinematics/vector-calculus
     - file: kinematics/rigid-bodies
       sections:
       - file: kinematics/rigid-bodies1
       - file: kinematics/rigid-bodies2
+    - file: kinematics/vector-calculus
     - file: kinematics/particle-kinematics
     - file: kinematics/theorems
   - caption: Inertia
