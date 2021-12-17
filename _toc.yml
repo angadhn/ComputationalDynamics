@@ -5,8 +5,8 @@ parts:
     chapters:
     - file: kinematics/vector
     - file: kinematics/vectors-revision
-    - file: kinematics/vector-calculus
     - file: kinematics/reference-frame
+    - file: kinematics/vector-calculus
     - file: kinematics/rigid-bodies
       sections:
       - file: kinematics/rigid-bodies1
