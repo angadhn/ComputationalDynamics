@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
-    <script >
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -70,13 +70,14 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
+      
       <h1 class="site-logo" id="site-title">Computational Dynamics</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -85,7 +86,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Vectors
  </span>
@@ -102,13 +103,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../kinematics/reference-frame.html">
-   Vectors and Reference Frames
+  <a class="reference internal" href="../kinematics/vector-calculus.html">
+   Vector Calculus
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../kinematics/vector-calculus.html">
-   Vector Calculus
+  <a class="reference internal" href="../kinematics/reference-frame.html">
+   Vectors and Reference Frames
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -128,7 +129,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../kinematics/rigid-bodies2.html">
-     Angular Velocity and Angular Acceleration
+     Rigid Body Kinematics: Angular Velocity and Angular Acceleration
     </a>
    </li>
   </ul>
@@ -144,7 +145,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Inertia
  </span>
@@ -164,7 +165,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Forces, Moments, and Momenta
  </span>
@@ -181,7 +182,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Dynamics
  </span>
@@ -261,7 +262,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
@@ -318,10 +319,10 @@
 <div class="section" id="checklist">
 <h1>Checklist<a class="headerlink" href="#checklist" title="Permalink to this headline">¶</a></h1>
 <!-- Put an `x` in the boxes. All tasks must be completed before merging. -->
-<ul class="simple">
-<li><p>[ ] 🤖 This change is covered by unit and integration tests as required.</p></li>
-<li><p>[ ] 🤹 All required manual testing has been performed on the affected platforms.</p></li>
-<li><p>[ ] 📃 Updated status on Notion.</p></li>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> 🤖 This change is covered by unit and integration tests as required.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> 🤹 All required manual testing has been performed on the affected platforms.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> 📃 Updated status on Notion.</p></li>
 </ul>
 </div>
 
@@ -348,14 +349,18 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
             
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

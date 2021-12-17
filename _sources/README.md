@@ -11,7 +11,8 @@ of [EMS418U: Computational Dynamics](https://www.sems.qmul.ac.uk/ugadmissions/pr
 at
 the [School of Eningeering and Material Sciences](https://www.sems.qmul.ac.uk/)
 within
-[Queen Mary, University of London](https://www.qmul.ac.uk/). 
+[Queen Mary, University of London](https://www.qmul.ac.uk/)
+. 
 
 This project is a collection of modules aimed
 at undergraduate engineering students. Each module makes up separate lessons that
