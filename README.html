@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -70,14 +70,13 @@
     <a class="navbar-brand text-wrap" href="index.html">
       
       
-      
       <h1 class="site-logo" id="site-title">Computational Dynamics</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -86,7 +85,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Vectors
  </span>
@@ -103,13 +102,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="kinematics/vector-calculus.html">
-   Vector Calculus
+  <a class="reference internal" href="kinematics/reference-frame.html">
+   Vectors and Reference Frames
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="kinematics/reference-frame.html">
-   Vectors and Reference Frames
+  <a class="reference internal" href="kinematics/vector-calculus.html">
+   Vector Calculus
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -129,7 +128,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="kinematics/rigid-bodies2.html">
-     Rigid Body Kinematics: Angular Velocity and Angular Acceleration
+     Angular Velocity and Angular Acceleration
     </a>
    </li>
   </ul>
@@ -145,7 +144,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Inertia
  </span>
@@ -165,7 +164,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Forces, Moments, and Momenta
  </span>
@@ -182,7 +181,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Dynamics
  </span>
@@ -262,7 +261,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
@@ -295,7 +294,7 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="ems418u-computational-dynamics-book">
+  <div class="section" id="ems418u-computational-dynamics-book">
 <h1>EMS418U: <a class="reference external" href="https://angadhn.github.io/ComputationalDynamics/kinematics/introduction.html">Computational Dynamics book</a><a class="headerlink" href="#ems418u-computational-dynamics-book" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
@@ -307,8 +306,7 @@ of <a class="reference external" href="https://www.sems.qmul.ac.uk/ugadmissions/
 at
 the <a class="reference external" href="https://www.sems.qmul.ac.uk/">School of Eningeering and Material Sciences</a>
 within
-<a class="reference external" href="https://www.qmul.ac.uk/">Queen Mary, University of London</a>
-.</p>
+<a class="reference external" href="https://www.qmul.ac.uk/">Queen Mary, University of London</a>.</p>
 <p>This project is a collection of modules aimed
 at undergraduate engineering students. Each module makes up separate lessons that
 are accompanied by computational problem-solving tutorials
@@ -367,18 +365,14 @@ and <a class="reference external" href="https://docs.github.com/en/issues/tracki
               </div>
               
         
+        <div class='prev-next-bottom'>
             
 
-
-
-<div class='prev-next-bottom'>
-    
-
-</div>
+        </div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
