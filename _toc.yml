@@ -26,10 +26,23 @@ parts:
     chapters:
     - file: inertia/inertia-1
     - file: inertia/inertia-2
+#     - file: inertia/Week7/Mass_Inertia_Activity
+    - file: inertia/Week7/Mass_Inertia_Activity_Solution
   - caption: Forces, Moments, and Momenta
     chapters:
     - file: forces-moments-momenta/forces-1
     - file: forces-moments-momenta/forces-2
+#     - file: forces-moments-momenta/Week9/Angular_Momentum_Activity1
+    - file: forces-moments-momenta/Week9/Angular_Momentum_Activity1_Solution
+#     - file: forces-moments-momenta/Week9/Angular_Momentum_Activity2
+    - file: forces-moments-momenta/Week9/Angular_Momentum_Activity2_Solution
+#     - file: forces-moments-momenta/Week9/Angular_Momentum_Activity3
+    - file: forces-moments-momenta/Week9/Angular_Momentum_Activity3_Solution
   - caption: Dynamics
     chapters:
     - file: dynamics/dynamics-1
+#     - file: dynamics/Week10/Activity1_Single_Particle_Kinetics
+    - file: dynamics/Week10/Activity1_Single_Particle_Kinetics_Solution
+#     - file: dynamics/Week10/Activity2_System_Of_Particles_Kinetics
+    - file: dynamics/Week10/Activity2_System_Of_Particles_Kinetics_Solution
+    - file: dynamics/Week10/Activity3_Rigid_Body_Kinetic_Energy
