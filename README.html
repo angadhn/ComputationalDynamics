@@ -69,6 +69,8 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
       
       <h1 class="site-logo" id="site-title">Computational Dynamics</h1>
       
@@ -103,7 +105,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="kinematics/Week1/NB_Tutorial_Vectors_ReferenceFrames.html">
-   Interactive Textbook
+   Vector Algebra with a Computer Algebra System
   </a>
  </li>
  <li class="toctree-l1">
@@ -273,6 +275,23 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="kinematics/Week1/NB_Tutorial_string.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kinematics/Week1/NB_Tutorial_variable.html">
+   How to interact with this tutorial
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -359,6 +378,28 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-create-your-own-jupyter-book">
+   How to create your own Jupyter Book
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-an-environment">
+     Creating an environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#building-a-jupyter-book">
+     Building a Jupyter Book
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#publishing-this-jupyter-book">
+     Publishing this Jupyter Book
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#active-contributors">
    Active Contributors:
   </a>
@@ -411,6 +452,25 @@ problems as computational methods.</p>
 so <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">contributions</a>
 and <a class="reference external" href="https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues">suggestions</a> are welcome.</p></li>
 </ul>
+</div>
+<div class="section" id="how-to-create-your-own-jupyter-book">
+<h2>How to create your own Jupyter Book<a class="headerlink" href="#how-to-create-your-own-jupyter-book" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="creating-an-environment">
+<h3>Creating an environment<a class="headerlink" href="#creating-an-environment" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">environment.yml</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">qe-example</span></code></p></li>
+</ol>
+</div>
+<div class="section" id="building-a-jupyter-book">
+<h3>Building a Jupyter Book<a class="headerlink" href="#building-a-jupyter-book" title="Permalink to this headline">¶</a></h3>
+<p>Run the following command in your terminal: <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">.</span></code>.
+If you would like to work with a clean build, you can empty the build folder by running <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">clean</span> <span class="pre">.</span></code>. If the jupyter execution is cached, this command will not delete the cached folder. To remove the build folder, you can run <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">clean</span> <span class="pre">--all</span> <span class="pre">.</span></code>.</p>
+</div>
+<div class="section" id="publishing-this-jupyter-book">
+<h3>Publishing this Jupyter Book<a class="headerlink" href="#publishing-this-jupyter-book" title="Permalink to this headline">¶</a></h3>
+<p>Run <code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">_build/html</span></code></p>
+</div>
 </div>
 <div class="section" id="active-contributors">
 <h2>Active Contributors:<a class="headerlink" href="#active-contributors" title="Permalink to this headline">¶</a></h2>

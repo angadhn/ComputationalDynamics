@@ -53,7 +53,7 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Interactive Textbook" href="Week1/NB_Tutorial_Vectors_ReferenceFrames.html" />
+    <link rel="next" title="Vector Algebra with a Computer Algebra System" href="Week1/NB_Tutorial_Vectors_ReferenceFrames.html" />
     <link rel="prev" title="Fundamental concepts" href="vector.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -72,6 +72,8 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Computational Dynamics</h1>
@@ -107,7 +109,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Week1/NB_Tutorial_Vectors_ReferenceFrames.html">
-   Interactive Textbook
+   Vector Algebra with a Computer Algebra System
   </a>
  </li>
  <li class="toctree-l1">
@@ -277,6 +279,23 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Week1/NB_Tutorial_string.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Week1/NB_Tutorial_variable.html">
+   How to interact with this tutorial
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -350,6 +369,11 @@
         
         
         
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/kinematics/vectors-revision.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
         
     </div>
 </div>
@@ -365,8 +389,13 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#representation">
-   Representation
+  <a class="reference internal nav-link" href="#notation-of-vectors-handwritten-and-typewritten">
+   Notation of Vectors: handwritten and typewritten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphical-representation-of-vectors">
+   Graphical Representation of Vectors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -404,15 +433,20 @@
 <h1>Vectors Fundamentals<a class="headerlink" href="#vectors-fundamentals" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p><strong>scalar</strong>: A quantity described purely by a number. <br>
-      e.g. <span class="math notranslate nohighlight">\(1, 2, 3\ldots\)</span>; one pint of beer<br></p></li>
+      e.g. <span class="math notranslate nohighlight">\(1.1, 2, 3\ldots\)</span>; one tree; 3 spacecraft; 7 robot arms.<br>
+In dynamics, you will also see scalars in the context of quantifying masses (e.g., the mass of a professional football is  <span class="math notranslate nohighlight">\(430\)</span> g, which is a scalar unit of measure) or geometric dimensions (e.g., the circumference of a professional football is <span class="math notranslate nohighlight">\(63.5\)</span> mm, which is also a scalar).</p></li>
 <li><p><strong>vector</strong>: a quantity characterised by both magnitude and direction.</p></li>
-<li><p><em>Notation</em>: commonly, written using letters from the English and Greek alphabets.</p></li>
 </ul>
+<div class="section" id="notation-of-vectors-handwritten-and-typewritten">
+<h2>Notation of Vectors: handwritten and typewritten<a class="headerlink" href="#notation-of-vectors-handwritten-and-typewritten" title="Permalink to this headline">¶</a></h2>
+<p>Vectors are commonly denoted using letters from the English and Greek alphabets. When typed, you will typically see a general vector typed in boldface. For example, <span class="math notranslate nohighlight">\(\bf a\)</span> is a vector. When written by hand, you will see instructors use two common notifications. Below, we show how the vectors <span class="math notranslate nohighlight">\(\boldsymbol\alpha\)</span> and <span class="math notranslate nohighlight">\(\bf a\)</span> are commonly written by hand.</p>
 <div class="figure align-default" id="id1">
 <img alt="../_images/310.png" src="../_images/310.png" />
 </div>
-<div class="section" id="representation">
-<h2>Representation<a class="headerlink" href="#representation" title="Permalink to this headline">¶</a></h2>
+<p>In live lectures by Angadh, you will commonly see the highlighted notation in his handwriting. However, both notations are equally valid.</p>
+</div>
+<div class="section" id="graphical-representation-of-vectors">
+<h2>Graphical Representation of Vectors<a class="headerlink" href="#graphical-representation-of-vectors" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>Vectors are drawn as a directed line segment (i.e., a line segment with an arrow at one end).</p>
 </div></blockquote>
@@ -420,13 +454,18 @@
 <div class="figure align-default" id="id2">
 <img alt="../_images/410.png" src="../_images/410.png" />
 </div>
-<p>Conversely, by the same rule, a clockwise vector will have a negative direction and points into the plane of the paper. The convention is shown below for a vector <span class="math notranslate nohighlight">\(\vec{\mathcal{L}}\)</span>:</p>
-<div class="figure align-default" id="id3">
-<img alt="../_images/510.png" src="../_images/510.png" />
-</div>
+<p>Conversely, by the same rule, a clockwise vector will have a negative direction and points into the plane of the paper.</p>
+<!-- The convention is shown below for a vector $\boldsymbol\alpha$:
+
+```{figure} ./images/5.png
+---
+name: 5
+---
+```
+ -->
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>The inclination of clockwise and counterclockwise vectors is <span class="math notranslate nohighlight">\(90^{\circ{}}\)</span> with respect to the plane of the paper.</p>
+<p>The inclination of clockwise and counterclockwise vectors is <span class="math notranslate nohighlight">\(90^{\circ{}}\)</span> with respect to the plane of the paper or the computer screen.</p>
 </div>
 </div>
 <div class="section" id="unit-vector">
@@ -441,55 +480,57 @@
 <blockquote>
 <div><p>A set of three unit vectors that are mutually orthogonal.</p>
 </div></blockquote>
-<p>In the figure below, <span class="math notranslate nohighlight">\(X-Y-Z\)</span> form a Cartesian coordinate system. <span class="math notranslate nohighlight">\(\hat{i},\;\hat{j}\;\&amp; \;\hat{k}\)</span> are a set of unit vectors that are mutually orthogonal and directed along <span class="math notranslate nohighlight">\(X-Y-Z\)</span> respectively.</p>
-<div class="figure align-default" id="id4">
+<p>In <a class="reference internal" href="#refr"><span class="std std-numref">Fig. 1</span></a> below, <span class="math notranslate nohighlight">\(X-Y-Z\)</span> form a Cartesian coordinate system. <span class="math notranslate nohighlight">\(\hat{\bf i},\;\hat{\bf j}\;\&amp; \;\hat{\bf k}\)</span> (drawn in pink) are a set of unit vectors that are mutually orthogonal and directed along <span class="math notranslate nohighlight">\(X\)</span>,<span class="math notranslate nohighlight">\(Y\)</span>, and <span class="math notranslate nohighlight">\(Z\)</span>, respectively.</p>
+<div class="figure align-default" id="refr">
 <img alt="../_images/610.png" src="../_images/610.png" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Reference Frame R and its unit vectors.</span><a class="headerlink" href="#refr" title="Permalink to this image">¶</a></p>
 </div>
 <p>The set of unit vectors are right-handed (also known as a “dextral set”), which means the following relationships hold true:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\hat{i} \times \hat{j} = \hat{k}  \\
-\hat{j} \times \hat{k} = \hat{i}  \\
-\hat{k} \times \hat{i} = \hat{j}  \\
+\hat{\bf i} \times \hat{\bf j} = \hat{\bf k}  \\
+\hat{\bf j} \times \hat{\bf k} = \hat{\bf i}  \\
+\hat{\bf k} \times \hat{\bf i} = \hat{\bf j}  \\
 \end{split}\]</div>
-<p>The set of unit vector form a reference frame <span class="math notranslate nohighlight">\(R\)</span>.</p>
-<p>Reference frames are useful for studying moving objects. This will become apparent in the coming weeks of lectures.</p>
+<p>In reference to <a class="reference internal" href="#refr"><span class="std std-numref">Fig. 1</span></a> above, this set of unit vectors forms a reference frame <span class="math notranslate nohighlight">\(R\)</span>. Reference frames are useful for studying moving objects. This is discussed in further detail much further on in this book.</p>
 <p>An alternate notation for unit vectors that make up a reference frame commonly used for dynamics is shown in the figure below; it makes use of subscripts in <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span> directions to make it explicit along which coordinate axis the unit vectors are aligned. We will (almost always) see (and use) such subscript-based notations in these notes for sake of clarity.</p>
-<div class="figure align-default" id="id5">
+<div class="figure align-default" id="id3">
 <img alt="../_images/710.png" src="../_images/710.png" />
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Reference Frame A and its unit vectors.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\hat{a}_x\)</span> is the unit vector along the <span class="math notranslate nohighlight">\(X\)</span>-direction</p></li>
-<li><p><span class="math notranslate nohighlight">\(\hat{a}_y\)</span> is the unit vector along the <span class="math notranslate nohighlight">\(Y\)</span>-direction</p></li>
-<li><p><span class="math notranslate nohighlight">\(\hat{a}_z\)</span> is the unit vector along the <span class="math notranslate nohighlight">\(Z\)</span>-direction</p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{\bf a}_x\)</span> is the unit vector along the <span class="math notranslate nohighlight">\(X\)</span>-direction</p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{\bf a}_y\)</span> is the unit vector along the <span class="math notranslate nohighlight">\(Y\)</span>-direction</p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{\bf a}_z\)</span> is the unit vector along the <span class="math notranslate nohighlight">\(Z\)</span>-direction</p></li>
 </ul>
-<p>This is a dextral set of unit vectors, which form a reference frame <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>This is a right-handed set of unit vectors. In the <a class="reference internal" href="#id3"><span class="std std-numref">Fig. 2</span></a> above, this set forms the reference frame <span class="math notranslate nohighlight">\(A\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
-\hat{a}_x \times \hat{a}_y =&amp; \hat{a}_z  \\
-\hat{a}_y \times \hat{a}_z =&amp; \hat{a}_x  \\
-\hat{a}_z \times \hat{a}_x =&amp; \hat{a}_y  \\
-\hat{a}_x \times \hat{a}_z =&amp; -\hat{a}_y  \\
-\hat{a}_z \times \hat{a}_y =&amp; -\hat{a}_x  \\
-\hat{a}_y \times \hat{a}_x =&amp; -\hat{a}_z  \\
+\hat{\bf a}_x \times \hat{\bf a}_y =&amp; \hat{\bf a}_z  \\
+\hat{\bf a}_y \times \hat{\bf a}_z =&amp; \hat{\bf a}_x  \\
+\hat{\bf a}_z \times \hat{\bf a}_x =&amp; \hat{\bf a}_y  \\
+\hat{\bf a}_x \times \hat{\bf a}_z =&amp; -\hat{\bf a}_y  \\
+\hat{\bf a}_z \times \hat{\bf a}_y =&amp; -\hat{\bf a}_x  \\
+\hat{\bf a}_y \times \hat{\bf a}_x =&amp; -\hat{\bf a}_z  \\
 \end{align}
 \end{split}\]</div>
 </div>
 <div class="section" id="component-form">
 <h2>Component form<a class="headerlink" href="#component-form" title="Permalink to this headline">¶</a></h2>
-<p>In the figure below, <span class="math notranslate nohighlight">\(\vec{r}\)</span> is a vector with coordinates <span class="math notranslate nohighlight">\(a,\;b,\;c\)</span> in <span class="math notranslate nohighlight">\(X-Y-Z\)</span>, respectively.</p>
-<div class="figure align-default" id="id6">
+<p>In <a class="reference internal" href="#id4"><span class="std std-numref">Fig. 3</span></a> below, <span class="math notranslate nohighlight">\(\bf{r}\)</span> is a vector with coordinates <span class="math notranslate nohighlight">\(a,\;b,\;c\)</span> in <span class="math notranslate nohighlight">\(X-Y-Z\)</span>, respectively.</p>
+<div class="figure align-default" id="id4">
 <img alt="../_images/89.png" src="../_images/89.png" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">The scalar components of <span class="math notranslate nohighlight">\({\bf r}\)</span>.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><span class="math notranslate nohighlight">\(a,\;b,\;c\)</span> are scalars.</p>
+<p><span class="math notranslate nohighlight">\(a,\;b,\;c\)</span> are scalars and <span class="math notranslate nohighlight">\({\bf r}\)</span> is a vector.</p>
 </div>
-<p>The component form of <span class="math notranslate nohighlight">\(\vec{r}\)</span> is given by:</p>
+<p>The component form of <span class="math notranslate nohighlight">\(\bf{r}\)</span> is given by:</p>
 <div class="math notranslate nohighlight">
 \[
-\vec{r} = a\hat{i} + b\hat{j} + c\hat{k}
+{\bf r} = a\hat{\bf i} + b\hat{\bf j} + c\hat{\bf k}
 \]</div>
 <p>This is the “component form” of expressing vectors, which makes use of scalars and unit vectors.</p>
 </div>
@@ -497,10 +538,10 @@
 <h2>Vector algebra using a CAS (Computer Algebra Systems)<a class="headerlink" href="#vector-algebra-using-a-cas-computer-algebra-systems" title="Permalink to this headline">¶</a></h2>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>Please review addition and multiplication of vectors.</p>
+<p>If you haven’t already done so, it would benefit the reader to review addition and multiplication of vectors from the video links on the preceding page <a class="reference internal" href="vector.html"><span class="doc std std-doc">on fundamentals</span></a>.</p>
 </div>
-<p>In this module on dynamics, we will exploit a computer algebra system (CAS, for short) to perform some key vector algebra operations. A CAS is a software that allows manipulation of non-numerical as well as numerical mathematical expressions in a manner similar to that done manually, by humans.</p>
-<p><code class="docutils literal notranslate"><span class="pre">SymPy</span></code> is a free CAS that we will use in studying dynamics. It has many advanced features that are particularly useful in studying rigid body dynamics.</p>
+<p>In this book, we exploit a computer algebra system (CAS, for short) to perform vector algebra operations. A CAS is a software that allows manipulation of non-numerical as well as numerical mathematical expressions in a manner similar to that preformed manually (on a piece of paper by humans).</p>
+<p><code class="docutils literal notranslate"><span class="pre">SymPy</span></code> is an <a class="reference external" href="https://en.wikipedia.org/wiki/Open-source_software">open-source</a> and free CAS that we will use in our studies on dynamics in this textbook. It has many advanced features that are particularly useful in studying dynamics of rigid bodies.</p>
 </div>
 </div>
 
@@ -530,7 +571,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="vector.html" title="previous page">Fundamental concepts</a>
-    <a class='right-next' id="next-link" href="Week1/NB_Tutorial_Vectors_ReferenceFrames.html" title="next page">Interactive Textbook</a>
+    <a class='right-next' id="next-link" href="Week1/NB_Tutorial_Vectors_ReferenceFrames.html" title="next page">Vector Algebra with a Computer Algebra System</a>
 
         </div>
         

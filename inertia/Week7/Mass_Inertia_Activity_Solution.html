@@ -73,6 +73,8 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
       
       <h1 class="site-logo" id="site-title">Computational Dynamics</h1>
       
@@ -107,7 +109,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../kinematics/Week1/NB_Tutorial_Vectors_ReferenceFrames.html">
-   Interactive Textbook
+   Vector Algebra with a Computer Algebra System
   </a>
  </li>
  <li class="toctree-l1">
@@ -277,6 +279,23 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../kinematics/Week1/NB_Tutorial_string.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../kinematics/Week1/NB_Tutorial_variable.html">
+   How to interact with this tutorial
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -349,6 +368,11 @@
                     alt="Interact on binder">Binder</button></a>
         
         
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/inertia/Week7/Mass_Inertia_Activity_Solution.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
         
         
     </div>
@@ -432,8 +456,8 @@
 <div class="toc"><ul class="toc-item"><li><span><a href="#Overview-of-Practice-Activity" data-toc-modified-id="Overview-of-Practice-Activity-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Overview of Practice Activity</a></span></li><li><span><a href="#Solution" data-toc-modified-id="Solution-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Solution</a></span><ul class="toc-item"><li><span><a href="#Evaluate-inertia-matrix-of-$A$-about-$O$" data-toc-modified-id="Evaluate-inertia-matrix-of-$A$-about-$O$-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>Evaluate inertia matrix of $A$ about $O$</a></span></li><li><span><a href="#Evaluate-inertia-matrix-of-$B$-about-$O$" data-toc-modified-id="Evaluate-inertia-matrix-of-$B$-about-$O$-2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span>Evaluate inertia matrix of $B$ about $O$</a></span></li><li><span><a href="#Evaluate-inertia-matrix-of-$C$-about-$O$" data-toc-modified-id="Evaluate-inertia-matrix-of-$C$-about-$O$-2.3"><span class="toc-item-num">2.3&nbsp;&nbsp;</span>Evaluate inertia matrix of $C$ about $O$</a></span></li></ul></li><li><span><a href="#Generate-inertia-matrix-of-system-from-composite-theorem" data-toc-modified-id="Generate-inertia-matrix-of-system-from-composite-theorem-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Generate inertia matrix of system from composite theorem</a></span></li></ul></div><div class="section" id="overview-of-practice-activity">
 <h1>Overview of Practice Activity<a class="headerlink" href="#overview-of-practice-activity" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-default" id="id1">
-<a class="reference internal image-reference" href="../../_images/Problem21.png"><img alt="../../_images/Problem21.png" src="../../_images/Problem21.png" style="width: 300px; height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Door wall</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../../_images/Problem22.png"><img alt="../../_images/Problem22.png" src="../../_images/Problem22.png" style="width: 300px; height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Door wall</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>The figure above shows a composite system made up of three slender rods; the total mass of this system is <span class="math notranslate nohighlight">\(M\)</span>. For this system, you are to derive the inertia matrix of the system about the point O; that is, determine all the 9 elements of <span class="math notranslate nohighlight">\([{\bf I}]^{S/O}\)</span>. Recall that:</p>
 <p><span class="math notranslate nohighlight">\([{\bf I}]^{S/O} = \begin{bmatrix}
@@ -451,7 +475,7 @@ I^{S/O}_{zx} &amp; I^{S/O}_{zy} &amp; I^{S/O}_{zz}
 </ol>
 <div class="figure align-default" id="id2">
 <a class="reference internal image-reference" href="inertia/Week7/Figures/Problem22.png"><img alt="inertia/Week7/Figures/Problem22.png" src="inertia/Week7/Figures/Problem22.png" style="width: 300px; height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Door wall</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Door wall</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>The figure above essentially tells you that the moment of inertia scalar about G in a direction perpendicular to rigid rod’s length is <span class="math notranslate nohighlight">\(\frac{1}{12}\)</span>(mass of the rod)<span class="math notranslate nohighlight">\(\cdot\)</span>(length of the rod)<span class="math notranslate nohighlight">\(^2\)</span>.</p>
 <p>Additionally, you are also told that, for this slender rigid rod in the figure:</p>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interactive Textbook &#8212; Computational Dynamics</title>
+    <title>Vector Algebra with a Computer Algebra System &#8212; Computational Dynamics</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -73,6 +73,8 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
       
       <h1 class="site-logo" id="site-title">Computational Dynamics</h1>
       
@@ -107,7 +109,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Interactive Textbook
+   Vector Algebra with a Computer Algebra System
   </a>
  </li>
  <li class="toctree-l1">
@@ -277,6 +279,23 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="NB_Tutorial_string.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NB_Tutorial_variable.html">
+   How to interact with this tutorial
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -350,6 +369,11 @@
         
         
         
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/kinematics/Week1/NB_Tutorial_Vectors_ReferenceFrames.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
         
     </div>
 </div>
@@ -366,13 +390,15 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Interactive Textbook
+   Vector Algebra with a Computer Algebra System
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-interact-with-this-tutorial">
-   How to interact with this tutorial
-  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-interact-with-this-tutorial">
+     How to interact with this tutorial
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pre-knowledge-for-this-tutorial">
@@ -477,20 +503,26 @@
         
               <div>
                 
-  <h1>Table of Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Interactive-Textbook" data-toc-modified-id="Interactive-Textbook-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Interactive Textbook</a></span></li><li><span><a href="#How-to-interact-with-this-tutorial" data-toc-modified-id="How-to-interact-with-this-tutorial-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>How to interact with this tutorial</a></span></li><li><span><a href="#Pre-knowledge-for-this-tutorial" data-toc-modified-id="Pre-knowledge-for-this-tutorial-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Pre-knowledge for this tutorial</a></span></li><li><span><a href="#Reference-Frames-and-Vectors" data-toc-modified-id="Reference-Frames-and-Vectors-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Reference Frames and Vectors</a></span><ul class="toc-item"><li><span><a href="#Introduction" data-toc-modified-id="Introduction-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>Introduction</a></span></li><li><span><a href="#Initial-program-setup:-get-the-necessary-tools!" data-toc-modified-id="Initial-program-setup:-get-the-necessary-tools!-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>Initial program setup: get the necessary tools!</a></span></li><li><span><a href="#Create-the-vector-'v'" data-toc-modified-id="Create-the-vector-'v'-4.3"><span class="toc-item-num">4.3&nbsp;&nbsp;</span>Create the vector 'v'</a></span></li><li><span><a href="#Some-operations-on-vector-'v'" data-toc-modified-id="Some-operations-on-vector-'v'-4.4"><span class="toc-item-num">4.4&nbsp;&nbsp;</span>Some operations on vector 'v'</a></span></li></ul></li><li><span><a href="#Vector-algebra" data-toc-modified-id="Vector-algebra-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Vector algebra</a></span><ul class="toc-item"><li><span><a href="#Addition" data-toc-modified-id="Addition-5.1"><span class="toc-item-num">5.1&nbsp;&nbsp;</span>Addition</a></span><ul class="toc-item"><li><span><a href="#Activity" data-toc-modified-id="Activity-5.1.1"><span class="toc-item-num">5.1.1&nbsp;&nbsp;</span>Activity</a></span></li></ul></li><li><span><a href="#Multiplication" data-toc-modified-id="Multiplication-5.2"><span class="toc-item-num">5.2&nbsp;&nbsp;</span>Multiplication</a></span><ul class="toc-item"><li><span><a href="#Scalar-product" data-toc-modified-id="Scalar-product-5.2.1"><span class="toc-item-num">5.2.1&nbsp;&nbsp;</span>Scalar product</a></span></li><li><span><a href="#Dot-product" data-toc-modified-id="Dot-product-5.2.2"><span class="toc-item-num">5.2.2&nbsp;&nbsp;</span>Dot product</a></span></li><li><span><a href="#Cross-product" data-toc-modified-id="Cross-product-5.2.3"><span class="toc-item-num">5.2.3&nbsp;&nbsp;</span>Cross product</a></span><ul class="toc-item"><li><span><a href="#Activity:" data-toc-modified-id="Activity:-5.2.3.1"><span class="toc-item-num">5.2.3.1&nbsp;&nbsp;</span>Activity:</a></span></li></ul></li></ul></li></ul></li><li><span><a href="#Additional-useful-features" data-toc-modified-id="Additional-useful-features-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Additional useful features</a></span><ul class="toc-item"><li><span><a href="#Activity" data-toc-modified-id="Activity-6.1"><span class="toc-item-num">6.1&nbsp;&nbsp;</span>Activity</a></span></li></ul></li></ul></div><div class="section" id="interactive-textbook">
-<h1>Interactive Textbook<a class="headerlink" href="#interactive-textbook" title="Permalink to this headline">¶</a></h1>
-<p>I’ve written this <span style="color: red;">interactive notebook</span> to help get you started using SymPy for use in DEN4108 Engineering Mechanics: Dynamics. This particular notebook is a tutorial and set of exercises for you to do that will gradually help you start to get the basics of vector algebra using SymPy.</p>
-<p>Each unit of the module has more such notebooks as well as other resources. Work through them at your own pace each week. I hope you enjoy learning to program.</p>
-<p>-Angadh Nanjangud</p>
-</div>
+  <div class="section" id="vector-algebra-with-a-computer-algebra-system">
+<h1>Vector Algebra with a Computer Algebra System<a class="headerlink" href="#vector-algebra-with-a-computer-algebra-system" title="Permalink to this headline">¶</a></h1>
+<p>This <a class="reference external" href="https://en.wikipedia.org/wiki/Project_Jupyter#Jupyter_Notebook">interactive Jupyter notebook</a> is to help get you started using <a class="reference external" href="https://www.sympy.org/en/index.html">SymPy</a> for performing vector computations. This contrasts with your standard hand-held calculator, which performs computations on scalar quantities.</p>
+<p>This particular page is a Jupyter notebook-based tutorial that also contains a set of interactive exercises to gradually help get you started with the basics of computational vector algebra (which you now know how to do if you watched the videos <a class="reference internal" href="../vector.html"><span class="doc std std-doc">here</span></a>) using SymPy.</p>
+<p>This textbook has more such interactive notebooks as well as other resources. Work through them at your own pace each week. I hope this makes learning to program a more enjoyable process.</p>
 <div class="section" id="how-to-interact-with-this-tutorial">
-<h1>How to interact with this tutorial<a class="headerlink" href="#how-to-interact-with-this-tutorial" title="Permalink to this headline">¶</a></h1>
+<h2>How to interact with this tutorial<a class="headerlink" href="#how-to-interact-with-this-tutorial" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This portion of the discussion assumes you have access to the Jupyter platform. Two ways to access:</p>
+<ol class="simple">
+<li><p><strong>Easiest option</strong>: online access such provided by universities e.g., <a class="reference external" href="https://jhub.sems.qmul.ac.uk">QMUL</a> offers one to its students here; or</p></li>
+<li><p><strong>Advanced option</strong>: by installing <a class="reference external" href="https://anaconda.org">Anaconda</a> on your personal computer and accessing the Jupyter notebook interface. Instructions here.</p></li>
+</ol>
+</div>
 <p>Execute a code cell (such as the one right below this line) by clicking on it
 and simultaneously pressing ‘Shift+Enter’. You will then see a new line appear,
 which says <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">name</span> <span class="pre">is</span>&#160; <span class="pre">Bond.</span> <span class="pre">James</span> <span class="pre">Bond</span></code>. You may change the text stored in
-<code class="docutils literal notranslate"><span class="pre">name</span></code> to your name. Recall that <code class="docutils literal notranslate"><span class="pre">name</span></code> is a <a class="reference external" href="NB_Tutorial_variable.ipynb#Definition">variable</a>
-which stores a <a class="reference external" href="NB_Tutorial_string.ipynb#Conceptual-Definition">string</a>.</p>
+<code class="docutils literal notranslate"><span class="pre">name</span></code> to your name. Recall that <code class="docutils literal notranslate"><span class="pre">name</span></code> is a <a class="reference internal" href="NB_Tutorial_variable.html"><span class="doc std std-doc">variable</span></a>
+which stores a <a class="reference internal" href="NB_Tutorial_string.html"><span class="doc std std-doc">string</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Bond. James Bond.&#39;</span>
@@ -507,6 +539,7 @@ which stores a <a class="reference external" href="NB_Tutorial_string.ipynb#Conc
 <p>All the code cells below can be run in this manner. In spots which have
 activities, you should type in your responses. This will help you assess your
 understanding.</p>
+</div>
 </div>
 <div class="section" id="pre-knowledge-for-this-tutorial">
 <h1>Pre-knowledge for this tutorial<a class="headerlink" href="#pre-knowledge-for-this-tutorial" title="Permalink to this headline">¶</a></h1>

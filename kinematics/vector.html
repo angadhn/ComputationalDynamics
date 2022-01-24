@@ -73,6 +73,8 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
       
       <h1 class="site-logo" id="site-title">Computational Dynamics</h1>
       
@@ -107,7 +109,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Week1/NB_Tutorial_Vectors_ReferenceFrames.html">
-   Interactive Textbook
+   Vector Algebra with a Computer Algebra System
   </a>
  </li>
  <li class="toctree-l1">
@@ -277,6 +279,23 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Week1/NB_Tutorial_string.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Week1/NB_Tutorial_variable.html">
+   How to interact with this tutorial
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -350,6 +369,11 @@
         
         
         
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/kinematics/vector.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
         
     </div>
 </div>
@@ -371,10 +395,10 @@
 <h1>Fundamental concepts<a class="headerlink" href="#fundamental-concepts" title="Permalink to this headline">¶</a></h1>
 <p>The following definitions are used in kinematics:</p>
 <ol class="simple">
-<li><p><strong>Particles</strong>: Objects that can be modelled as point masses, having negligible dimension.</p></li>
+<li><p><strong>Particles</strong>: Objects that can be modeled as point masses, having negligible dimension.</p></li>
 <li><p><strong>Point</strong>: A massless particle.</p></li>
-<li><p><strong>Rigid bodies</strong>: Objects that have some shape. They can have a mass or be massless. Also, these objects do not deform when a force is applied to them.</p></li>
-<li><p><strong>Reference frame</strong>: A massless rigid body with respect to which an analyst observes and measures motion of objects.</p></li>
+<li><p><strong>Rigid bodies</strong>: These are objects that have some predefined constant shape and a mass. The distances between all points of a rigid body remain constant for all time, even when a force is applied to them. Also, these objects do not deform when a force is applied to them.</p></li>
+<li><p><strong>Reference frame</strong>: Essentially, these frames serve as a reference with respect to which an analyst chooses to observe and measure the motion of other objects. Reference frames can be thought of as massless rigid bodies, thus they are the analog of what a point is to a particle. As you will come to infer (or may already know from other readings), this also implies that the mass moment of inertia is zero for massless bodies.</p></li>
 </ol>
 <div class="figure align-default" id="id1">
 <img alt="../_images/213.png" src="../_images/213.png" />
@@ -389,6 +413,17 @@
 (ii) <strong>vector algebra</strong>: addition of vectors and multiplication of vectors<br>
 (iii) <strong>vector calculus</strong>: vector differentiation<br></p></li>
 </ul>
+<p>Topics (i) and (ii) above are revisited in the following YouTube playlists, which I recommend watching.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The below is a <strong>playlist comprising eleven videos</strong>. They should automatically play one after another.</p>
+<iframe width="656" height="551" src="https://www.youtube.com/embed/dd-PXs9bKH4?list=PLiZ4Kv-hA48VTFBQSCBFi542T6KChtX65" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The below is a <strong>playlist comprising two videos</strong>. They should automatically play one after another.</p>
+<iframe width="656" height="551" src="https://www.youtube.com/embed/7LyPdUVZuho?list=PLiZ4Kv-hA48VngnZnGzn17dmZjgEgnUXa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

@@ -32,7 +32,21 @@ problems as computational methods.
 
 - This project is still under-development
   so [contributions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
-  and [suggestions](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) are welcome. 
+  and [suggestions](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) are welcome.
+
+## How to create your own Jupyter Book
+
+### Creating an environment
+1. `conda env create -f environment.yml`
+2. `conda activate qe-example`
+
+### Building a Jupyter Book
+Run the following command in your terminal: `jb build .`.
+If you would like to work with a clean build, you can empty the build folder by running `jb clean .`. If the jupyter execution is cached, this command will not delete the cached folder. To remove the build folder, you can run `jb clean --all .`.
+
+### Publishing this Jupyter Book
+
+Run `ghp-import -n -p -f _build/html`
 
 ## Active Contributors:
 
