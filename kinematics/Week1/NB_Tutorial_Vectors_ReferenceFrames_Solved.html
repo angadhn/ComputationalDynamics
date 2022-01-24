@@ -53,8 +53,6 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Vectors and Reference Frames" href="../reference-frame.html" />
-    <link rel="prev" title="Vectors Fundamentals" href="../vectors-revision.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -96,7 +94,7 @@
   Vectors
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../vector.html">
    Fundamental concepts
@@ -107,8 +105,8 @@
    Vectors Fundamentals
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="NB_Tutorial_Vectors_ReferenceFrames.html">
    Vector Algebra with a Computer Algebra System
   </a>
  </li>
@@ -336,7 +334,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/kinematics/Week1/NB_Tutorial_Vectors_ReferenceFrames.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/kinematics/Week1/NB_Tutorial_Vectors_ReferenceFrames_Solved.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -361,7 +359,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/kinematics/Week1/NB_Tutorial_Vectors_ReferenceFrames.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/kinematics/Week1/NB_Tutorial_Vectors_ReferenceFrames_Solved.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -369,7 +367,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/kinematics/Week1/NB_Tutorial_Vectors_ReferenceFrames.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/kinematics/Week1/NB_Tutorial_Vectors_ReferenceFrames_Solved.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -401,8 +399,8 @@
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reference-frames-and-vectors-in-sympy">
-   Reference Frames and Vectors in SymPy
+  <a class="reference internal nav-link" href="#reference-frames-and-vectors">
+   Reference Frames and Vectors
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
@@ -431,32 +429,34 @@
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#reinforcement-activities">
-       Reinforcement Activities
+      <a class="reference internal nav-link" href="#activity">
+       Activity
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiplication">
+     Multiplication
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#scalar-product">
+       Scalar product
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#multiplication">
-       Multiplication
+      <a class="reference internal nav-link" href="#dot-product">
+       Dot product
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cross-product">
+       Cross product
       </a>
       <ul class="nav section-nav flex-column">
        <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#scalar-product">
-         Scalar product
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#dot-product">
-         Dot product
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#cross-product">
-         Cross product
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#activity">
+        <a class="reference internal nav-link" href="#id1">
          Activity:
         </a>
        </li>
@@ -464,17 +464,17 @@
      </li>
     </ul>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-useful-features">
+   Additional useful features
+  </a>
+  <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#additional-useful-features">
-     Additional useful features
+    <a class="reference internal nav-link" href="#id2">
+     Activity
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#reinforcement-activity">
-       Reinforcement Activity
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -491,6 +491,9 @@
                 
   <div class="section" id="vector-algebra-with-a-computer-algebra-system">
 <h1>Vector Algebra with a Computer Algebra System<a class="headerlink" href="#vector-algebra-with-a-computer-algebra-system" title="Permalink to this headline">¶</a></h1>
+<p>This <a class="reference external" href="https://en.wikipedia.org/wiki/Project_Jupyter#Jupyter_Notebook">interactive Jupyter notebook</a> is to help get you started using <a class="reference external" href="https://www.sympy.org/en/index.html">SymPy</a> for performing vector computations. This contrasts with your standard hand-held calculator, which performs computations on scalar quantities.</p>
+<p>This particular page is a Jupyter notebook-based tutorial that also contains a set of interactive exercises to gradually help get you started with the basics of computational vector algebra (which you now know how to do if you watched the videos <a class="reference internal" href="../vector.html"><span class="doc std std-doc">here</span></a>) using SymPy.</p>
+<p>This textbook has more such interactive notebooks as well as other resources. Work through them at your own pace each week. I hope this makes learning to program a more enjoyable process.</p>
 <div class="section" id="how-to-interact-with-this-tutorial">
 <h2>How to interact with this tutorial<a class="headerlink" href="#how-to-interact-with-this-tutorial" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
@@ -501,9 +504,6 @@
 <li><p><strong>Advanced and adventurous option</strong>: by installing <a class="reference external" href="https://anaconda.org">Anaconda</a> on your personal computer and accessing the Jupyter notebook interface. Instructions on using Jupyter notebooks with Anaconda can be found <a class="reference external" href="https://docs.anaconda.com/ae-notebooks/user-guide/basic-tasks/apps/jupyter/index.html">here</a>.</p></li>
 </ol>
 </div>
-<p>This <a class="reference external" href="https://en.wikipedia.org/wiki/Project_Jupyter#Jupyter_Notebook">interactive Jupyter notebook</a> is to help get you started using <a class="reference external" href="https://www.sympy.org/en/index.html">SymPy</a> for performing vector computations. This contrasts with your standard hand-held calculator, which performs computations on scalar quantities.</p>
-<p>This particular page is a Jupyter notebook-based tutorial that also contains a set of interactive exercises to gradually help get you started with the basics of computational vector algebra (which you now know how to do if you watched the videos <a class="reference internal" href="../vector.html"><span class="doc std std-doc">here</span></a>) using SymPy.</p>
-<p>This textbook has more such interactive notebooks as well as other resources. Work through them at your own pace each week. I hope this makes learning to program a more enjoyable process.</p>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Here <code class="docutils literal notranslate"><span class="pre">name</span></code> is a variable which contains a string.</p>
@@ -532,8 +532,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="reference-frames-and-vectors-in-sympy">
-<h1>Reference Frames and Vectors in SymPy<a class="headerlink" href="#reference-frames-and-vectors-in-sympy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reference-frames-and-vectors">
+<h1>Reference Frames and Vectors<a class="headerlink" href="#reference-frames-and-vectors" title="Permalink to this headline">¶</a></h1>
 <p>In the preceding discussions, we reviewed vectors and reference frames. Therein, the component form of representing
 a vector was presented- this allows us to write a vector using its scalar components and some unit vectors.</p>
 <p>For example: <span class="math notranslate nohighlight">\({\bf v}= v_1 \hat{\bf{a}}_x + v_2 \hat{\bf{a}}_y + v_3
@@ -753,38 +753,58 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 </div>
 </div>
 </div>
-<div class="section" id="reinforcement-activities">
-<h3>Reinforcement Activities<a class="headerlink" href="#reinforcement-activities" title="Permalink to this headline">¶</a></h3>
-<p><strong>Question 1:</strong> Can you write one line of code to add <span class="math notranslate nohighlight">\(\bf v\)</span> to itself?</p>
+<div class="section" id="activity">
+<h3>Activity<a class="headerlink" href="#activity" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Can you write one line of code to add <span class="math notranslate nohighlight">\(\bf v\)</span> to itself?</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Enter your code below</span>
+<span class="n">v</span><span class="o">+</span><span class="n">v</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 v_{1}\mathbf{\hat{a}_x} + 2 v_{2}\mathbf{\hat{a}_y} + 2 v_{3}\mathbf{\hat{a}_z}\]</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Can you create a new vector <span class="math notranslate nohighlight">\(\bf u\)</span> expressed in a new reference frame <span class="math notranslate nohighlight">\(B\)</span>?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Enter your code below</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">ReferenceFrame</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;u1, u2, u3&quot;</span><span class="p">,</span> <span class="n">real</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">u1</span><span class="o">*</span><span class="n">B</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">u2</span><span class="o">*</span><span class="n">B</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">u3</span> <span class="o">*</span> <span class="n">B</span><span class="o">.</span><span class="n">z</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Question 2:</strong> Can you create a new vector <span class="math notranslate nohighlight">\(\bf u\)</span> expressed in a new reference frame <span class="math notranslate nohighlight">\(B\)</span>?</p>
+<ol class="simple">
+<li><p>What is the result of adding <span class="math notranslate nohighlight">\(\bf u\)</span> to <span class="math notranslate nohighlight">\(\bf v\)</span>? Does this make sense?</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Enter your code below</span>
+<span class="n">u</span> <span class="o">+</span> <span class="n">v</span>
 </pre></div>
 </div>
 </div>
-</div>
-<p><strong>Question 3:</strong> What is the result of adding <span class="math notranslate nohighlight">\(\bf u\)</span> to <span class="math notranslate nohighlight">\(\bf v\)</span>? Does this make sense?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Enter your code below</span>
-</pre></div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle u_{1}\mathbf{\hat{b}_x} + u_{2}\mathbf{\hat{b}_y} + u_{3}\mathbf{\hat{b}_z} + v_{1}\mathbf{\hat{a}_x} + v_{2}\mathbf{\hat{a}_y} + v_{3}\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="multiplication">
-<h3>Multiplication<a class="headerlink" href="#multiplication" title="Permalink to this headline">¶</a></h3>
+<h2>Multiplication<a class="headerlink" href="#multiplication" title="Permalink to this headline">¶</a></h2>
 <p>It is quite straightforward to multiply a vector by a scalar. For example:</p>
 <div class="section" id="scalar-product">
-<h4>Scalar product<a class="headerlink" href="#scalar-product" title="Permalink to this headline">¶</a></h4>
+<h3>Scalar product<a class="headerlink" href="#scalar-product" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span> <span class="o">*</span> <span class="n">v</span>
@@ -798,7 +818,7 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 </div>
 </div>
 <div class="section" id="dot-product">
-<h4>Dot product<a class="headerlink" href="#dot-product" title="Permalink to this headline">¶</a></h4>
+<h3>Dot product<a class="headerlink" href="#dot-product" title="Permalink to this headline">¶</a></h3>
 <p>Compute the dot product between two vectors:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -813,7 +833,7 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 </div>
 </div>
 <div class="section" id="cross-product">
-<h4>Cross product<a class="headerlink" href="#cross-product" title="Permalink to this headline">¶</a></h4>
+<h3>Cross product<a class="headerlink" href="#cross-product" title="Permalink to this headline">¶</a></h3>
 <p>Similarly, one can also take the cross products between two vectors:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -826,9 +846,8 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 \[\displaystyle 0\]</div>
 </div>
 </div>
-</div>
-<div class="section" id="activity">
-<h4>Activity:<a class="headerlink" href="#activity" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id1">
+<h4>Activity:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p>Can you write code to compute the dot and cross products product between
 <span class="math notranslate nohighlight">\(\bf v\)</span> and <span class="math notranslate nohighlight">\(\bf w\)</span>?</p>
 <div class="cell docutils container">
@@ -846,9 +865,13 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="additional-useful-features">
-<h2>Additional useful features<a class="headerlink" href="#additional-useful-features" title="Permalink to this headline">¶</a></h2>
-<p>The matrix form of both vectors and dyadics can be found if the frame of interest is provided.</p>
+<h1>Additional useful features<a class="headerlink" href="#additional-useful-features" title="Permalink to this headline">¶</a></h1>
+<ol class="simple">
+<li><p>The matrix form of both vectors and dyadics can be found if the frame of
+interest is provided.</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">to_matrix</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
@@ -860,7 +883,10 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 \[\begin{split}\displaystyle \left[\begin{matrix}v_{1}\\v_{2}\\v_{3}\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
-<p>You can also find all of the scalar variables present in a vector with the <code class="docutils literal notranslate"><span class="pre">free_symbols()</span></code> feature, as shown below:</p>
+<ol class="simple">
+<li><p>You can find all of the scalar variables present in a vector with
+<code class="docutils literal notranslate"><span class="pre">free_symbols()</span></code>.</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">free_symbols</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
@@ -873,8 +899,10 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 </div>
 </div>
 </div>
-<p>Partial derivatives of vectors can be computed in the specified reference
-frame.</p>
+<ol class="simple">
+<li><p>Partial derivatives of vectors can be computed in the specified reference
+frame.</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">v2</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>
@@ -886,7 +914,9 @@ frame.</p>
 \[\displaystyle \mathbf{\hat{a}_y}\]</div>
 </div>
 </div>
-<p>You can substitute numerical values for scalar expressions.</p>
+<ol class="simple">
+<li><p>You can substitute numerical values for scalar expressions.</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">v1</span><span class="p">:</span> <span class="mf">1.34</span><span class="p">,</span> <span class="n">v2</span><span class="p">:</span> <span class="mi">5</span><span class="p">})</span>
@@ -898,7 +928,7 @@ frame.</p>
 \[\displaystyle 1.34\mathbf{\hat{a}_x} + 5\mathbf{\hat{a}_y} + v_{3}\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
-<p>Note that this does not alter the original definition of vector <span class="math notranslate nohighlight">\(\bf v\)</span> (or, more specifically, its scalars); this can be seen as shown below:</p>
+<p>Note that this does not alter the vector or the scalars</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span>
@@ -932,7 +962,9 @@ frame.</p>
 \[\displaystyle v_{2}\]</div>
 </div>
 </div>
-<p>The above three code cells demonstrate that the original vector is unchanged. However, we can make use of the new substitutions by creating a new variable <code class="docutils literal notranslate"><span class="pre">z</span></code> and assigning it the numerical representation of the vector <span class="math notranslate nohighlight">\(\bf v\)</span> (stored in the variable<code class="docutils literal notranslate"><span class="pre">v</span></code>). This is shown below:</p>
+<p>Thus, we can make use of the new subsitutions by assigning it to a different
+variable.
+Let’s call that <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">v1</span><span class="p">:</span> <span class="mf">1.34</span><span class="p">,</span> <span class="n">v2</span><span class="p">:</span> <span class="mi">5</span><span class="p">})</span>
@@ -945,9 +977,9 @@ frame.</p>
 \[\displaystyle 1.34\mathbf{\hat{a}_x} + v_{2}\mathbf{\hat{a}_y} + v_{3}\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
-<div class="section" id="reinforcement-activity">
-<h3>Reinforcement Activity<a class="headerlink" href="#reinforcement-activity" title="Permalink to this headline">¶</a></h3>
-<p>Run the following code snippet:</p>
+<div class="section" id="id2">
+<h2>Activity<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Run the following code snippet</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">to_matrix</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
@@ -965,8 +997,8 @@ below and identify what its <code class="docutils literal notranslate"><span cla
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Enter your code below</span>
+m<span class="o">?</span>
 </pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -998,8 +1030,6 @@ below and identify what its <code class="docutils literal notranslate"><span cla
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../vectors-revision.html" title="previous page">Vectors Fundamentals</a>
-    <a class='right-next' id="next-link" href="../reference-frame.html" title="next page">Vectors and Reference Frames</a>
 
         </div>
         
