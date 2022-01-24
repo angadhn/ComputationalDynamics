@@ -93,7 +93,7 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Vectors
+  Kinematics
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -426,6 +426,13 @@
 <div class="figure align-default" id="eqn1">
 <img alt="../../_images/Equation1.png" src="../../_images/Equation1.png" />
 </div>
+<p>The above handwritten equations can be written in typeface as:</p>
+<div class="math notranslate nohighlight" id="equation-eqn1">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eqn1" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{align}
+{\bf v}&amp; = v \hat{\bf b}_x\\
+{\bf e}&amp; = -e \hat{\bf b}_y
+\end{align}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(e\)</span> are the magnitudes of <span class="math notranslate nohighlight">\({\bf v}\)</span> and <span class="math notranslate nohighlight">\({\bf e}\)</span>.</p>
 </div>
 <div class="section" id="create-scalars-using-symbols">
 <h1>Create scalars using “symbols”<a class="headerlink" href="#create-scalars-using-symbols" title="Permalink to this headline">¶</a></h1>
@@ -524,7 +531,7 @@
 <div class="figure align-default" id="id2">
 <img alt="../../_images/Equation1.png" src="../../_images/Equation1.png" />
 </div>
-<p>The final task of L2PA1 is to type in the above handwritten component form of <span class="math notranslate nohighlight">\({\bf v}\)</span> and <span class="math notranslate nohighlight">\({\bf e}\)</span> the scalars and unit vectors that we created in Sections 2 and 3 using SymPy. We will store the <span class="math notranslate nohighlight">\({\bf v}\)</span> and <span class="math notranslate nohighlight">\({\bf e}\)</span> as two variables <code class="docutils literal notranslate"><span class="pre">v_vec</span></code> and <code class="docutils literal notranslate"><span class="pre">e_vec</span></code>, respectively, as shown below:</p>
+<p>The final task of PA1 is to type in the above handwritten component form of <span class="math notranslate nohighlight">\({\bf v}\)</span> and <span class="math notranslate nohighlight">\({\bf e}\)</span> the scalars and unit vectors that we created in Sections 2 and 3 using SymPy. We will store the <span class="math notranslate nohighlight">\({\bf v}\)</span> and <span class="math notranslate nohighlight">\({\bf e}\)</span> as two variables <code class="docutils literal notranslate"><span class="pre">v_vec</span></code> and <code class="docutils literal notranslate"><span class="pre">e_vec</span></code>, respectively, as shown below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v_vec</span> <span class="o">=</span> <span class="n">v</span><span class="o">*</span><span class="n">B</span><span class="o">.</span><span class="n">x</span> <span class="c1"># v_vec stores the vector v that was handwritten in Equation 1 at the start of this notebook.</span>
@@ -561,6 +568,7 @@
 \[\displaystyle -  e\mathbf{\hat{b}_y}\]</div>
 </div>
 </div>
+<p>You can see that these are the same as Equation <a class="reference internal" href="../reference-frame.html#equation-eqn1">(1)</a> above.</p>
 </div>
 
     <script type="text/x-thebe-config">
