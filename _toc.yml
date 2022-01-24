@@ -1,7 +1,7 @@
 format: jb-book
 root: kinematics/introduction
 parts:
-  - caption: Vectors
+  - caption: Kinematics
     chapters:
     - file: kinematics/vector
     - file: kinematics/vectors-revision
