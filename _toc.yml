@@ -7,20 +7,20 @@ parts:
     - file: kinematics/vectors-revision
     - file: kinematics/Week1/NB_Tutorial_Vectors_ReferenceFrames.ipynb
     - file: kinematics/reference-frame
-    - file: kinematics/Week2/L2PA1
+    - file: kinematics/Week2/PA1
     - file: kinematics/rigid-bodies1
       sections:
-      - file: kinematics/Week2/L2PA2
+      - file: kinematics/Week2/PA2
       - file: kinematics/DCM
-      - file: kinematics/Week4/L4PA6
+      - file: kinematics/Week3/PA3
       - file: kinematics/vector-calculus
-      - file: kinematics/Week3/L3PA3
+      - file: kinematics/Week3/PA4
       - file: kinematics/rigid-bodies2
-      - file: kinematics/Week4/L4PA5
-      - file: kinematics/Week3/L3PA4
+      - file: kinematics/Week4/PA5
+      - file: kinematics/Week4/PA6
     - file: kinematics/particle-kinematics
     - file: kinematics/theorems
-    - file: kinematics/Week5/L5PA7
+    - file: kinematics/Week5/PA7
   - caption: Inertia
     chapters:
     - file: inertia/inertia-1
