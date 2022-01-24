@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rigid Body Kinematics &#8212; Computational Dynamics</title>
+    <title>&lt;no title&gt; &#8212; Computational Dynamics</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,12 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Classification of Rigid Body Motion" href="rigid-bodies1.html" />
-    <link rel="prev" title="Overview of Practice Activity L2PA1" href="Week2/L2PA1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -96,7 +92,7 @@
   Vectors
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="vector.html">
    Fundamental concepts
@@ -109,37 +105,32 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Week1/NB_Tutorial_Vectors_ReferenceFrames.html">
-   Vector Algebra with a Computer Algebra System
+   JN1: Vector Algebra with a Computer Algebra System
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="reference-frame.html">
-   Vectors and Reference Frames
+   Vectors and Reference Frames for Dynamics: Physical Examples
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Week2/L2PA1.html">
-   Overview of Practice Activity L2PA1
+   JN2: Practice Activity 1
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="rigid-bodies1.html">
    Rigid Body Kinematics
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="rigid-bodies1.html">
-     Classification of Rigid Body Motion
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="Week2/L2PA2.html">
-     Overview of Practice Activity L2PA2
+     JN3: Practice Activity 2
     </a>
    </li>
    <li class="toctree-l2">
@@ -149,7 +140,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Week4/L4PA6.html">
-     Overview of Practice Activity L4PA6
+     JN4: Practice Activity 3
     </a>
    </li>
    <li class="toctree-l2">
@@ -159,7 +150,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Week3/L3PA3.html">
-     Overview of Practice Acitivty L3PA3
+     JN5: Practice Activity 4
     </a>
    </li>
    <li class="toctree-l2">
@@ -169,12 +160,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Week4/L4PA5.html">
-     Overview of Practice Activity L4PA5
+     JN6: Practice Activity 5
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Week3/L3PA4.html">
-     Overview of Practice Acitivty L3PA4
+     JN7: Practice Activity 6
     </a>
    </li>
   </ul>
@@ -191,7 +182,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Week5/L5PA7.html">
-   Overview of Practice Acitivty L5PA5
+   JN8: Practice Activity 7
   </a>
  </li>
 </ul>
@@ -383,6 +374,14 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -391,18 +390,7 @@
         
               <div>
                 
-  <div class="section" id="rigid-body-kinematics">
-<h1>Rigid Body Kinematics<a class="headerlink" href="#rigid-body-kinematics" title="Permalink to this headline">¶</a></h1>
-<p>Kinematics or Rigid body kinematics is the study of motion while ignoring the cause of motion.</p>
-<p>In kinematics, we are interested in “position”, “velocity”, and “acceleration” and the relationship between them.</p>
-<p>In other words, using the figure below, we are interested in describing the motion of <span class="math notranslate nohighlight">\(B\)</span> in <span class="math notranslate nohighlight">\(A\)</span>.</p>
-<div class="figure align-default" id="id1">
-<img alt="../_images/132.png" src="../_images/132.png" />
-</div>
-<div class="toctree-wrapper compound">
-</div>
-</div>
-
+  
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -428,8 +416,6 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="Week2/L2PA1.html" title="previous page">Overview of Practice Activity L2PA1</a>
-    <a class='right-next' id="next-link" href="rigid-bodies1.html" title="next page">Classification of Rigid Body Motion</a>
 
         </div>
         

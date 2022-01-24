@@ -22,7 +22,7 @@ r_vec.dt(A)
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mValueError[0m                                Traceback (most recent call last)
-[0;32m/var/folders/nv/1xnwf7gx3kx0c_dlh9wxbqkc0000gn/T/ipykernel_88681/1721655755.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/var/folders/nv/1xnwf7gx3kx0c_dlh9wxbqkc0000gn/T/ipykernel_6672/1721655755.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mr_vec[0m[0;34m.[0m[0mdt[0m[0;34m([0m[0mA[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;32m~/opt/anaconda3/envs/qe-mini-example/lib/python3.8/site-packages/sympy/physics/vector/vector.py[0m in [0;36mdt[0;34m(self, otherframe)[0m

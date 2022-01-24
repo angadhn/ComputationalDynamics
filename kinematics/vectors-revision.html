@@ -53,7 +53,7 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Vector Algebra with a Computer Algebra System" href="Week1/NB_Tutorial_Vectors_ReferenceFrames.html" />
+    <link rel="next" title="JN1: Vector Algebra with a Computer Algebra System" href="Week1/NB_Tutorial_Vectors_ReferenceFrames.html" />
     <link rel="prev" title="Fundamental concepts" href="vector.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -109,21 +109,21 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Week1/NB_Tutorial_Vectors_ReferenceFrames.html">
-   Vector Algebra with a Computer Algebra System
+   JN1: Vector Algebra with a Computer Algebra System
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="reference-frame.html">
-   Vectors and Reference Frames
+   Vectors and Reference Frames for Dynamics: Physical Examples
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Week2/L2PA1.html">
-   Overview of Practice Activity L2PA1
+   JN2: Practice Activity 1
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="rigid-bodies.html">
+  <a class="reference internal" href="rigid-bodies1.html">
    Rigid Body Kinematics
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -133,13 +133,8 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="rigid-bodies1.html">
-     Classification of Rigid Body Motion
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="Week2/L2PA2.html">
-     Overview of Practice Activity L2PA2
+     JN3: Practice Activity 2
     </a>
    </li>
    <li class="toctree-l2">
@@ -149,7 +144,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Week4/L4PA6.html">
-     Overview of Practice Activity L4PA6
+     JN4: Practice Activity 3
     </a>
    </li>
    <li class="toctree-l2">
@@ -159,7 +154,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Week3/L3PA3.html">
-     Overview of Practice Acitivty L3PA3
+     JN5: Practice Activity 4
     </a>
    </li>
    <li class="toctree-l2">
@@ -169,12 +164,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Week4/L4PA5.html">
-     Overview of Practice Activity L4PA5
+     JN6: Practice Activity 5
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Week3/L3PA4.html">
-     Overview of Practice Acitivty L3PA4
+     JN7: Practice Activity 6
     </a>
    </li>
   </ul>
@@ -191,7 +186,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Week5/L5PA7.html">
-   Overview of Practice Acitivty L5PA5
+   JN8: Practice Activity 7
   </a>
  </li>
 </ul>
@@ -478,7 +473,7 @@ name: 5
 <div class="section" id="reference-frames">
 <h2>Reference frames<a class="headerlink" href="#reference-frames" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>A set of three unit vectors that are mutually orthogonal.</p>
+<div><p>A set of three right-handed unit vectors (i.e., obeying the ‘right-hand rule’) that are mutually orthogonal.</p>
 </div></blockquote>
 <p>In <a class="reference internal" href="#refr"><span class="std std-numref">Fig. 1</span></a> below, <span class="math notranslate nohighlight">\(X-Y-Z\)</span> form a Cartesian coordinate system. <span class="math notranslate nohighlight">\(\hat{\bf i},\;\hat{\bf j}\;\&amp; \;\hat{\bf k}\)</span> (drawn in pink) are a set of unit vectors that are mutually orthogonal and directed along <span class="math notranslate nohighlight">\(X\)</span>,<span class="math notranslate nohighlight">\(Y\)</span>, and <span class="math notranslate nohighlight">\(Z\)</span>, respectively.</p>
 <div class="figure align-default" id="refr">
@@ -493,7 +488,9 @@ name: 5
 \hat{\bf k} \times \hat{\bf i} = \hat{\bf j}  \\
 \end{split}\]</div>
 <p>In reference to <a class="reference internal" href="#refr"><span class="std std-numref">Fig. 1</span></a> above, this set of unit vectors forms a reference frame <span class="math notranslate nohighlight">\(R\)</span>. Reference frames are useful for studying moving objects. This is discussed in further detail much further on in this book.</p>
-<p>An alternate notation for unit vectors that make up a reference frame commonly used for dynamics is shown in the figure below; it makes use of subscripts in <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span> directions to make it explicit along which coordinate axis the unit vectors are aligned. We will (almost always) see (and use) such subscript-based notations in these notes for sake of clarity.</p>
+<div class="admonition-other-notations-of-unit-vectors admonition">
+<p class="admonition-title">Other notations of unit vectors</p>
+<p>An alternate notation for unit vectors that make up a reference frame commonly used for dynamics is shown in the figure below; it makes use of subscripts in <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span> to make explicit along which coordinate axis the unit vectors are aligned. We will (almost always) see (and use) this alternative subscript-based notations in dynamics for sake of clarity.</p>
 <div class="figure align-default" id="id3">
 <img alt="../_images/710.png" src="../_images/710.png" />
 <p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Reference Frame A and its unit vectors.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
@@ -516,9 +513,10 @@ name: 5
 \end{align}
 \end{split}\]</div>
 </div>
+</div>
 <div class="section" id="component-form">
 <h2>Component form<a class="headerlink" href="#component-form" title="Permalink to this headline">¶</a></h2>
-<p>In <a class="reference internal" href="#id4"><span class="std std-numref">Fig. 3</span></a> below, <span class="math notranslate nohighlight">\(\bf{r}\)</span> is a vector with coordinates <span class="math notranslate nohighlight">\(a,\;b,\;c\)</span> in <span class="math notranslate nohighlight">\(X-Y-Z\)</span>, respectively.</p>
+<p>Let <span class="math notranslate nohighlight">\(a,\;b,\;c\)</span> be three scalar coordinates that describe the location of an arbitrary point in space in the <span class="math notranslate nohighlight">\(X-Y-Z\)</span> coordinate system as shown in <a class="reference internal" href="#id4"><span class="std std-numref">Fig. 3</span></a>. We can locate this point from the origin of the  using a position vector, denoted as <span class="math notranslate nohighlight">\(\bf{r}\)</span>. From our earlier review on vectors form the videos, we can see (in <a class="reference internal" href="#id4"><span class="std std-numref">Fig. 3</span></a>) that the tail of the vector is at the origin while its head is at the point of interest.</p>
 <div class="figure align-default" id="id4">
 <img alt="../_images/89.png" src="../_images/89.png" />
 <p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">The scalar components of <span class="math notranslate nohighlight">\({\bf r}\)</span>.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
@@ -527,12 +525,13 @@ name: 5
 <p class="admonition-title">Note</p>
 <p><span class="math notranslate nohighlight">\(a,\;b,\;c\)</span> are scalars and <span class="math notranslate nohighlight">\({\bf r}\)</span> is a vector.</p>
 </div>
-<p>The component form of <span class="math notranslate nohighlight">\(\bf{r}\)</span> is given by:</p>
+<p>The component form of this position vector, <span class="math notranslate nohighlight">\(\bf{r}\)</span>, can be written as:</p>
 <div class="math notranslate nohighlight">
 \[
 {\bf r} = a\hat{\bf i} + b\hat{\bf j} + c\hat{\bf k}
 \]</div>
-<p>This is the “component form” of expressing vectors, which makes use of scalars and unit vectors.</p>
+<p>The above “component form” of expressing vectors makes use of scalar coordinates and their corresponding directions through the use of the unit vectors. In other words, the equation above says that we can march
+<span class="math notranslate nohighlight">\(a\)</span> units along <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(b\)</span> units along <span class="math notranslate nohighlight">\(Y\)</span>, and <span class="math notranslate nohighlight">\(c\)</span> units along <span class="math notranslate nohighlight">\(Z\)</span> to get to the head of the vector <span class="math notranslate nohighlight">\(\bf r\)</span>.</p>
 </div>
 <div class="section" id="vector-algebra-using-a-cas-computer-algebra-systems">
 <h2>Vector algebra using a CAS (Computer Algebra Systems)<a class="headerlink" href="#vector-algebra-using-a-cas-computer-algebra-systems" title="Permalink to this headline">¶</a></h2>
@@ -571,7 +570,7 @@ name: 5
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="vector.html" title="previous page">Fundamental concepts</a>
-    <a class='right-next' id="next-link" href="Week1/NB_Tutorial_Vectors_ReferenceFrames.html" title="next page">Vector Algebra with a Computer Algebra System</a>
+    <a class='right-next' id="next-link" href="Week1/NB_Tutorial_Vectors_ReferenceFrames.html" title="next page">JN1: Vector Algebra with a Computer Algebra System</a>
 
         </div>
         

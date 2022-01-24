@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vectors and Reference Frames &#8212; Computational Dynamics</title>
+    <title>Vectors and Reference Frames for Dynamics: Physical Examples &#8212; Computational Dynamics</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,8 +53,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Overview of Practice Activity L2PA1" href="Week2/L2PA1.html" />
-    <link rel="prev" title="Vector Algebra with a Computer Algebra System" href="Week1/NB_Tutorial_Vectors_ReferenceFrames.html" />
+    <link rel="next" title="JN2: Practice Activity 1" href="Week2/L2PA1.html" />
+    <link rel="prev" title="JN1: Vector Algebra with a Computer Algebra System" href="Week1/NB_Tutorial_Vectors_ReferenceFrames.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -109,21 +109,21 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Week1/NB_Tutorial_Vectors_ReferenceFrames.html">
-   Vector Algebra with a Computer Algebra System
+   JN1: Vector Algebra with a Computer Algebra System
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Vectors and Reference Frames
+   Vectors and Reference Frames for Dynamics: Physical Examples
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Week2/L2PA1.html">
-   Overview of Practice Activity L2PA1
+   JN2: Practice Activity 1
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="rigid-bodies.html">
+  <a class="reference internal" href="rigid-bodies1.html">
    Rigid Body Kinematics
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -133,13 +133,8 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="rigid-bodies1.html">
-     Classification of Rigid Body Motion
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="Week2/L2PA2.html">
-     Overview of Practice Activity L2PA2
+     JN3: Practice Activity 2
     </a>
    </li>
    <li class="toctree-l2">
@@ -149,7 +144,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Week4/L4PA6.html">
-     Overview of Practice Activity L4PA6
+     JN4: Practice Activity 3
     </a>
    </li>
    <li class="toctree-l2">
@@ -159,7 +154,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Week3/L3PA3.html">
-     Overview of Practice Acitivty L3PA3
+     JN5: Practice Activity 4
     </a>
    </li>
    <li class="toctree-l2">
@@ -169,12 +164,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Week4/L4PA5.html">
-     Overview of Practice Activity L4PA5
+     JN6: Practice Activity 5
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Week3/L3PA4.html">
-     Overview of Practice Acitivty L3PA4
+     JN7: Practice Activity 6
     </a>
    </li>
   </ul>
@@ -191,7 +186,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Week5/L5PA7.html">
-   Overview of Practice Acitivty L5PA5
+   JN8: Practice Activity 7
   </a>
  </li>
 </ul>
@@ -391,24 +386,23 @@
         
               <div>
                 
-  <div class="section" id="vectors-and-reference-frames">
-<h1>Vectors and Reference Frames<a class="headerlink" href="#vectors-and-reference-frames" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="vectors-and-reference-frames-for-dynamics-physical-examples">
+<h1>Vectors and Reference Frames for Dynamics: Physical Examples<a class="headerlink" href="#vectors-and-reference-frames-for-dynamics-physical-examples" title="Permalink to this headline">¶</a></h1>
+<div class="admonition-concept admonition">
+<p class="admonition-title">Concept</p>
 <div class="figure align-default" id="id1">
 <img alt="../_images/102.png" src="../_images/102.png" />
 </div>
 <ul class="simple">
-<li><p>The figure above shows a reference frame <span class="math notranslate nohighlight">\(A\)</span> and vector <span class="math notranslate nohighlight">\(\vec{v}\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\vec{v}\)</span> is said to be fixed in the frame <span class="math notranslate nohighlight">\(A\)</span> if and only if none of the characteristics of <span class="math notranslate nohighlight">\(\vec{v}\)</span> are seen to change when it is observed from <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+<li><p>The figure above shows a reference frame <span class="math notranslate nohighlight">\(A\)</span> (in pink) and vector <span class="math notranslate nohighlight">\({\bf v}\)</span> (in black).</p></li>
+<li><p>Here, <span class="math notranslate nohighlight">\({\bf v}\)</span> is said to be fixed in the frame <span class="math notranslate nohighlight">\(A\)</span> <strong>if and only if</strong> none of the characteristics of <span class="math notranslate nohighlight">\(\bf v\)</span> (i.e., magnitude and direction) are seen to change when it is observed from <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
 </ul>
+</div>
+<p>Below, we make use of some hand illustrations to exemplify the above concept.</p>
 <div class="figure align-default" id="id2">
 <img alt="../_images/113.png" src="../_images/113.png" />
 </div>
-<p>Notice that I have introduced the unit vectors <span class="math notranslate nohighlight">\(\hat{b}_x\)</span> and <span class="math notranslate nohighlight">\(\hat{b}_y\)</span> for the reference frame <span class="math notranslate nohighlight">\(B\)</span> but <span class="math notranslate nohighlight">\(\hat{b}_z\)</span> is not shown though it is orthogonal to both <span class="math notranslate nohighlight">\(\hat{b}_x\)</span> and <span class="math notranslate nohighlight">\(\hat{b}_y\)</span>.</p>
-<p>For sake of developing subsequent discussions, we will now also introduce a dextral set of unit vectors for frame</p>
-<div class="math notranslate nohighlight">
-\[
-A: \: \hat{a}_x,\;\hat{a}_y\:\&amp;\:\hat{a}_z
-\]</div>
+<p>Notice that we have introduced the unit vectors <span class="math notranslate nohighlight">\(\hat{\bf b}_x\)</span> and <span class="math notranslate nohighlight">\(\hat{\bf b}_y\)</span> for the reference frame <span class="math notranslate nohighlight">\(B\)</span> but <span class="math notranslate nohighlight">\(\hat{\bf b}_z\)</span> is not shown; however, it still does exist and is orthogonal to both <span class="math notranslate nohighlight">\(\hat{\bf b}_x\)</span> and <span class="math notranslate nohighlight">\(\hat{\bf b}_y\)</span>. For the sake of the next discussions on how reference frames relate to each other, we now also introduce a right-handed set of unit vectors for frame <span class="math notranslate nohighlight">\( A: \: \hat{\bf a}_x,\;\hat{\bf a}_y\:\&amp;\:\hat{\bf a}_z\)</span>. We will work with this example in our next Jupyter Notebook, which is our first Practice Activity specifically pertinent to our discussion on dynamics.</p>
 <div class="figure align-default" id="id3">
 <img alt="../_images/122.png" src="../_images/122.png" />
 </div>
@@ -439,8 +433,8 @@ A: \: \hat{a}_x,\;\hat{a}_y\:\&amp;\:\hat{a}_z
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="Week1/NB_Tutorial_Vectors_ReferenceFrames.html" title="previous page">Vector Algebra with a Computer Algebra System</a>
-    <a class='right-next' id="next-link" href="Week2/L2PA1.html" title="next page">Overview of Practice Activity L2PA1</a>
+    <a class='left-prev' id="prev-link" href="Week1/NB_Tutorial_Vectors_ReferenceFrames.html" title="previous page">JN1: Vector Algebra with a Computer Algebra System</a>
+    <a class='right-next' id="next-link" href="Week2/L2PA1.html" title="next page">JN2: Practice Activity 1</a>
 
         </div>
         

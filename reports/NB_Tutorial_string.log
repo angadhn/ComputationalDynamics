@@ -21,7 +21,7 @@ prefix = 'Py'
 prefix 'thon'  # Can't concatenate a variable and a string literal.
 ------------------
 
-[0;36m  File [0;32m"/var/folders/nv/1xnwf7gx3kx0c_dlh9wxbqkc0000gn/T/ipykernel_88963/2795526229.py"[0;36m, line [0;32m2[0m
+[0;36m  File [0;32m"/var/folders/nv/1xnwf7gx3kx0c_dlh9wxbqkc0000gn/T/ipykernel_6631/2795526229.py"[0;36m, line [0;32m2[0m
 [0;31m    prefix 'thon'  # Can't concatenate a variable and a string literal.[0m
 [0m           ^[0m
 [0;31mSyntaxError[0m[0;31m:[0m invalid syntax

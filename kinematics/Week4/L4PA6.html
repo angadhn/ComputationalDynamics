@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Overview of Practice Activity L4PA6 &#8212; Computational Dynamics</title>
+    <title>JN4: Practice Activity 3 &#8212; Computational Dynamics</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -109,21 +109,21 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../Week1/NB_Tutorial_Vectors_ReferenceFrames.html">
-   Vector Algebra with a Computer Algebra System
+   JN1: Vector Algebra with a Computer Algebra System
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../reference-frame.html">
-   Vectors and Reference Frames
+   Vectors and Reference Frames for Dynamics: Physical Examples
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../Week2/L2PA1.html">
-   Overview of Practice Activity L2PA1
+   JN2: Practice Activity 1
   </a>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../rigid-bodies.html">
+  <a class="reference internal" href="../rigid-bodies1.html">
    Rigid Body Kinematics
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -133,13 +133,8 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../rigid-bodies1.html">
-     Classification of Rigid Body Motion
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../Week2/L2PA2.html">
-     Overview of Practice Activity L2PA2
+     JN3: Practice Activity 2
     </a>
    </li>
    <li class="toctree-l2">
@@ -149,7 +144,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Overview of Practice Activity L4PA6
+     JN4: Practice Activity 3
     </a>
    </li>
    <li class="toctree-l2">
@@ -159,7 +154,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Week3/L3PA3.html">
-     Overview of Practice Acitivty L3PA3
+     JN5: Practice Activity 4
     </a>
    </li>
    <li class="toctree-l2">
@@ -169,12 +164,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="L4PA5.html">
-     Overview of Practice Activity L4PA5
+     JN6: Practice Activity 5
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Week3/L3PA4.html">
-     Overview of Practice Acitivty L3PA4
+     JN7: Practice Activity 6
     </a>
    </li>
   </ul>
@@ -191,7 +186,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../Week5/L5PA7.html">
-   Overview of Practice Acitivty L5PA5
+   JN8: Practice Activity 7
   </a>
  </li>
 </ul>
@@ -390,12 +385,15 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Overview of Practice Activity L4PA6
+   JN4: Practice Activity 3
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pre-work-from-l2pa1">
-   Pre-work from L2PA1
+  <a class="reference internal nav-link" href="#pre-work-from-jn1">
+   Pre-work from
+   <span class="xref myst">
+    JN1
+   </span>
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
@@ -514,11 +512,14 @@
         
               <div>
                 
-  <h1>Table of Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Overview-of-Practice-Activity-L4PA6" data-toc-modified-id="Overview-of-Practice-Activity-L4PA6-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Overview of Practice Activity L4PA6</a></span></li><li><span><a href="#Pre-work-from-L2PA1" data-toc-modified-id="Pre-work-from-L2PA1-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Pre-work from L2PA1</a></span><ul class="toc-item"><li><span><a href="#Create-scalars-using-symbols-and-dynamicsymbols" data-toc-modified-id="Create-scalars-using-symbols-and-dynamicsymbols-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>Create scalars using <code>symbols</code> and <code>dynamicsymbols</code></a></span></li><li><span><a href="#Creating-Reference-Frames" data-toc-modified-id="Creating-Reference-Frames-2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span>Creating Reference Frames</a></span></li></ul></li><li><span><a href="#Direction-Cosine-Matrices-for-Orienting-Reference-Frames" data-toc-modified-id="Direction-Cosine-Matrices-for-Orienting-Reference-Frames-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Direction Cosine Matrices for Orienting Reference Frames</a></span><ul class="toc-item"><li><span><a href="#Step-1:--Creating-$^A\mathbf{C}^B$-withsympy" data-toc-modified-id="Step-1:--Creating-$^A\mathbf{C}^B$-withsympy-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>Step 1:  Creating $^A\mathbf{C}^B$ with<code>sympy</code></a></span></li><li><span><a href="#Use-B_dcm_A-and-orient-method-of-frame-A-to-rotate-B" data-toc-modified-id="Use-B_dcm_A-and-orient-method-of-frame-A-to-rotate-B-3.2"><span class="toc-item-num">3.2&nbsp;&nbsp;</span>Use <code>B_dcm_A</code> and <code>orient</code> method of frame <code>A</code> to rotate <code>B</code></a></span></li></ul></li><li><span><a href="#How-can-we-express-vectors-in-different-frames-with-sympy-and-B_dcm_A-that-we-created-above?" data-toc-modified-id="How-can-we-express-vectors-in-different-frames-with-sympy-and-B_dcm_A-that-we-created-above?-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>How can we express vectors in different frames with <code>sympy</code> and <code>B_dcm_A</code> that we created above?</a></span><ul class="toc-item"><li><span><a href="#Create-the-vectors-in-B-frame-(slightly-modified-from-L2PA1)" data-toc-modified-id="Create-the-vectors-in-B-frame-(slightly-modified-from-L2PA1)-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>Create the vectors in B-frame (slightly modified from L2PA1)</a></span></li><li><span><a href="#Exercsie:-Can-you-write-the-same-for-the-vector-$\bf-e$?" data-toc-modified-id="Exercsie:-Can-you-write-the-same-for-the-vector-$\bf-e$?-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>Exercsie: Can you write the same for the vector $\bf e$?</a></span></li></ul></li></ul></div><div class="section" id="overview-of-practice-activity-l4pa6">
-<h1>Overview of Practice Activity L4PA6<a class="headerlink" href="#overview-of-practice-activity-l4pa6" title="Permalink to this headline">¶</a></h1>
-<img src="Figures/Door_Wall.png" height=450 width=450>
-This activity returns to the door-wall example (see figure above); it also utilises code first written in L2PA1 to teach you how to use direction cosine matrices to support your work as a dynamics engineer.
+  <div class="section" id="jn4-practice-activity-3">
+<h1>JN4: Practice Activity 3<a class="headerlink" href="#jn4-practice-activity-3" title="Permalink to this headline">¶</a></h1>
+<!-- <img src="Figures/Door_Wall.png" height=450 width=450> -->
+<div class="figure align-default" id="id1">
+<img alt="../../_images/Door_Wall1.png" src="../../_images/Door_Wall1.png" />
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Motion of a door <span class="math notranslate nohighlight">\(B\)</span> relative to wall <span class="math notranslate nohighlight">\(A\)</span>.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>This activity returns to the door-wall example (see figure above); it also utilises code first written in L2PA1 to teach you how to use direction cosine matrices to support your work as a dynamics engineer.</p>
 <p>This notebook has three objectives:</p>
 <ol class="simple">
 <li><p>creating a Direction Cosine Matrix (DCM) and using it to configure the orientation between two reference frames <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> using <code class="docutils literal notranslate"><span class="pre">sympy</span></code>; and</p></li>
@@ -527,8 +528,8 @@ This activity returns to the door-wall example (see figure above); it also utili
 </ol>
 <p>The code in Section 2 is to express vectors <span class="math notranslate nohighlight">\(\bf v\)</span> and <span class="math notranslate nohighlight">\(\bf e\)</span> in the <span class="math notranslate nohighlight">\(B\)</span>-frame; in other words, it is a repeat of L2PA1 . Sections 3, 4, and 5 address the 3 objectives above.</p>
 </div>
-<div class="section" id="pre-work-from-l2pa1">
-<h1>Pre-work from L2PA1<a class="headerlink" href="#pre-work-from-l2pa1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="pre-work-from-jn1">
+<h1>Pre-work from <a class="reference internal" href="../Week2/L2PA1.html"><span class="doc std std-doc">JN1</span></a><a class="headerlink" href="#pre-work-from-jn1" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="create-scalars-using-symbols-and-dynamicsymbols">
 <h2>Create scalars using <code class="docutils literal notranslate"><span class="pre">symbols</span></code> and <code class="docutils literal notranslate"><span class="pre">dynamicsymbols</span></code><a class="headerlink" href="#create-scalars-using-symbols-and-dynamicsymbols" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
@@ -561,9 +562,12 @@ This activity returns to the door-wall example (see figure above); it also utili
 <ul>
 <li><p><strong>Question</strong>: How did we convert vectors <span class="math notranslate nohighlight">\(\bf v\)</span> and <span class="math notranslate nohighlight">\(\bf e\)</span> given in B-frame unit vectors to to A-frame unit vectors?</p>
 <p><strong>Answer</strong>: Using <em>Direction Cosine Matrices</em>, <span class="math notranslate nohighlight">\(^B\mathbf{C}^A\)</span>, to rotate <span class="math notranslate nohighlight">\(B\)</span> relative to <span class="math notranslate nohighlight">\(A\)</span> (see below: Equation 8a from file ‘ 4 rigid body kinematics: orientations.pdf’).</p>
- <img src="Figures/DCM_notes.png">
 </li>
 </ul>
+<!--    <img src="Figures/DCM_notes.png"> -->
+<div class="figure align-default">
+<img alt="../../_images/DCM_notes.png" src="../../_images/DCM_notes.png" />
+</div>
 <p>Now, we must ask ourselves (or might already have questioned):</p>
 <ul>
 <li><p>How can we exploit <code class="docutils literal notranslate"><span class="pre">sympy</span></code> to convert the vectors while minimizing hand computation?</p>

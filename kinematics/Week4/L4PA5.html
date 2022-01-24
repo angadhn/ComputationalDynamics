@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Overview of Practice Activity L4PA5 &#8212; Computational Dynamics</title>
+    <title>JN6: Practice Activity 5 &#8212; Computational Dynamics</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Overview of Practice Acitivty L3PA4" href="../Week3/L3PA4.html" />
+    <link rel="next" title="JN7: Practice Activity 6" href="../Week3/L3PA4.html" />
     <link rel="prev" title="Angular Velocity and Angular Acceleration" href="../rigid-bodies2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -109,21 +109,21 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../Week1/NB_Tutorial_Vectors_ReferenceFrames.html">
-   Vector Algebra with a Computer Algebra System
+   JN1: Vector Algebra with a Computer Algebra System
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../reference-frame.html">
-   Vectors and Reference Frames
+   Vectors and Reference Frames for Dynamics: Physical Examples
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../Week2/L2PA1.html">
-   Overview of Practice Activity L2PA1
+   JN2: Practice Activity 1
   </a>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../rigid-bodies.html">
+  <a class="reference internal" href="../rigid-bodies1.html">
    Rigid Body Kinematics
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -133,13 +133,8 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../rigid-bodies1.html">
-     Classification of Rigid Body Motion
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../Week2/L2PA2.html">
-     Overview of Practice Activity L2PA2
+     JN3: Practice Activity 2
     </a>
    </li>
    <li class="toctree-l2">
@@ -149,7 +144,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="L4PA6.html">
-     Overview of Practice Activity L4PA6
+     JN4: Practice Activity 3
     </a>
    </li>
    <li class="toctree-l2">
@@ -159,7 +154,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Week3/L3PA3.html">
-     Overview of Practice Acitivty L3PA3
+     JN5: Practice Activity 4
     </a>
    </li>
    <li class="toctree-l2">
@@ -169,12 +164,12 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Overview of Practice Activity L4PA5
+     JN6: Practice Activity 5
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Week3/L3PA4.html">
-     Overview of Practice Acitivty L3PA4
+     JN7: Practice Activity 6
     </a>
    </li>
   </ul>
@@ -191,7 +186,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../Week5/L5PA7.html">
-   Overview of Practice Acitivty L5PA5
+   JN8: Practice Activity 7
   </a>
  </li>
 </ul>
@@ -414,14 +409,17 @@
         
               <div>
                 
-  <h1>Table of Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Overview-of-Practice-Activity-L2PA4" data-toc-modified-id="Overview-of-Practice-Activity-L2PA4-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Overview of Practice Activity L2PA4</a></span><ul class="toc-item"><li><span><a href="#Case-1:-Given-just-orientation-angle-between-two-frames" data-toc-modified-id="Case-1:-Given-just-orientation-angle-between-two-frames-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Case 1: Given just orientation angle between two frames</a></span></li><li><span><a href="#Case-2:-If-you-are-only-given-angular-speed-and-direction-of-rotation-then-you-should-use-the-.set_ang_vel" data-toc-modified-id="Case-2:-If-you-are-only-given-angular-speed-and-direction-of-rotation-then-you-should-use-the-.set_ang_vel-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Case 2: If you are only given angular speed and direction of rotation then you should use the <code>.set_ang_vel</code></a></span></li></ul></li></ul></div><div class="section" id="overview-of-practice-activity-l4pa5">
-<h1>Overview of Practice Activity L4PA5<a class="headerlink" href="#overview-of-practice-activity-l4pa5" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="jn6-practice-activity-5">
+<h1>JN6: Practice Activity 5<a class="headerlink" href="#jn6-practice-activity-5" title="Permalink to this headline">¶</a></h1>
 <p>In this interactive activity, you will learn about two methods that you can use on a <code class="docutils literal notranslate"><span class="pre">ReferenceFrame</span></code> to define its angular velocity (and, therefore, also its angular acceleration).</p>
 <div class="section" id="case-1-given-just-orientation-angle-between-two-frames">
 <h2>Case 1: Given just orientation angle between two frames<a class="headerlink" href="#case-1-given-just-orientation-angle-between-two-frames" title="Permalink to this headline">¶</a></h2>
-<p>The figure below is that of the rolling disk, which was covered in the lecture (see your notes file titled “6 rigid body kinematics: angular velocities and accelerations.pdf”)
-<img src="Figures/Rolling_Disk.png" height=450 width=450></p>
+<p>The figure below is that of the rolling disk, which was covered in the lecture (see your notes file titled “6 rigid body kinematics: angular velocities and accelerations.pdf”)</p>
+<!-- <img src="Figures/Rolling_Disk.png" height=450 width=450> -->
+<div class="figure align-default" id="door-wall-modified">
+<img alt="../../_images/Rolling_Disk.png" src="../../_images/Rolling_Disk.png" />
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Motion of a rolling disk <span class="math notranslate nohighlight">\(D\)</span> relative to ground <span class="math notranslate nohighlight">\(A\)</span>.</span><a class="headerlink" href="#door-wall-modified" title="Permalink to this image">¶</a></p>
+</div>
 <p>You can see that the  information given here is:</p>
 <ol class="simple">
 <li><p>the angle <span class="math notranslate nohighlight">\(\theta\)</span> between frames <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(D\)</span>; and</p></li>
@@ -501,8 +499,12 @@ __ You will get an error (or incorrect result) if you do not provide the informa
 </div>
 <div class="section" id="case-2-if-you-are-only-given-angular-speed-and-direction-of-rotation-then-you-should-use-the-set-ang-vel">
 <h2>Case 2: If you are only given angular speed and direction of rotation then you should use the <code class="docutils literal notranslate"><span class="pre">.set_ang_vel</span></code><a class="headerlink" href="#case-2-if-you-are-only-given-angular-speed-and-direction-of-rotation-then-you-should-use-the-set-ang-vel" title="Permalink to this headline">¶</a></h2>
-<p>In some cases, you are not given an orientation angle. Instead, you are given the angular speed and the direction of rotation. An example of this is the rotating shaft (shown below and also covered in the lecture):
-<img src="Figures/Rotating_Shaft.png" height=450 width=450>.</p>
+<p>In some cases, you are not given an orientation angle. Instead, you are given the angular speed and the direction of rotation. An example of this is the rotating shaft (shown below and also covered in the lecture):</p>
+<!-- <img src="Figures/Rotating_Shaft.png" height=450 width=450>. -->
+<div class="figure align-default" id="id1">
+<img alt="../../_images/Rotating_Shaft.png" src="../../_images/Rotating_Shaft.png" />
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Motion of a shaft <span class="math notranslate nohighlight">\(B\)</span> rotating relative to fixed axis <span class="math notranslate nohighlight">\(A\)</span>.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
 <p>The shaft is rotating at the constant speed <span class="math notranslate nohighlight">\(4\)</span> radian per second. So, from the figure, we can easily infer that the <span class="math notranslate nohighlight">\(^A\omega^B = 4 \hat{\bf n} = 4 \hat{\bf a}_z\)</span>. Here, we made the assumption that <span class="math notranslate nohighlight">\(\hat{\bf n} = 4 \hat{\bf a}_z\)</span>. Let’s see how we can let provide this information to <code class="docutils literal notranslate"><span class="pre">sympy</span></code>.</p>
 <p>First, we create the <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> frames using <code class="docutils literal notranslate"><span class="pre">ReferenceFrame</span></code>; the frames are assigned the variable names <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code>:</p>
 <div class="cell docutils container">
@@ -561,7 +563,7 @@ __ You will get an error (or incorrect result) if you do not provide the informa
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">nv</span><span class="o">/</span><span class="mi">1</span><span class="n">xnwf7gx3kx0c_dlh9wxbqkc0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_88713</span><span class="o">/</span><span class="mf">3951029059.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">nv</span><span class="o">/</span><span class="mi">1</span><span class="n">xnwf7gx3kx0c_dlh9wxbqkc0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_6708</span><span class="o">/</span><span class="mf">3951029059.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">B</span><span class="o">.</span><span class="n">dcm</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 
 <span class="nn">~/opt/anaconda3/envs/qe-mini-example/lib/python3.8/site-packages/sympy/physics/vector/frame.py</span> in <span class="ni">dcm</span><span class="nt">(self, otherframe)</span>
@@ -613,7 +615,7 @@ __ You will get an error (or incorrect result) if you do not provide the informa
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../rigid-bodies2.html" title="previous page">Angular Velocity and Angular Acceleration</a>
-    <a class='right-next' id="next-link" href="../Week3/L3PA4.html" title="next page">Overview of Practice Acitivty L3PA4</a>
+    <a class='right-next' id="next-link" href="../Week3/L3PA4.html" title="next page">JN7: Practice Activity 6</a>
 
         </div>
         
