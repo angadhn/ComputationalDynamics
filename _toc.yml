@@ -8,9 +8,8 @@ parts:
     - file: kinematics/Week1/NB_Tutorial_Vectors_ReferenceFrames.ipynb
     - file: kinematics/reference-frame
     - file: kinematics/Week2/L2PA1
-    - file: kinematics/rigid-bodies
+    - file: kinematics/rigid-bodies1
       sections:
-      - file: kinematics/rigid-bodies1
       - file: kinematics/Week2/L2PA2
       - file: kinematics/DCM
       - file: kinematics/Week4/L4PA6
@@ -46,3 +45,7 @@ parts:
 #     - file: dynamics/Week10/Activity2_System_Of_Particles_Kinetics
     - file: dynamics/Week10/Activity2_System_Of_Particles_Kinetics_Solution
     - file: dynamics/Week10/Activity3_Rigid_Body_Kinetic_Energy
+  - caption: Appendices
+    chapters:
+    - file: kinematics/Week1/NB_Tutorial_string
+    - file: kinematics/Week1/NB_Tutorial_variable
