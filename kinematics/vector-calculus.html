@@ -203,9 +203,9 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../inertia/inertia-2.html">
-   Key Theorems for computing
+   Theorems for Computing Inertia Matrix
    <span class="math notranslate nohighlight">
-    \(\left[I\right]^{S/O}\)
+    \(\left[I\right]\)
    </span>
   </a>
  </li>
@@ -415,15 +415,11 @@
 <div class="figure align-default" id="id1">
 <img alt="../_images/332.png" src="../_images/332.png" />
 </div>
-<div class="math notranslate nohighlight">
-\[
-\vec{x} = x_1\hat{a}_x + x_2\hat{y}_x + x_3\hat{a}_x
-\]</div>
+<div class="math notranslate nohighlight" id="equation-eqn-vectorcalc-1">
+<span class="eqno">(22)<a class="headerlink" href="#equation-eqn-vectorcalc-1" title="Permalink to this equation">¶</a></span>\[{\bf x} = x_1\hat{\bf a}_x + x_2\hat{\bf a}_y + x_3\hat{\bf a}_z\]</div>
 <p>then</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{{}^{A}d\vec{x}}{d\theta} \triangleq \left(\frac{d\hat{x_1}}{d\theta}\right)\hat{a}_x + \left(\frac{d\hat{x_2}}{d\theta}\right)\hat{a}_y + \left(\frac{d\hat{x_3}}{d\theta}\right)\hat{a}_z
-\]</div>
+<div class="math notranslate nohighlight" id="equation-eqn-vectorcalc-2">
+<span class="eqno">(23)<a class="headerlink" href="#equation-eqn-vectorcalc-2" title="Permalink to this equation">¶</a></span>\[\frac{{}^{A}d{\bf x}}{d\theta} \triangleq \left(\frac{d{x_1}}{d\theta}\right)\hat{\bf a}_x + \left(\frac{d{x_2}}{d\theta}\right)\hat{\bf a}_y + \left(\frac{d{x_3}}{d\theta}\right)\hat{\bf a}_z\]</div>
 </div>
 <div class="section" id="doorwall-example">
 <h2>Doorwall example<a class="headerlink" href="#doorwall-example" title="Permalink to this headline">¶</a></h2>
@@ -431,15 +427,10 @@
 <img alt="../_images/162.png" src="../_images/162.png" />
 </div>
 <p><strong>Notation</strong>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\frac{{}^{A}d\vec{e}}{dt} = \text{is the time derivative of the vector } \vec{e} \text{ when observed from the }\\ \text{reference frame } A\text{. So, } \vec{e}= h\hat{b}_y = h\hat{a}_y
-\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(\frac{{}^{A}d{\bf e}}{dt}\)</span> is the time derivative of the vector <span class="math notranslate nohighlight">\({\bf e}\)</span> when observed from the reference frame A. So, <span class="math notranslate nohighlight">\({\bf e}= h\hat{\bf b}_y = h\hat{\bf a}_y\)</span>.</p>
 <p>Therefore,</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{{}^{A}d\vec{e}}{dt} = \frac{{}^{A}d(h\hat{a}_y)}{dt} = 0 \text{ (zero vector)}
-\]</div>
+<div class="math notranslate nohighlight" id="equation-eqn-vectorcalc-3">
+<span class="eqno">(24)<a class="headerlink" href="#equation-eqn-vectorcalc-3" title="Permalink to this equation">¶</a></span>\[\frac{{}^{A}d{\bf e}}{dt} = \frac{{}^{A}d(h\hat{\bf a}_y)}{dt} = 0 \text{ (zero vector)}\]</div>
 <div class="tip dropdown admonition">
 <p class="admonition-title">So, how can we compute the derivative of a vector using <code class="docutils literal notranslate"><span class="pre">SymPy</span></code>?</p>
 <div class="figure align-default" id="id3">
@@ -454,14 +445,14 @@
 <div class="figure align-default" id="id5">
 <img alt="../_images/371.png" src="../_images/371.png" />
 </div>
-<p>All final answers are to be expressed in unit vectors attached to the <span class="math notranslate nohighlight">\(A\)</span>-frame.</p>
+<p>Or, if written in typeface, you are being asked to evaluate: <span class="math notranslate nohighlight">\(\frac{{}^{A}d{\bf r}}{dt}\)</span> and <span class="math notranslate nohighlight">\(\frac{{}^{B}d{\bf r}}{dt}\)</span>. Additionally, you are instructed that all final answers must be expressed in unit vectors attached to the <span class="math notranslate nohighlight">\(A\)</span>-frame.</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Solution</p>
 <div class="figure align-default" id="id6">
-<img alt="../_images/381.png" src="../_images/381.png" />
+<img alt="../_images/38.png" src="../_images/38.png" />
 </div>
 <div class="figure align-default" id="id7">
-<img alt="../_images/391.png" src="../_images/391.png" />
+<img alt="../_images/39.png" src="../_images/39.png" />
 </div>
 <p>The above example demonstrated the difference between taking time derivatives of the same vector from two frames.</p>
 </div>
@@ -469,7 +460,7 @@
 <div class="section" id="properties-of-vector-derivatives">
 <h2>Properties of Vector Derivatives<a class="headerlink" href="#properties-of-vector-derivatives" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="id8">
-<img alt="../_images/401.png" src="../_images/401.png" />
+<img alt="../_images/40.png" src="../_images/40.png" />
 </div>
 <p>where,</p>
 <ul class="simple">
@@ -478,7 +469,7 @@
 <li><p><span class="math notranslate nohighlight">\(t\)</span> is scalar time.</p></li>
 </ul>
 <div class="figure align-default" id="id9">
-<img alt="../_images/412.png" src="../_images/412.png" />
+<img alt="../_images/411.png" src="../_images/411.png" />
 </div>
 </div>
 </div>
