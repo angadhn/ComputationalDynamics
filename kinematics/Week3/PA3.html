@@ -203,9 +203,9 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../inertia/inertia-2.html">
-   Key Theorems for computing
+   Theorems for Computing Inertia Matrix
    <span class="math notranslate nohighlight">
-    \(\left[I\right]^{S/O}\)
+    \(\left[I\right]\)
    </span>
   </a>
  </li>
@@ -486,8 +486,8 @@
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-the-vectors-in-b-frame-slightly-modified-from-l2pa1">
-     Create the vectors in B-frame (slightly modified from L2PA1)
+    <a class="reference internal nav-link" href="#create-the-vectors-in-b-frame-slightly-modified-from-pa1">
+     Create the vectors in B-frame (slightly modified from PA1)
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
@@ -519,14 +519,14 @@
 <img alt="../../_images/Door_Wall1.png" src="../../_images/Door_Wall1.png" />
 <p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Motion of a door <span class="math notranslate nohighlight">\(B\)</span> relative to wall <span class="math notranslate nohighlight">\(A\)</span>.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<p>This activity returns to the door-wall example (see figure above); it also utilises code first written in L2PA1 to teach you how to use direction cosine matrices to support your work as a dynamics engineer.</p>
+<p>This activity returns to the door-wall example (see figure above); it also utilises code first written in PA1 to teach you how to use direction cosine matrices to support your work as a dynamics engineer.</p>
 <p>This notebook has three objectives:</p>
 <ol class="simple">
 <li><p>creating a Direction Cosine Matrix (DCM) and using it to configure the orientation between two reference frames <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> using <code class="docutils literal notranslate"><span class="pre">sympy</span></code>; and</p></li>
 <li><p>obtaining <strong>angular velocity</strong> and <strong>angular accelerations</strong> using <code class="docutils literal notranslate"><span class="pre">sympy</span></code>; and</p></li>
 <li><p>a method of expressing any vector in different frames with <code class="docutils literal notranslate"><span class="pre">sympy</span></code> which works once the DCM is known.</p></li>
 </ol>
-<p>The code in Section 2 is to express vectors <span class="math notranslate nohighlight">\(\bf v\)</span> and <span class="math notranslate nohighlight">\(\bf e\)</span> in the <span class="math notranslate nohighlight">\(B\)</span>-frame; in other words, it is a repeat of L2PA1 . Sections 3, 4, and 5 address the 3 objectives above.</p>
+<p>The code in Section 2 is to express vectors <span class="math notranslate nohighlight">\(\bf v\)</span> and <span class="math notranslate nohighlight">\(\bf e\)</span> in the <span class="math notranslate nohighlight">\(B\)</span>-frame; in other words, it is a repeat of PA1 . Sections 3, 4, and 5 address the 3 objectives above.</p>
 </div>
 <div class="section" id="pre-work-from-jn1">
 <h1>Pre-work from <span class="xref myst">JN1</span><a class="headerlink" href="#pre-work-from-jn1" title="Permalink to this headline">¶</a></h1>
@@ -558,7 +558,7 @@
 </div>
 <div class="section" id="direction-cosine-matrices-for-orienting-reference-frames">
 <h1>Direction Cosine Matrices for Orienting Reference Frames<a class="headerlink" href="#direction-cosine-matrices-for-orienting-reference-frames" title="Permalink to this headline">¶</a></h1>
-<p>We now have created the vectors <span class="math notranslate nohighlight">\(\bf v\)</span> and <span class="math notranslate nohighlight">\(\bf e\)</span> in component form in the <span class="math notranslate nohighlight">\(B\)</span>-system; they are stored in variables named <code class="docutils literal notranslate"><span class="pre">v_vec</span></code> and <code class="docutils literal notranslate"><span class="pre">e_vec</span></code>. Recall from L2PA2 that we had used variables named <code class="docutils literal notranslate"><span class="pre">v_vec_B</span></code> and <code class="docutils literal notranslate"><span class="pre">e_vec_B</span></code> for this purpose. Then, we introduced variable names <code class="docutils literal notranslate"><span class="pre">v_vec_A</span></code> and <code class="docutils literal notranslate"><span class="pre">e_vec_A</span></code> when <span class="math notranslate nohighlight">\(\bf v\)</span> and <span class="math notranslate nohighlight">\(\bf e\)</span> were expressed in the <span class="math notranslate nohighlight">\(A\)</span> frame. This was done for good bookkeeping. However, we know that <code class="docutils literal notranslate"><span class="pre">v_vec_A</span></code> and <code class="docutils literal notranslate"><span class="pre">v_vec_b</span></code> are the same vector <span class="math notranslate nohighlight">\(\bf v\)</span>! (All of this is also true for <span class="math notranslate nohighlight">\(\bf e\)</span> and its variables <code class="docutils literal notranslate"><span class="pre">e_vec_A</span></code> and <code class="docutils literal notranslate"><span class="pre">e_vec_B</span></code>.)</p>
+<p>We now have created the vectors <span class="math notranslate nohighlight">\(\bf v\)</span> and <span class="math notranslate nohighlight">\(\bf e\)</span> in component form in the <span class="math notranslate nohighlight">\(B\)</span>-system; they are stored in variables named <code class="docutils literal notranslate"><span class="pre">v_vec</span></code> and <code class="docutils literal notranslate"><span class="pre">e_vec</span></code>. Recall from PA2 that we had used variables named <code class="docutils literal notranslate"><span class="pre">v_vec_B</span></code> and <code class="docutils literal notranslate"><span class="pre">e_vec_B</span></code> for this purpose. Then, we introduced variable names <code class="docutils literal notranslate"><span class="pre">v_vec_A</span></code> and <code class="docutils literal notranslate"><span class="pre">e_vec_A</span></code> when <span class="math notranslate nohighlight">\(\bf v\)</span> and <span class="math notranslate nohighlight">\(\bf e\)</span> were expressed in the <span class="math notranslate nohighlight">\(A\)</span> frame. This was done for good bookkeeping. However, we know that <code class="docutils literal notranslate"><span class="pre">v_vec_A</span></code> and <code class="docutils literal notranslate"><span class="pre">v_vec_b</span></code> are the same vector <span class="math notranslate nohighlight">\(\bf v\)</span>! (All of this is also true for <span class="math notranslate nohighlight">\(\bf e\)</span> and its variables <code class="docutils literal notranslate"><span class="pre">e_vec_A</span></code> and <code class="docutils literal notranslate"><span class="pre">e_vec_B</span></code>.)</p>
 <ul>
 <li><p><strong>Question</strong>: How did we convert vectors <span class="math notranslate nohighlight">\(\bf v\)</span> and <span class="math notranslate nohighlight">\(\bf e\)</span> given in B-frame unit vectors to to A-frame unit vectors?</p>
 <p><strong>Answer</strong>: Using <em>Direction Cosine Matrices</em>, <span class="math notranslate nohighlight">\(^B\mathbf{C}^A\)</span>, to rotate <span class="math notranslate nohighlight">\(B\)</span> relative to <span class="math notranslate nohighlight">\(A\)</span> (see below: Equation 8a from file ‘ 4 rigid body kinematics: orientations.pdf’).</p>
@@ -627,7 +627,10 @@
 <p>In this case, the <code class="docutils literal notranslate"><span class="pre">orient</span></code> method takes the following sequence of information in the parantheses:</p>
 <ol class="simple">
 <li><p>Frame of rotation, in this case, <code class="docutils literal notranslate"><span class="pre">B</span></code></p></li>
-<li><p>the type of rotation, in this case it is the <code class="docutils literal notranslate"><span class="pre">DCM</span></code> (whereas in L4PA5, we used <code class="docutils literal notranslate"><span class="pre">Axis</span></code>); and</p></li>
+<li><p>the type of rotation, in this case it is the <code class="docutils literal notranslate"><span class="pre">DCM</span></code> ; and</p></li>
+</ol>
+<!-- 2. the type of rotation, in this case it is the `DCM` (whereas in L4PA5, we used `Axis`); and -->
+<ol class="simple">
 <li><p>the specific matrix that we are using as the DCM. In this case, it is <code class="docutils literal notranslate"><span class="pre">B_dcm_A</span></code>.</p></li>
 </ol>
 <p>__ You will get an error (or incorrect result) if you do not provide the information in the order listed above or give it incorrect information__.</p>
@@ -658,8 +661,8 @@
 </div>
 <div class="section" id="how-can-we-express-vectors-in-different-frames-with-sympy-and-b-dcm-a-that-we-created-above">
 <h1>How can we express vectors in different frames with <code class="docutils literal notranslate"><span class="pre">sympy</span></code> and <code class="docutils literal notranslate"><span class="pre">B_dcm_A</span></code> that we created above?<a class="headerlink" href="#how-can-we-express-vectors-in-different-frames-with-sympy-and-b-dcm-a-that-we-created-above" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="create-the-vectors-in-b-frame-slightly-modified-from-l2pa1">
-<h2>Create the vectors in B-frame (slightly modified from L2PA1)<a class="headerlink" href="#create-the-vectors-in-b-frame-slightly-modified-from-l2pa1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="create-the-vectors-in-b-frame-slightly-modified-from-pa1">
+<h2>Create the vectors in B-frame (slightly modified from PA1)<a class="headerlink" href="#create-the-vectors-in-b-frame-slightly-modified-from-pa1" title="Permalink to this headline">¶</a></h2>
 <p>In this section, we use the variable names <code class="docutils literal notranslate"><span class="pre">v_vec</span></code> and <code class="docutils literal notranslate"><span class="pre">e_vec</span></code> for <span class="math notranslate nohighlight">\(\bf v\)</span> and <span class="math notranslate nohighlight">\(\bf e\)</span>; we write the vectors in the B reference frame.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
