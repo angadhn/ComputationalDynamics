@@ -384,8 +384,8 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#doorwall-example">
-   Doorwall example
+  <a class="reference internal nav-link" href="#door-wall-example">
+   Door-wall example
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -421,16 +421,16 @@
 <div class="math notranslate nohighlight" id="equation-eqn-vectorcalc-2">
 <span class="eqno">(23)<a class="headerlink" href="#equation-eqn-vectorcalc-2" title="Permalink to this equation">¶</a></span>\[\frac{{}^{A}d{\bf x}}{d\theta} \triangleq \left(\frac{d{x_1}}{d\theta}\right)\hat{\bf a}_x + \left(\frac{d{x_2}}{d\theta}\right)\hat{\bf a}_y + \left(\frac{d{x_3}}{d\theta}\right)\hat{\bf a}_z\]</div>
 </div>
-<div class="section" id="doorwall-example">
-<h2>Doorwall example<a class="headerlink" href="#doorwall-example" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="door-wall-example">
+<h2>Door-wall example<a class="headerlink" href="#door-wall-example" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="id2">
 <img alt="../_images/162.png" src="../_images/162.png" />
 </div>
 <p><strong>Notation</strong>:</p>
-<p><span class="math notranslate nohighlight">\(\frac{{}^{A}d{\bf e}}{dt}\)</span> is the time derivative of the vector <span class="math notranslate nohighlight">\({\bf e}\)</span> when observed from the reference frame A. So, <span class="math notranslate nohighlight">\({\bf e}= h\hat{\bf b}_y = h\hat{\bf a}_y\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\frac{{}^{A}d{\bf e}}{dt}\)</span> is the time derivative of the vector <span class="math notranslate nohighlight">\({\bf e}\)</span> when observed from the reference frame A. So, <span class="math notranslate nohighlight">\({\bf e}= -h\hat{\bf b}_y = -h\hat{\bf a}_y\)</span>.</p>
 <p>Therefore,</p>
 <div class="math notranslate nohighlight" id="equation-eqn-vectorcalc-3">
-<span class="eqno">(24)<a class="headerlink" href="#equation-eqn-vectorcalc-3" title="Permalink to this equation">¶</a></span>\[\frac{{}^{A}d{\bf e}}{dt} = \frac{{}^{A}d(h\hat{\bf a}_y)}{dt} = 0 \text{ (zero vector)}\]</div>
+<span class="eqno">(24)<a class="headerlink" href="#equation-eqn-vectorcalc-3" title="Permalink to this equation">¶</a></span>\[\frac{{}^{A}d{\bf e}}{dt} = \frac{{}^{A}d(-h\hat{\bf a}_y)}{dt} = 0 \text{ (zero vector)}\]</div>
 <div class="tip dropdown admonition">
 <p class="admonition-title">So, how can we compute the derivative of a vector using <code class="docutils literal notranslate"><span class="pre">SymPy</span></code>?</p>
 <div class="figure align-default" id="id3">
