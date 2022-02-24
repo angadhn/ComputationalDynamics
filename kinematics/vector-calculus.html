@@ -441,17 +441,27 @@
 <div class="figure align-default" id="id4">
 <img alt="../_images/361.png" src="../_images/361.png" />
 </div>
-<p><span class="math notranslate nohighlight">\(O\)</span>, <span class="math notranslate nohighlight">\(C\)</span>, <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(P\)</span> are points as shown in the figure. <span class="math notranslate nohighlight">\(l\)</span> and <span class="math notranslate nohighlight">\(h\)</span> are the length and height of the door. <span class="math notranslate nohighlight">\(\theta\)</span> is timevarying. You are asked to find (i.e., compute symbolic expressions) for the following:</p>
-<div class="figure align-default" id="id5">
-<img alt="../_images/371.png" src="../_images/371.png" />
-</div>
-<p>Or, if written in typeface, you are being asked to evaluate: <span class="math notranslate nohighlight">\(\frac{{}^{A}d{\bf r}}{dt}\)</span> and <span class="math notranslate nohighlight">\(\frac{{}^{B}d{\bf r}}{dt}\)</span>. Additionally, you are instructed that all final answers must be expressed in unit vectors attached to the <span class="math notranslate nohighlight">\(A\)</span>-frame.</p>
+<p><span class="math notranslate nohighlight">\(O\)</span>, <span class="math notranslate nohighlight">\(C\)</span>, <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(P\)</span> are points as shown in the figure. <span class="math notranslate nohighlight">\(l\)</span> and <span class="math notranslate nohighlight">\(h\)</span> are the length and height of the door. <span class="math notranslate nohighlight">\(\theta\)</span> is time-varying. You are asked to find (i.e., compute symbolic expressions) for the following:</p>
+<!--
+```{figure} ./images/37.png
+---
+name: 37
+---
+```
+Or, if written in typeface, you are being asked to evaluate:
+-->
+<div class="math notranslate nohighlight">
+\[\frac{{}^{A}d{\bf r}}{dt}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\frac{{}^{B}d{\bf r}}{dt}.\]</div>
+<p>Additionally, you are instructed that all final answers must be expressed in unit vectors attached to the <span class="math notranslate nohighlight">\(A\)</span>-frame.</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Solution</p>
-<div class="figure align-default" id="id6">
+<div class="figure align-default" id="id5">
 <img alt="../_images/38.png" src="../_images/38.png" />
 </div>
-<div class="figure align-default" id="id7">
+<div class="figure align-default" id="id6">
 <img alt="../_images/39.png" src="../_images/39.png" />
 </div>
 <p>The above example demonstrated the difference between taking time derivatives of the same vector from two frames.</p>
@@ -459,19 +469,40 @@
 </div>
 <div class="section" id="properties-of-vector-derivatives">
 <h2>Properties of Vector Derivatives<a class="headerlink" href="#properties-of-vector-derivatives" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="id8">
-<img alt="../_images/40.png" src="../_images/40.png" />
-</div>
-<p>where,</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\vec{a},\;\vec{b},\;\vec{c}\)</span> are arbitrary vectors.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\theta,\;\lambda,\;\alpha,\;\gamma\)</span> are scalars.</p></li>
-<li><p><span class="math notranslate nohighlight">\(t\)</span> is scalar time.</p></li>
-</ul>
-<div class="figure align-default" id="id9">
-<img alt="../_images/411.png" src="../_images/411.png" />
-</div>
-</div>
+<p>The following four properties are useful in computing derivatives of vectors.</p>
+<!--
+```{figure} ./images/40.png
+---
+name: 40
+---
+```
+-->
+<p><strong>Property 1</strong>: If <span class="math notranslate nohighlight">\(\bf a\)</span> and <span class="math notranslate nohighlight">\(\bf b\)</span> are two vectors expressed in a reference frame <span class="math notranslate nohighlight">\(D\)</span>, then the time derivative of their vector sum, taken from the frame <span class="math notranslate nohighlight">\(D\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[\frac{{}^{D}d{}}{dt} ({\bf a} + {\bf b}) = \frac{{}^{D}d{\bf a}}{dt} + \frac{{}^{D}d{\bf b}}{dt}\]</div>
+<p><strong>Property 2</strong>: If <span class="math notranslate nohighlight">\(\bf a\)</span> is a vector expressed in a reference frame <span class="math notranslate nohighlight">\(C\)</span> and <span class="math notranslate nohighlight">\(\lambda\)</span> is some arbitrary scalar (not necessarily a constant), then the time derivative of their product is:</p>
+<div class="math notranslate nohighlight">
+\[\frac{{}^{C}d{ (\lambda {\bf a})}}{dt} = \frac{d{\lambda}}{dt} {\bf a} + \lambda \frac{{}^{C}d{\bf a}}{dt}\]</div>
+<p><strong>Property 3</strong>: If <span class="math notranslate nohighlight">\(\bf a\)</span> and <span class="math notranslate nohighlight">\(\bf b\)</span> are two vectors expressed in a reference frame <span class="math notranslate nohighlight">\(E\)</span>, then the derivative of their dot product with respect to some scalar parameter <span class="math notranslate nohighlight">\(\alpha\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[\frac{d{}}{d \alpha} ({\bf a} \cdot {\bf b}) = \frac{{}^{E}d{\bf a}}{d\alpha} \cdot {\bf b} + {\bf a} \cdot \frac{{}^{E}d{\bf b}}{d\alpha}\]</div>
+<p><strong>Property 4</strong>: If <span class="math notranslate nohighlight">\(\bf a\)</span> and <span class="math notranslate nohighlight">\(\bf b\)</span> are two vectors expressed in some reference frame <span class="math notranslate nohighlight">\(A\)</span>, then the derivative of their cross product taken with respect to some scalar parameter <span class="math notranslate nohighlight">\(\gamma\)</span> from the frame <span class="math notranslate nohighlight">\(A\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[\frac{{}^{A}d{}}{d \gamma} ({\bf a} \times {\bf b}) = \frac{{}^{A}d{\bf a}}{d\gamma} \times {\bf b} + {\bf a} \times \frac{{}^{A}d{\bf b}}{d\gamma}\]</div>
+<!-- where,
+
+* $\vec{a},\;\vec{b},\;\vec{c}$ are arbitrary vectors.
+* $\theta,\;\lambda,\;\alpha,\;\gamma$ are scalars.
+* $t$ is scalar time. 
+
+
+
+```{figure} ./images/41.png
+---
+name: 41
+---
+```
+--></div>
 </div>
 
     <script type="text/x-thebe-config">
