@@ -38,7 +38,7 @@ problems as computational methods.
 
 ### Creating an environment
 1. `conda env create -f environment.yml`
-2. `conda activate qe-example`
+2. `conda activate computational-mechanics-example`
 
 ### Building a Jupyter Book
 Run the following command in your terminal: `jb build .`.

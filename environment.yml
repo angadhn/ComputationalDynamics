@@ -1,4 +1,4 @@
-name: qe-mini-example
+name: computational-mechanics-example
 channels:
   - default
 dependencies:
