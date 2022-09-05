@@ -9,13 +9,14 @@ tags:
 authors:
   - name: Angadh Nanjangud
     orcid: 0000-0002-1785-9140
-    equal-contrib: true
+    corresponding: true # (This is how to denote the corresponding author)
+    equal-contrib: false
     affiliation: 1 # (Multiple affiliations must be quoted)
   - name: Mughees Asif 
     equal-contrib: true # (This is how you can denote equal contributions between multiple authors)
     affiliation: 1
   - name: Simone Asci
-    corresponding: true # (This is how to denote the corresponding author)
+    equal-contrib: true
     affiliation: 1
 affiliations:
  - name: Queen Mary University of London, London, UK
