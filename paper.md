@@ -13,10 +13,10 @@ authors:
     equal-contrib: false
     affiliation: 1 # (Multiple affiliations must be quoted)
   - name: Mughees Asif 
-    equal-contrib: true # (This is how you can denote equal contributions between multiple authors)
+    equal-contrib: false # (This is how you can denote equal contributions between multiple authors)
     affiliation: 1
   - name: Simone Asci
-    equal-contrib: true
+    equal-contrib: false
     affiliation: 1
 affiliations:
  - name: Queen Mary University of London, London, UK
