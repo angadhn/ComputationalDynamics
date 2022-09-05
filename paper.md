@@ -10,13 +10,13 @@ authors:
   - name: Angadh Nanjangud
     orcid: 0000-0002-1785-9140
     equal-contrib: true
-    affiliation: "1" # (Multiple affiliations must be quoted)
+    affiliation: 1 # (Multiple affiliations must be quoted)
   - name: Mughees Asif 
     equal-contrib: true # (This is how you can denote equal contributions between multiple authors)
     affiliation: 1
   - name: Simone Asci
     corresponding: true # (This is how to denote the corresponding author)
-    affiliation: 3
+    affiliation: 1
 affiliations:
  - name: Queen Mary University of London, London, UK
    index: 1
@@ -24,7 +24,7 @@ affiliations:
    index: 2
  - name: Independent Researcher, Country
    index: 3
-date: 13 August 2017
+date: 5 September 2022
 bibliography: paper.bib
 
 # Optional fields if submitting to a AAS journal too, see this blog post:
