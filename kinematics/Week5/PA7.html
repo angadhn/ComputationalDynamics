@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JN8: Practice Activity 7 &#8212; Computational Dynamics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>JN8: Practice Activity 7 &#8212; Introduction to Symbolic Computational Dynamics</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,48 +20,64 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Mass/Inertia Scalars" href="../../inertia/inertia-1.html" />
     <link rel="prev" title="Two key velocity/acceleration transfer theorems" href="../theorems.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -68,30 +86,36 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../../_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Computational Dynamics</h1>
+      <h1 class="site-logo" id="site-title">Introduction to Symbolic Computational Dynamics</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../introduction.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../introduction.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Kinematics
  </span>
@@ -190,7 +214,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Inertia
  </span>
@@ -203,9 +227,9 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../inertia/inertia-2.html">
-   Key Theorems for computing
+   Theorems for Computing Inertia Matrix
    <span class="math notranslate nohighlight">
-    \(\left[I\right]^{S/O}\)
+    \(\left[I\right]\)
    </span>
   </a>
  </li>
@@ -215,7 +239,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Forces, Moments, and Momenta
  </span>
@@ -247,7 +271,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Dynamics
  </span>
@@ -274,7 +298,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Appendices
  </span>
@@ -293,96 +317,182 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/kinematics/Week5/PA7.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/kinematics/Week5/PA7.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/kinematics/Week5/PA7.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/kinematics/Week5/PA7.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/kinematics/Week5/PA7.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/kinematics/Week5/PA7.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
    JN8: Practice Activity 7
@@ -567,22 +677,224 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>JN8: Practice Activity 7</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   JN8: Practice Activity 7
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-set-up">
+   Problem set-up
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-constants-using-symbols-and-time-varying-scalars-using-dynamicsymbols">
+     Create constants using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       symbols
+      </span>
+     </code>
+     and time-varying scalars using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       dynamicsymbols
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-and-orient-reference-frames-n-a-and-b">
+     Create and orient reference frames
+     <span class="math notranslate nohighlight">
+      \(N\)
+     </span>
+     ,
+     <span class="math notranslate nohighlight">
+      \(A\)
+     </span>
+     , and
+     <span class="math notranslate nohighlight">
+      \(B\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-the-points-o-q-and-p">
+     Create the points
+     <span class="math notranslate nohighlight">
+      \(O\)
+     </span>
+     ,
+     <span class="math notranslate nohighlight">
+      \(Q\)
+     </span>
+     , and
+     <span class="math notranslate nohighlight">
+      \(P\)
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#approach-1-using-definitions">
+   Approach 1: Using definitions
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compute-n-bf-v-p">
+     Compute
+     <span class="math notranslate nohighlight">
+      \(^N{\bf v}^P\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compute-a-bf-v-p">
+     Compute
+     <span class="math notranslate nohighlight">
+      \(^A{\bf v}^P\)
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#approach-2-implementing-one-point-theorem">
+   Approach 2: Implementing one point theorem
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Compute
+     <span class="math notranslate nohighlight">
+      \(^N{\bf v}^P\)
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-1-define-b-bf-v-p-using-set-vel">
+       Step 1: Define
+       <span class="math notranslate nohighlight">
+        \(^B{\bf v}^P\)
+       </span>
+       using
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .set_vel
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-2-compute-n-bf-v-q">
+       Step 2: Compute
+       <span class="math notranslate nohighlight">
+        \(^N{\bf v}^Q\)
+       </span>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-3-store-n-omega-b-for-use-in-one-point-formula">
+       Step 3: Store
+       <span class="math notranslate nohighlight">
+        \(^N\omega^B\)
+       </span>
+       for use in one-point formula
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-4-finally-compute-n-bf-v-p">
+       Step 4: Finally, compute
+       <span class="math notranslate nohighlight">
+        \(^N{\bf v}^P\)
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Compute
+     <span class="math notranslate nohighlight">
+      \(^A{\bf v}^P\)
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-1-set-velocity-of-q-to-zero-in-a-and-b">
+       Step 1: Set velocity of
+       <span class="math notranslate nohighlight">
+        \(Q\)
+       </span>
+       to zero in
+       <span class="math notranslate nohighlight">
+        \(A\)
+       </span>
+       and
+       <span class="math notranslate nohighlight">
+        \(B\)
+       </span>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-2-store-a-omega-b-to-use-in-one-point-theorem">
+       Step 2: Store
+       <span class="math notranslate nohighlight">
+        \(^A\omega^B\)
+       </span>
+       to  use in one-point theorem
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-3-finally-compute-n-bf-v-p">
+       Step 3: Finally, compute
+       <span class="math notranslate nohighlight">
+        \(^N{\bf v}^P\)
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="jn8-practice-activity-7">
-<h1>JN8: Practice Activity 7<a class="headerlink" href="#jn8-practice-activity-7" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="jn8-practice-activity-7">
+<h1>JN8: Practice Activity 7<a class="headerlink" href="#jn8-practice-activity-7" title="Permalink to this headline">#</a></h1>
 <!-- <img src="Figures/Particle_sliding_on_Double_Pendulum.png" height=300 width=300> -->
-<div class="figure align-default" id="particle-sliding-on-doublependulum">
+<figure class="align-default" id="particle-sliding-on-doublependulum">
 <img alt="../../_images/Particle_sliding_on_Double_Pendulum.png" src="../../_images/Particle_sliding_on_Double_Pendulum.png" />
-<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text"><span class="math notranslate nohighlight">\(P\)</span> slides on a double pendulum (made up of two links <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>).</span><a class="headerlink" href="#particle-sliding-on-doublependulum" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text"><span class="math notranslate nohighlight">\(P\)</span> slides on a double pendulum (made up of two links <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>).</span><a class="headerlink" href="#particle-sliding-on-doublependulum" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>This notebook use the example of a particle <span class="math notranslate nohighlight">\(P\)</span> sliding on a double pendulum (see figure above); this system was first presented to you in the file “7 Particle Kinematics”. Your objective is to compute the :</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(^N{\bf v}^P\)</span>, velocity of <span class="math notranslate nohighlight">\(P\)</span> in <span class="math notranslate nohighlight">\(N\)</span>; and</p></li>
@@ -593,11 +905,11 @@
 <li><p>the defintions of velocity <span class="math notranslate nohighlight">\(^N{\bf v}^P \triangleq \frac{^N d}{dt}{\bf r}_{OP}\)</span> and <span class="math notranslate nohighlight">\(^A{\bf v}^P \triangleq \frac{^A d}{dt}{^N{\bf r}^{QP}}\)</span></p></li>
 <li><p>the one-point theorem for velocity.</p></li>
 </ol>
-</div>
-<div class="section" id="problem-set-up">
-<h1>Problem set-up<a class="headerlink" href="#problem-set-up" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="create-constants-using-symbols-and-time-varying-scalars-using-dynamicsymbols">
-<h2>Create constants using <code class="docutils literal notranslate"><span class="pre">symbols</span></code> and time-varying scalars using <code class="docutils literal notranslate"><span class="pre">dynamicsymbols</span></code><a class="headerlink" href="#create-constants-using-symbols-and-time-varying-scalars-using-dynamicsymbols" title="Permalink to this headline">¶</a></h2>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="problem-set-up">
+<h1>Problem set-up<a class="headerlink" href="#problem-set-up" title="Permalink to this headline">#</a></h1>
+<section id="create-constants-using-symbols-and-time-varying-scalars-using-dynamicsymbols">
+<h2>Create constants using <code class="docutils literal notranslate"><span class="pre">symbols</span></code> and time-varying scalars using <code class="docutils literal notranslate"><span class="pre">dynamicsymbols</span></code><a class="headerlink" href="#create-constants-using-symbols-and-time-varying-scalars-using-dynamicsymbols" title="Permalink to this headline">#</a></h2>
 <p>Below we create the scalar constant <span class="math notranslate nohighlight">\(l\)</span>, which is the length of the links <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>; this is stored as the variable <code class="docutils literal notranslate"><span class="pre">l_scalar.</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -618,9 +930,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="create-and-orient-reference-frames-n-a-and-b">
-<h2>Create and orient reference frames <span class="math notranslate nohighlight">\(N\)</span>, <span class="math notranslate nohighlight">\(A\)</span>, and <span class="math notranslate nohighlight">\(B\)</span><a class="headerlink" href="#create-and-orient-reference-frames-n-a-and-b" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="create-and-orient-reference-frames-n-a-and-b">
+<h2>Create and orient reference frames <span class="math notranslate nohighlight">\(N\)</span>, <span class="math notranslate nohighlight">\(A\)</span>, and <span class="math notranslate nohighlight">\(B\)</span><a class="headerlink" href="#create-and-orient-reference-frames-n-a-and-b" title="Permalink to this headline">#</a></h2>
 <p>Next, we create the three reference frames <span class="math notranslate nohighlight">\(N\)</span>, <span class="math notranslate nohighlight">\(A\)</span>, and <span class="math notranslate nohighlight">\(B\)</span>, which are stored in the variable names <code class="docutils literal notranslate"><span class="pre">N</span></code>, <code class="docutils literal notranslate"><span class="pre">A</span></code>, and <code class="docutils literal notranslate"><span class="pre">B</span></code>,  respectively.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -654,9 +966,9 @@
 <img alt="../../_images/PA7_10_0.png" src="../../_images/PA7_10_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="create-the-points-o-q-and-p">
-<h2>Create the points <span class="math notranslate nohighlight">\(O\)</span>, <span class="math notranslate nohighlight">\(Q\)</span>, and <span class="math notranslate nohighlight">\(P\)</span><a class="headerlink" href="#create-the-points-o-q-and-p" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="create-the-points-o-q-and-p">
+<h2>Create the points <span class="math notranslate nohighlight">\(O\)</span>, <span class="math notranslate nohighlight">\(Q\)</span>, and <span class="math notranslate nohighlight">\(P\)</span><a class="headerlink" href="#create-the-points-o-q-and-p" title="Permalink to this headline">#</a></h2>
 <p>Next, we need to create three points:</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(O\)</span> is the point of contact between link <span class="math notranslate nohighlight">\(A\)</span> and ceiling <span class="math notranslate nohighlight">\(N\)</span>; the corresponding variable name we use is <code class="docutils literal notranslate"><span class="pre">O</span></code></p></li>
@@ -721,9 +1033,9 @@ This is shown below:</p></li>
 </div>
 <p>Now, from out lecture notes, we know that <span class="math notranslate nohighlight">\({\bf r}^{OP}\)</span>,the position vector from <span class="math notranslate nohighlight">\(O\)</span> to <span class="math notranslate nohighlight">\(P\)</span>, is given by:</p>
 <!-- <img src="Figures/r_OP.png" height=400 width=400> -->
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/r_OP.png" src="../../_images/r_OP.png" />
-</div>
+</figure>
 <p>So, we can use <code class="docutils literal notranslate"><span class="pre">sympy</span></code> and our knowledge of vector addition to compute this position vector using the <code class="docutils literal notranslate"><span class="pre">r_OQ_vector</span></code> and <code class="docutils literal notranslate"><span class="pre">r_QP_vector</span></code>. I store this information in a variable <code class="docutils literal notranslate"><span class="pre">r_OP_vector</span></code>, as shown below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -737,17 +1049,17 @@ This is shown below:</p></li>
 </div>
 </div>
 <p>Next, I describe how we can exploit <code class="docutils literal notranslate"><span class="pre">sympy</span></code> and our knowledge on vector calculus to compute velocities of <span class="math notranslate nohighlight">\(P\)</span> from diffrerent reference frames.</p>
-</div>
-</div>
-<div class="section" id="approach-1-using-definitions">
-<h1>Approach 1: Using definitions<a class="headerlink" href="#approach-1-using-definitions" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="compute-n-bf-v-p">
-<h2>Compute <span class="math notranslate nohighlight">\(^N{\bf v}^P\)</span><a class="headerlink" href="#compute-n-bf-v-p" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="approach-1-using-definitions">
+<h1>Approach 1: Using definitions<a class="headerlink" href="#approach-1-using-definitions" title="Permalink to this headline">#</a></h1>
+<section id="compute-n-bf-v-p">
+<h2>Compute <span class="math notranslate nohighlight">\(^N{\bf v}^P\)</span><a class="headerlink" href="#compute-n-bf-v-p" title="Permalink to this headline">#</a></h2>
 <p>The classical definition of velocity is well known (see figure below):</p>
 <!-- <img src="Figures/NvP_approach_1.png" height=200 width=200> -->
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/NvP_approach_1.png" src="../../_images/NvP_approach_1.png" />
-</div>
+</figure>
 <p>We use that and our knowledge of taking time derivatives in <code class="docutils literal notranslate"><span class="pre">sympy</span></code> to compute <span class="math notranslate nohighlight">\(^N{\bf v}^P\)</span>, which is stored in the variable <code class="docutils literal notranslate"><span class="pre">N_v_P_approach1</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -760,9 +1072,9 @@ This is shown below:</p></li>
 <img alt="../../_images/PA7_24_0.png" src="../../_images/PA7_24_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="compute-a-bf-v-p">
-<h2>Compute <span class="math notranslate nohighlight">\(^A{\bf v}^P\)</span><a class="headerlink" href="#compute-a-bf-v-p" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="compute-a-bf-v-p">
+<h2>Compute <span class="math notranslate nohighlight">\(^A{\bf v}^P\)</span><a class="headerlink" href="#compute-a-bf-v-p" title="Permalink to this headline">#</a></h2>
 <p><span class="math notranslate nohighlight">\(^A{\bf v}^P\)</span> is also computed in a similar fashion using classical definition and sympy; this information is stored in the variable name <code class="docutils literal notranslate"><span class="pre">A_v_P_approach1</span></code>. See below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -775,18 +1087,18 @@ This is shown below:</p></li>
 <img alt="../../_images/PA7_26_0.png" src="../../_images/PA7_26_0.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="approach-2-implementing-one-point-theorem">
-<h1>Approach 2: Implementing one point theorem<a class="headerlink" href="#approach-2-implementing-one-point-theorem" title="Permalink to this headline">¶</a></h1>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="approach-2-implementing-one-point-theorem">
+<h1>Approach 2: Implementing one point theorem<a class="headerlink" href="#approach-2-implementing-one-point-theorem" title="Permalink to this headline">#</a></h1>
 <p>In this section, we learn to compute the two velocities <span class="math notranslate nohighlight">\(^N{\bf v}^P\)</span> and <span class="math notranslate nohighlight">\(^A{\bf v}^P\)</span> using the one-point theorem.</p>
-<div class="section" id="id1">
-<h2>Compute <span class="math notranslate nohighlight">\(^N{\bf v}^P\)</span><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<section id="id1">
+<h2>Compute <span class="math notranslate nohighlight">\(^N{\bf v}^P\)</span><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>To begin, we must first identify correctly how to utilize the one-point theorem. This has been explained in the video lecture so reference that to referesh your memory. In the image below, the resulting equation from correctly applying the one point theorem to compute <span class="math notranslate nohighlight">\(^N{\bf v}^P\)</span> is repeated from the handwritten notes :</p>
 <!-- <img src="Figures/NvP_one_point.png" height=300 width=300> -->
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/NvP_one_point.png" src="../../_images/NvP_one_point.png" />
-</div>
+</figure>
 <p>The right hand side of the above equation tells us what we need to compute. Specifically, it tells us we will need to compute the following to determine <span class="math notranslate nohighlight">\(^N{\bf v}^P\)</span> in <code class="docutils literal notranslate"><span class="pre">sympy</span></code>:</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(^B{\bf v}^P\)</span>, which we can easily evaluate from the figure;</p></li>
@@ -794,8 +1106,8 @@ This is shown below:</p></li>
 <li><p><span class="math notranslate nohighlight">\(^N{\bf \omega}^B\)</span>; this information is actually already available from approach 1 above, where we used the <code class="docutils literal notranslate"><span class="pre">.orient</span></code> method. However, we haven’t stored this in a variable, which we will do in the steps that follow below; and</p></li>
 <li><p><span class="math notranslate nohighlight">\({\bf r}^{QP}\)</span>, which we have already computed above for Approach 1; this is already stored in the variable name <code class="docutils literal notranslate"><span class="pre">r_QP_vector</span></code>.</p></li>
 </ol>
-<div class="section" id="step-1-define-b-bf-v-p-using-set-vel">
-<h3>Step 1: Define <span class="math notranslate nohighlight">\(^B{\bf v}^P\)</span> using <code class="docutils literal notranslate"><span class="pre">.set_vel</span></code><a class="headerlink" href="#step-1-define-b-bf-v-p-using-set-vel" title="Permalink to this headline">¶</a></h3>
+<section id="step-1-define-b-bf-v-p-using-set-vel">
+<h3>Step 1: Define <span class="math notranslate nohighlight">\(^B{\bf v}^P\)</span> using <code class="docutils literal notranslate"><span class="pre">.set_vel</span></code><a class="headerlink" href="#step-1-define-b-bf-v-p-using-set-vel" title="Permalink to this headline">#</a></h3>
 <p>From the figure, we can easily compute the <span class="math notranslate nohighlight">\(^B{\bf v}^P = \dot x \hat {\bf b}_y\)</span>. We can then use the <code class="docutils literal notranslate"><span class="pre">.set_vel</span></code> to set the velocity of <code class="docutils literal notranslate"><span class="pre">P</span></code> in the <code class="docutils literal notranslate"><span class="pre">B</span></code>-frame. This is then stored in the variable <code class="docutils literal notranslate"><span class="pre">B_v_P_vector</span></code> using <code class="docutils literal notranslate"><span class="pre">.vel</span></code> method.</p>
 <p>_<strong>The difference between <code class="docutils literal notranslate"><span class="pre">.set_vel</span></code> and <code class="docutils literal notranslate"><span class="pre">.vel</span></code>: the former lets us define the velocity and store it within the computer without an output; the latter method allows a human to access the velocity vector for future computation</strong>. In other words, their behaviour is similar to what we see for creating position vectors using <code class="docutils literal notranslate"><span class="pre">.set_pos</span></code> and accessing it using <code class="docutils literal notranslate"><span class="pre">.pos_from</span></code>.</p>
 <p>This is shown below:</p>
@@ -811,14 +1123,14 @@ This is shown below:</p></li>
 <img alt="../../_images/PA7_29_0.png" src="../../_images/PA7_29_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="step-2-compute-n-bf-v-q">
-<h3>Step 2: Compute <span class="math notranslate nohighlight">\(^N{\bf v}^Q\)</span><a class="headerlink" href="#step-2-compute-n-bf-v-q" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="step-2-compute-n-bf-v-q">
+<h3>Step 2: Compute <span class="math notranslate nohighlight">\(^N{\bf v}^Q\)</span><a class="headerlink" href="#step-2-compute-n-bf-v-q" title="Permalink to this headline">#</a></h3>
 <p>To compute this velocity, <span class="math notranslate nohighlight">\(^N{\bf v}^Q\)</span>, we make use of the two point theorem. This is shown below from the lecture notes:</p>
 <!-- <img src="Figures/NvQ_two_point.png" height=300 width=300> -->
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/NvQ_two_point.png" src="../../_images/NvQ_two_point.png" />
-</div>
+</figure>
 <p>From the figure it is clear that point <span class="math notranslate nohighlight">\(O\)</span> is fixed in the two frames <span class="math notranslate nohighlight">\(N\)</span> and <span class="math notranslate nohighlight">\(A\)</span>. So, for all our <code class="docutils literal notranslate"><span class="pre">sympy</span></code>-bsed computations, we need to ensure that <span class="math notranslate nohighlight">\(O\)</span> is fixed in frames <span class="math notranslate nohighlight">\(N\)</span> and <span class="math notranslate nohighlight">\(A\)</span> as a point of zero velocity. This is done using our tried and tested <code class="docutils literal notranslate"><span class="pre">.set_vel</span></code> method, as shown below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -856,9 +1168,9 @@ This is shown below:</p></li>
 <img alt="../../_images/PA7_37_0.png" src="../../_images/PA7_37_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="step-3-store-n-omega-b-for-use-in-one-point-formula">
-<h3>Step 3: Store <span class="math notranslate nohighlight">\(^N\omega^B\)</span> for use in one-point formula<a class="headerlink" href="#step-3-store-n-omega-b-for-use-in-one-point-formula" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="step-3-store-n-omega-b-for-use-in-one-point-formula">
+<h3>Step 3: Store <span class="math notranslate nohighlight">\(^N\omega^B\)</span> for use in one-point formula<a class="headerlink" href="#step-3-store-n-omega-b-for-use-in-one-point-formula" title="Permalink to this headline">#</a></h3>
 <p>We can store <span class="math notranslate nohighlight">\(^N\omega^B\)</span> in the variable <code class="docutils literal notranslate"><span class="pre">N_w_B_vector</span></code> using the <code class="docutils literal notranslate"><span class="pre">.ang_vel_in</span></code> method on B, as shown below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -867,14 +1179,14 @@ This is shown below:</p></li>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="step-4-finally-compute-n-bf-v-p">
-<h3>Step 4: Finally, compute <span class="math notranslate nohighlight">\(^N{\bf v}^P\)</span><a class="headerlink" href="#step-4-finally-compute-n-bf-v-p" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="step-4-finally-compute-n-bf-v-p">
+<h3>Step 4: Finally, compute <span class="math notranslate nohighlight">\(^N{\bf v}^P\)</span><a class="headerlink" href="#step-4-finally-compute-n-bf-v-p" title="Permalink to this headline">#</a></h3>
 <p>Now, we can finally compute the <span class="math notranslate nohighlight">\(^N{\bf v}^P\)</span> by implementing the one point theorem (repeating the hand-written equation so you can avoid scrolling up):</p>
 <!-- <img src="Figures/NvP_one_point.png" height=300 width=300> -->
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/NvP_one_point.png" src="../../_images/NvP_one_point.png" />
-</div>
+</figure>
 <p>Indeed, we will store <span class="math notranslate nohighlight">\(^N{\bf v}^P\)</span> in a variable named <code class="docutils literal notranslate"><span class="pre">N_v_P_vector_approach2</span></code> to be clear that we are using our second approach here. In <code class="docutils literal notranslate"><span class="pre">sympy</span></code>, we  implement the handwritten equation to compute <span class="math notranslate nohighlight">\(^N{\bf v}^P\)</span> by making use of vector addition (which you have already learned) as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -887,23 +1199,23 @@ This is shown below:</p></li>
 <img alt="../../_images/PA7_41_0.png" src="../../_images/PA7_41_0.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="id2">
-<h2>Compute <span class="math notranslate nohighlight">\(^A{\bf v}^P\)</span><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="id2">
+<h2>Compute <span class="math notranslate nohighlight">\(^A{\bf v}^P\)</span><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
 <p>By one-point theorem, we know that <span class="math notranslate nohighlight">\(^A{\bf v}^P\)</span> can be evaluated using:</p>
 <!-- <img src="Figures/AvP_one_point.png" height=300 width=300> -->
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/AvP_one_point.png" src="../../_images/AvP_one_point.png" />
-</div>
+</figure>
 <p>So, we can do this entire computation in <code class="docutils literal notranslate"><span class="pre">sympy</span></code> through the few lines of code written below (This is very similar to how we computed <span class="math notranslate nohighlight">\(^N{\bf v}^P\)</span>). Note that:</p>
 <ol class="simple">
 <li><p>we have already computed and stored <span class="math notranslate nohighlight">\(^B{\bf v}^P\)</span> in <code class="docutils literal notranslate"><span class="pre">B_v_P_vector</span></code>; and</p></li>
 <li><p>we have already computed and stored <span class="math notranslate nohighlight">\({\bf r}^{QP}\)</span> in <code class="docutils literal notranslate"><span class="pre">r_QP_vector</span></code>.</p></li>
 </ol>
 <p>We discuss the evaluation of the other terms in the below steps.</p>
-<div class="section" id="step-1-set-velocity-of-q-to-zero-in-a-and-b">
-<h3>Step 1: Set velocity of <span class="math notranslate nohighlight">\(Q\)</span> to zero in <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span><a class="headerlink" href="#step-1-set-velocity-of-q-to-zero-in-a-and-b" title="Permalink to this headline">¶</a></h3>
+<section id="step-1-set-velocity-of-q-to-zero-in-a-and-b">
+<h3>Step 1: Set velocity of <span class="math notranslate nohighlight">\(Q\)</span> to zero in <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span><a class="headerlink" href="#step-1-set-velocity-of-q-to-zero-in-a-and-b" title="Permalink to this headline">#</a></h3>
 <p>Since Q is a point shared by and also fixed in the bodies <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, we use the <code class="docutils literal notranslate"><span class="pre">.set_vel</span></code> method to set its velocity to be zero. We then store this in the <code class="docutils literal notranslate"><span class="pre">A_v_Q_vector</span></code> for accessing in later computations:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -918,9 +1230,9 @@ This is shown below:</p></li>
 <img alt="../../_images/PA7_43_0.png" src="../../_images/PA7_43_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="step-2-store-a-omega-b-to-use-in-one-point-theorem">
-<h3>Step 2: Store <span class="math notranslate nohighlight">\(^A\omega^B\)</span> to  use in one-point theorem<a class="headerlink" href="#step-2-store-a-omega-b-to-use-in-one-point-theorem" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="step-2-store-a-omega-b-to-use-in-one-point-theorem">
+<h3>Step 2: Store <span class="math notranslate nohighlight">\(^A\omega^B\)</span> to  use in one-point theorem<a class="headerlink" href="#step-2-store-a-omega-b-to-use-in-one-point-theorem" title="Permalink to this headline">#</a></h3>
 <p>In approach 1, we already used the <code class="docutils literal notranslate"><span class="pre">orient</span></code> method on <span class="math notranslate nohighlight">\(B\)</span> to define its orientaiton relative to <span class="math notranslate nohighlight">\(A\)</span>. So, we can readily access its angular velocity using the <code class="docutils literal notranslate"><span class="pre">.ang_vel_in</span></code> method on B. For future use, we store <span class="math notranslate nohighlight">\(^A\omega^B\)</span> in the variable <code class="docutils literal notranslate"><span class="pre">A_w_B_vector</span></code>, as shown below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -929,9 +1241,9 @@ This is shown below:</p></li>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="step-3-finally-compute-n-bf-v-p">
-<h3>Step 3: Finally, compute <span class="math notranslate nohighlight">\(^N{\bf v}^P\)</span><a class="headerlink" href="#step-3-finally-compute-n-bf-v-p" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="step-3-finally-compute-n-bf-v-p">
+<h3>Step 3: Finally, compute <span class="math notranslate nohighlight">\(^N{\bf v}^P\)</span><a class="headerlink" href="#step-3-finally-compute-n-bf-v-p" title="Permalink to this headline">#</a></h3>
 <p>Now, we can finally compute the <span class="math notranslate nohighlight">\(^A{\bf v}^P\)</span> by implementing the appropriate version of the one-point theorem in <code class="docutils literal notranslate"><span class="pre">sympy</span></code>. We store <span class="math notranslate nohighlight">\(^A{\bf v}^P\)</span> in the variable <code class="docutils literal notranslate"><span class="pre">A_v_P_vector_approach2</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -959,9 +1271,9 @@ This is shown below:</p></li>
 </div>
 <p>In English, we can say that the above input line is essentially us asking the computer: is the <code class="docutils literal notranslate"><span class="pre">A_v_P_vector_approach2</span></code> the same as <code class="docutils literal notranslate"><span class="pre">A_v_P_approach1</span></code>? Or, in other words, are the two approaches to computing velocities identical?</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">==</span></code> sign is one type of a comparison operator in computer programming. For those interested in learning more, they are discussed <a class="reference external" href="https://www.tutorialspoint.com/python/comparison_operators_example.htm">here</a>.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -985,34 +1297,48 @@ This is shown below:</p></li>
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="../theorems.html" title="previous page">Two key velocity/acceleration transfer theorems</a>
-    <a class='right-next' id="next-link" href="../../inertia/inertia-1.html" title="next page">Mass/Inertia Scalars</a>
-
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../theorems.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Two key velocity/acceleration transfer theorems</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="../../inertia/inertia-1.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Mass/Inertia Scalars</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Angadh Nanjangud<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Angadh Nanjangud<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
+
   </body>
 </html>
