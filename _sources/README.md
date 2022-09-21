@@ -34,11 +34,11 @@ problems as computational methods.
   so [contributions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
   and [suggestions](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) are welcome.
 
-## How to create this Jupyter Book
+## How to create your own Jupyter Book
 
 ### Creating an environment
 1. `conda env create -f environment.yml`
-2. `conda activate computational-mechanics-example`
+2. `conda activate qe-example`
 
 ### Building a Jupyter Book
 Run the following command in your terminal: `jb build .`.
