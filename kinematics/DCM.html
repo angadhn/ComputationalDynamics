@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Direction Cosine Matrix (DCM) &#8212; Computational Dynamics</title>
+    <title>Direction Cosine Matrix (DCM) &#8212; Introduction to Symbolic Computational Dynamics</title>
   
   
   
@@ -56,6 +56,13 @@
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-8NCYQHENVD"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-8NCYQHENVD');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -155,8 +162,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Computational Dynamics - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Computational Dynamics - Home"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Introduction to Symbolic Computational Dynamics - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Introduction to Symbolic Computational Dynamics - Home"/>`);</script>
   
   
 </a></div>
@@ -536,34 +543,30 @@ C
 -\sin\theta  &amp; \cos\theta &amp; 0\\
 0 &amp; 0 &amp; 1\\
 \end{bmatrix}\end{split}\]</div>
-<div class="highlight-{admonition}Terminology notranslate"><div class="highlight"><pre><span></span>**Why does the term Direction _Cosine_ Matrix have the term $\text{cosine}$ in its name?**
-
-Recall that Equation set {eq}`eqnrb8` was derived purely using the $\text{cosine}$ of angles between pairs of unit vectors. For example, consider the $x$-unit vector of the $B$-frame as represented in the $A$-frame:
-
-$$
+<div class="admonition-terminology admonition">
+<p class="admonition-title">Terminology</p>
+<p><strong>Why does the term Direction <em>Cosine</em> Matrix have the term <span class="math notranslate nohighlight">\(\text{cosine}\)</span> in its name?</strong></p>
+<p>Recall that Equation set <a class="reference internal" href="rigid-bodies1.html#equation-eqnrb8">(10)</a> was derived purely using the <span class="math notranslate nohighlight">\(\text{cosine}\)</span> of angles between pairs of unit vectors. For example, consider the <span class="math notranslate nohighlight">\(x\)</span>-unit vector of the <span class="math notranslate nohighlight">\(B\)</span>-frame as represented in the <span class="math notranslate nohighlight">\(A\)</span>-frame:</p>
+<div class="math notranslate nohighlight">
+\[
 \hat{\bf b}_x = \cos{\theta}\hat{\bf a}_x + \cos{(90-0)}\hat{\bf a}_z
-$$
-
-which then becomes
-
-$$
+\]</div>
+<p>which then becomes</p>
+<div class="math notranslate nohighlight">
+\[
 \hat{\bf b}_x = \cos{\theta}\hat{\bf a}_x + \sin{\theta}\hat{\bf a}_z
-$$
-
-This can be written in a more generic form using only dot products (as this product is defined using $\text{cosine}$ terms), as shown below:
-
-$$
+\]</div>
+<p>This can be written in a more generic form using only dot products (as this product is defined using <span class="math notranslate nohighlight">\(\text{cosine}\)</span> terms), as shown below:</p>
+<div class="math notranslate nohighlight">
+\[
 \hat{\bf b}_x = (\hat{\bf b}_x\cdot{}\hat{\bf a}_x)\hat{\bf a}_x + (\hat{\bf b}_x\cdot{}\hat{\bf a}_y)\hat{\bf a}_y + (\hat{\bf b}_x\cdot{}\hat{\bf a}_z)\hat{\bf a}_z
-$$
-
-where,
-
-$$
+\]</div>
+<p>where,</p>
+<div class="math notranslate nohighlight">
+\[
 \hat{\bf b}_x\cdot{}\hat{\bf a}_y = \cos{90^{\circ}} = 0
-$$
-
-This serves as the foundation for a more general description of orientations for **General $3D$ Rotation**.
-</pre></div>
+\]</div>
+<p>This serves as the foundation for a more general description of orientations for <strong>General <span class="math notranslate nohighlight">\(3D\)</span> Rotation</strong>.</p>
 </div>
 </section>
 <section id="general-3d-rotation-and-dcm">

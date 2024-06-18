@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Kinetics &#8212; Computational Dynamics</title>
+    <title>Kinetics &#8212; Introduction to Symbolic Computational Dynamics</title>
   
   
   
@@ -56,6 +56,13 @@
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-8NCYQHENVD"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-8NCYQHENVD');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -155,8 +162,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Computational Dynamics - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Computational Dynamics - Home"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Introduction to Symbolic Computational Dynamics - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Introduction to Symbolic Computational Dynamics - Home"/>`);</script>
   
   
 </a></div>
@@ -473,26 +480,37 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="kinetics">
 <h1>Kinetics<a class="headerlink" href="#kinetics" title="Permalink to this heading">#</a></h1>
 <ul>
-<li><p>You may recall that dynamics has two main parts:
-kinematics and kinetics. In kinematics, we
-studied motion without considering the forces
-causing the motion. Then, we introduced you to
-concepts such as mass/inertia scalars; forces;
-moments; and momentum functions. This builds up
-to the second part: kinetics.</p></li>
-<li><p>Kinetics is the final piece of the puzzle that
-relates all forces acting on bodies to the
-resulting motion.</p></li>
-<li><p>The basic relation between force (all forces on
-a system) and acceleration is found in Newton’s
-second law:</p>
-<div class="math notranslate nohighlight">
-\[
-  \vec{F} = m\vec{a}
-  \]</div>
+<li><p>You may recall that dynamics was principally
+divided into two key parts: <strong>kinematics</strong> and <strong>kinetics</strong>.</p>
+<p>However, if you have followed the text so far, the following has
+been our journey:</p>
+<ol class="arabic simple">
+<li><p>We have already examined kinematics in some detail.
+One must pause to take note here that, in this case,
+motion was investigated without considering the forces
+causing it.</p></li>
+<li><p>Then, we introduced you to
+concepts such as mass/inertia scalars.</p></li>
+<li><p>And then we learned about forces; moments; and the various types of momenta.</p></li>
+</ol>
 </li>
+<li><p>This leads up to the final act: <strong>kinetics</strong>, which is
+the piece of the puzzle that relates the causes of motion (forces and moments)
+to the bodies. The law that connects them is one that the reader is likely<br />
+already familiar with- Newton’s Second Law. Quite simply put, this law states that
+the acceleration of a particle <span class="math notranslate nohighlight">\(P\)</span> (for now, denoted as <span class="math notranslate nohighlight">\({\bf a}\)</span>) is directly
+proportional to the force <span class="math notranslate nohighlight">\({\bf F}\)</span> acting on it. One may have also seen this law
+written as the following equation:</p></li>
 </ul>
-<section id="key-concept-inertial-frame">
+<div class="math notranslate nohighlight" id="equation-dynamics1-newtonslawbasic">
+<span class="eqno">(41)<a class="headerlink" href="#equation-dynamics1-newtonslawbasic" title="Permalink to this equation">#</a></span>\[{\bf F} = m{\bf a}\]</div>
+<p>In the following discussion, we dive deeper into this equation as
+the keen reader of this text may have already taken note that the vectors
+written here are incomplete when compared to our approach so far, i.e.,
+our typical vector notations make use of super-scripts (and subscripts, in some cases)
+to specify reference frames, particles, bodies, etc.</p>
+<!--   This is what we will expound on that permits us to precisely -->
+<!--   define the dynamics in a manner consistent with what we have followed so far. --><section id="key-concept-inertial-frame">
 <h2>Key Concept: Inertial Frame<a class="headerlink" href="#key-concept-inertial-frame" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>In our discussions within kinematics, we have
@@ -593,7 +611,7 @@ F = \frac{Gm_1m_2}{r^2}
 <figure class="align-default" id="spring-forces">
 <img alt="../_images/spring-forces.png" src="../_images/spring-forces.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Spring forces</span><a class="headerlink" href="#spring-forces" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Spring forces</span><a class="headerlink" href="#spring-forces" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>

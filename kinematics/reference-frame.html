@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Vectors and Reference Frames for Dynamics: Physical Examples &#8212; Computational Dynamics</title>
+    <title>Vectors and Reference Frames for Dynamics: Physical Examples &#8212; Introduction to Symbolic Computational Dynamics</title>
   
   
   
@@ -56,6 +56,13 @@
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-8NCYQHENVD"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-8NCYQHENVD');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -155,8 +162,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Computational Dynamics - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Computational Dynamics - Home"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Introduction to Symbolic Computational Dynamics - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Introduction to Symbolic Computational Dynamics - Home"/>`);</script>
   
   
 </a></div>
@@ -455,18 +462,18 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="vectors-and-reference-frames-for-dynamics-physical-examples">
 <h1>Vectors and Reference Frames for Dynamics: Physical Examples<a class="headerlink" href="#vectors-and-reference-frames-for-dynamics-physical-examples" title="Permalink to this heading">#</a></h1>
-<div class="highlight-{admonition}Concept notranslate"><div class="highlight"><pre><span></span>```{figure} ./images/10.png
----
-name: 10
----
-```
-
-* The figure above shows a reference frame $A$ (in pink) and vector ${\bf v}$ (in black).
-* Here, ${\bf v}$ is said to be fixed in the frame $A$ __if and only if__ none of the characteristics of $\bf v$ (i.e., magnitude and direction) are seen to change when it is observed from $A$.
-</pre></div>
+<div class="admonition-concept admonition">
+<p class="admonition-title">Concept</p>
+<figure class="align-default" id="id1">
+<img alt="../_images/102.png" src="../_images/102.png" />
+</figure>
+<ul class="simple">
+<li><p>The figure above shows a reference frame <span class="math notranslate nohighlight">\(A\)</span> (in pink) and vector <span class="math notranslate nohighlight">\({\bf v}\)</span> (in black).</p></li>
+<li><p>Here, <span class="math notranslate nohighlight">\({\bf v}\)</span> is said to be fixed in the frame <span class="math notranslate nohighlight">\(A\)</span> <strong>if and only if</strong> none of the characteristics of <span class="math notranslate nohighlight">\(\bf v\)</span> (i.e., magnitude and direction) are seen to change when it is observed from <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+</ul>
 </div>
 <p>Below, we make use of some hand illustrations to exemplify the above concept.</p>
-<figure class="align-default" id="id1">
+<figure class="align-default" id="id2">
 <img alt="../_images/113.png" src="../_images/113.png" />
 </figure>
 <p>The above handwritten equation can be written in typeface as:</p>
@@ -475,7 +482,7 @@ name: 10
 {\bf e}&amp; = -e \hat{\bf b}_y\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(e\)</span> are the magnitudes of <span class="math notranslate nohighlight">\({\bf v}\)</span> and <span class="math notranslate nohighlight">\({\bf e}\)</span>.</p>
 <p>Notice that we have introduced the unit vectors <span class="math notranslate nohighlight">\(\hat{\bf b}_x\)</span> and <span class="math notranslate nohighlight">\(\hat{\bf b}_y\)</span> for the reference frame <span class="math notranslate nohighlight">\(B\)</span> but <span class="math notranslate nohighlight">\(\hat{\bf b}_z\)</span> is not shown; however, it still does exist and is orthogonal to both <span class="math notranslate nohighlight">\(\hat{\bf b}_x\)</span> and <span class="math notranslate nohighlight">\(\hat{\bf b}_y\)</span>. For the sake of the next discussions on how reference frames relate to each other, we now also introduce a right-handed set of unit vectors for frame <span class="math notranslate nohighlight">\( A: \: \hat{\bf a}_x,\;\hat{\bf a}_y\:\&amp;\:\hat{\bf a}_z\)</span>. We will work with this example in our next Jupyter Notebook, which is our first Practice Activity specifically pertinent to our discussion on dynamics.</p>
-<figure class="align-default" id="id2">
+<figure class="align-default" id="id3">
 <img alt="../_images/122.png" src="../_images/122.png" />
 </figure>
 </section>
