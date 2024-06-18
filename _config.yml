@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Computational Dynamics
+title: Introduction to Symbolic Computational Dynamics
 author: Angadh Nanjangud
 logo: logo.png
 # Add a bibtex file so that we can create citations
@@ -17,3 +17,5 @@ sphinx:
 launch_buttons:
   binderhub_url: "https://mybinder.org"
   colab_url: "https://colab.research.google.com"
+html:
+  google_analytics_id: G-8NCYQHENVD
