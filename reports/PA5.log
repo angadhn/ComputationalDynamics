@@ -1,19 +1,19 @@
 Traceback (most recent call last):
-  File "/Users/angadhnanjangud/opt/anaconda3/envs/computational-mechanics-example/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+  File "/Users/angadhnanjangud/opt/anaconda3/envs/qe-mini-example/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
     executenb(
-  File "/Users/angadhnanjangud/opt/anaconda3/envs/computational-mechanics-example/lib/python3.8/site-packages/nbclient/client.py", line 1204, in execute
+  File "/Users/angadhnanjangud/opt/anaconda3/envs/qe-mini-example/lib/python3.8/site-packages/nbclient/client.py", line 1204, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/Users/angadhnanjangud/opt/anaconda3/envs/computational-mechanics-example/lib/python3.8/site-packages/nbclient/util.py", line 84, in wrapped
+  File "/Users/angadhnanjangud/opt/anaconda3/envs/qe-mini-example/lib/python3.8/site-packages/nbclient/util.py", line 84, in wrapped
     return just_run(coro(*args, **kwargs))
-  File "/Users/angadhnanjangud/opt/anaconda3/envs/computational-mechanics-example/lib/python3.8/site-packages/nbclient/util.py", line 62, in just_run
+  File "/Users/angadhnanjangud/opt/anaconda3/envs/qe-mini-example/lib/python3.8/site-packages/nbclient/util.py", line 62, in just_run
     return loop.run_until_complete(coro)
-  File "/Users/angadhnanjangud/opt/anaconda3/envs/computational-mechanics-example/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+  File "/Users/angadhnanjangud/opt/anaconda3/envs/qe-mini-example/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
     return future.result()
-  File "/Users/angadhnanjangud/opt/anaconda3/envs/computational-mechanics-example/lib/python3.8/site-packages/nbclient/client.py", line 663, in async_execute
+  File "/Users/angadhnanjangud/opt/anaconda3/envs/qe-mini-example/lib/python3.8/site-packages/nbclient/client.py", line 663, in async_execute
     await self.async_execute_cell(
-  File "/Users/angadhnanjangud/opt/anaconda3/envs/computational-mechanics-example/lib/python3.8/site-packages/nbclient/client.py", line 965, in async_execute_cell
+  File "/Users/angadhnanjangud/opt/anaconda3/envs/qe-mini-example/lib/python3.8/site-packages/nbclient/client.py", line 965, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/Users/angadhnanjangud/opt/anaconda3/envs/computational-mechanics-example/lib/python3.8/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+  File "/Users/angadhnanjangud/opt/anaconda3/envs/qe-mini-example/lib/python3.8/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
@@ -25,14 +25,14 @@ B.dcm(A)
 Input [0;32mIn [11][0m, in [0;36m<cell line: 1>[0;34m()[0m
 [0;32m----> 1[0m [43mB[49m[38;5;241;43m.[39;49m[43mdcm[49m[43m([49m[43mA[49m[43m)[49m
 
-File [0;32m~/opt/anaconda3/envs/computational-mechanics-example/lib/python3.8/site-packages/sympy/physics/vector/frame.py:532[0m, in [0;36mReferenceFrame.dcm[0;34m(self, otherframe)[0m
+File [0;32m~/opt/anaconda3/envs/qe-mini-example/lib/python3.8/site-packages/sympy/physics/vector/frame.py:532[0m, in [0;36mReferenceFrame.dcm[0;34m(self, otherframe)[0m
 [1;32m    530[0m [38;5;28;01mif[39;00m otherframe [38;5;129;01min[39;00m [38;5;28mself[39m[38;5;241m.[39m_dcm_cache:
 [1;32m    531[0m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_dcm_cache[otherframe]
 [0;32m--> 532[0m flist [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_dict_list[49m[43m([49m[43motherframe[49m[43m,[49m[43m [49m[38;5;241;43m0[39;49m[43m)[49m
 [1;32m    533[0m outdcm [38;5;241m=[39m eye([38;5;241m3[39m)
 [1;32m    534[0m [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m([38;5;28mlen[39m(flist) [38;5;241m-[39m [38;5;241m1[39m):
 
-File [0;32m~/opt/anaconda3/envs/computational-mechanics-example/lib/python3.8/site-packages/sympy/physics/vector/frame.py:329[0m, in [0;36mReferenceFrame._dict_list[0;34m(self, other, num)[0m
+File [0;32m~/opt/anaconda3/envs/qe-mini-example/lib/python3.8/site-packages/sympy/physics/vector/frame.py:329[0m, in [0;36mReferenceFrame._dict_list[0;34m(self, other, num)[0m
 [1;32m    326[0m     [38;5;28;01mreturn[39;00m possible_connecting_paths[[38;5;241m0[39m]  [38;5;66;03m# selects the shortest path[39;00m
 [1;32m    328[0m msg [38;5;241m=[39m [38;5;124m'[39m[38;5;124mNo connecting [39m[38;5;132;01m{}[39;00m[38;5;124m path found between [39m[38;5;132;01m{}[39;00m[38;5;124m and [39m[38;5;132;01m{}[39;00m[38;5;124m.[39m[38;5;124m'[39m
 [0;32m--> 329[0m [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(msg[38;5;241m.[39mformat(connect_type[num], [38;5;28mself[39m[38;5;241m.[39mname, other[38;5;241m.[39mname))
