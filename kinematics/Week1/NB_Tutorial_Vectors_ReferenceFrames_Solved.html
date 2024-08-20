@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Vector Algebra with a Computer Algebra System &#8212; Introduction to Symbolic Computational Dynamics</title>
   
@@ -647,6 +647,17 @@ For this, we will use SymPy’s <code class="docutils literal notranslate"><span
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">sympy.physics.mechanics</span> <span class="kn">import</span> <span class="n">ReferenceFrame</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sympy&#39;
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="create-the-vector-v">
@@ -680,10 +691,6 @@ examine each of these.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \mathbf{\hat{a}_x}\]</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -691,20 +698,12 @@ examine each of these.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \mathbf{\hat{a}_y}\]</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">.</span><span class="n">z</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 <p>Now, we can construct the vector <span class="math notranslate nohighlight">\(\bf v\)</span> by multiplying its scalars by the
@@ -725,10 +724,6 @@ variable
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle v_{1}\mathbf{\hat{a}_x} + v_{2}\mathbf{\hat{a}_y} + v_{3}\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 <p>Now, a little bit of Python and computer programming terminology.
@@ -764,10 +759,6 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \sqrt{v_{1}^{2} + v_{2}^{2} + v_{3}^{2}}\]</div>
-</div>
 </div>
 <p>A unit vector in the same direction as <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> can also be found with:</p>
 <div class="cell docutils container">
@@ -776,10 +767,6 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{v_{1}}{\sqrt{v_{1}^{2} + v_{2}^{2} + v_{3}^{2}}}\mathbf{\hat{a}_x} + \frac{v_{2}}{\sqrt{v_{1}^{2} + v_{2}^{2} + v_{3}^{2}}}\mathbf{\hat{a}_y} + \frac{v_{3}}{\sqrt{v_{1}^{2} + v_{2}^{2} + v_{3}^{2}}}\mathbf{\hat{a}_z}\]</div>
-</div>
 </div>
 <p>which is equivalent to:</p>
 <div class="cell docutils container">
@@ -787,10 +774,6 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">/</span> <span class="n">v</span><span class="o">.</span><span class="n">magnitude</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{v_{1}}{\sqrt{v_{1}^{2} + v_{2}^{2} + v_{3}^{2}}}\mathbf{\hat{a}_x} + \frac{v_{2}}{\sqrt{v_{1}^{2} + v_{2}^{2} + v_{3}^{2}}}\mathbf{\hat{a}_y} + \frac{v_{3}}{\sqrt{v_{1}^{2} + v_{2}^{2} + v_{3}^{2}}}\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 </section>
@@ -807,10 +790,6 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle w_{1}\mathbf{\hat{a}_x} + w_{2}\mathbf{\hat{a}_y} + w_{3}\mathbf{\hat{a}_z}\]</div>
-</div>
 </div>
 <p>Then, the two vectors can be added:</p>
 <div class="cell docutils container">
@@ -818,10 +797,6 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">+</span> <span class="n">w</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle (v_{1} + w_{1})\mathbf{\hat{a}_x} + (v_{2} + w_{2})\mathbf{\hat{a}_y} + (v_{3} + w_{3})\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 </section>
@@ -836,10 +811,6 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 <span class="n">v</span><span class="o">+</span><span class="n">v</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle 2 v_{1}\mathbf{\hat{a}_x} + 2 v_{2}\mathbf{\hat{a}_y} + 2 v_{3}\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 <ol class="arabic simple" start="2">
@@ -865,10 +836,6 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle u_{1}\mathbf{\hat{b}_x} + u_{2}\mathbf{\hat{b}_y} + u_{3}\mathbf{\hat{b}_z} + v_{1}\mathbf{\hat{a}_x} + v_{2}\mathbf{\hat{a}_y} + v_{3}\mathbf{\hat{a}_z}\]</div>
-</div>
 </div>
 </section>
 </section>
@@ -883,10 +850,6 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle 10 v_{1}\mathbf{\hat{a}_x} + 10 v_{2}\mathbf{\hat{a}_y} + 10 v_{3}\mathbf{\hat{a}_z}\]</div>
-</div>
 </div>
 </section>
 <section id="dot-product">
@@ -897,10 +860,6 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle v_{1}^{2} + v_{2}^{2} + v_{3}^{2}\]</div>
 </div>
 </div>
 </section>
@@ -913,10 +872,6 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle 0\]</div>
-</div>
 </div>
 <section id="id1">
 <h4>Activity:<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
@@ -928,10 +883,6 @@ The scalar magnitude of <code class="docutils literal notranslate"><span class="
 <span class="n">v</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle (v_{2} w_{3} - v_{3} w_{2})\mathbf{\hat{a}_x} + (- v_{1} w_{3} + v_{3} w_{1})\mathbf{\hat{a}_y} + (v_{1} w_{2} - v_{2} w_{1})\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 </section>
@@ -950,10 +901,6 @@ interest is provided.</p></li>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}v_{1}\\v_{2}\\v_{3}\end{matrix}\right]\end{split}\]</div>
-</div>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>You can find all of the scalar variables present in a vector with
@@ -962,11 +909,6 @@ interest is provided.</p></li>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">free_symbols</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{v1, v2, v3}
 </pre></div>
 </div>
 </div>
@@ -981,10 +923,6 @@ frame.</p></li>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \mathbf{\hat{a}_y}\]</div>
-</div>
 </div>
 <ol class="arabic simple" start="4">
 <li><p>You can substitute numerical values for scalar expressions.</p></li>
@@ -995,10 +933,6 @@ frame.</p></li>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle 1.34\mathbf{\hat{a}_x} + 5\mathbf{\hat{a}_y} + v_{3}\mathbf{\hat{a}_z}\]</div>
-</div>
 </div>
 <p>Note that this does not alter the vector or the scalars</p>
 <div class="cell docutils container">
@@ -1007,10 +941,6 @@ frame.</p></li>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle v_{1}\mathbf{\hat{a}_x} + v_{2}\mathbf{\hat{a}_y} + v_{3}\mathbf{\hat{a}_z}\]</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1018,20 +948,12 @@ frame.</p></li>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle v_{1}\]</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v2</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle v_{2}\]</div>
 </div>
 </div>
 <p>Thus, we can make use of the new subsitutions by assigning it to a different
@@ -1044,10 +966,6 @@ Let’s call that <code class="docutils literal notranslate"><span class="pre">z
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle 1.34\mathbf{\hat{a}_x} + v_{2}\mathbf{\hat{a}_y} + v_{3}\mathbf{\hat{a}_z}\]</div>
-</div>
 </div>
 <section id="id2">
 <h2>Activity<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
@@ -1058,10 +976,6 @@ Let’s call that <code class="docutils literal notranslate"><span class="pre">z
 <span class="n">m</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">v1</span><span class="p">:</span> <span class="mi">5</span><span class="p">})</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}5\\v_{2}\\v_{3}\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Now, probe what type of object <code class="docutils literal notranslate"><span class="pre">m</span></code>. In other words, enter <code class="docutils literal notranslate"><span class="pre">m?</span></code> in the code cell

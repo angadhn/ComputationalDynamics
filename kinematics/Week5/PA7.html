@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>JN8: Practice Activity 7 &#8212; Introduction to Symbolic Computational Dynamics</title>
   
@@ -597,6 +597,18 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">sympy.physics.mechanics</span> <span class="kn">import</span> <span class="n">dynamicsymbols</span><span class="p">,</span> <span class="n">ReferenceFrame</span><span class="p">,</span> <span class="n">init_vprinting</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">init_vprinting</span><span class="p">()</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sympy&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>A similar convention for naming variables is used to create <code class="docutils literal notranslate"><span class="pre">theta_1_scalar</span></code>, <code class="docutils literal notranslate"><span class="pre">theta_2_scalar</span></code>, and <code class="docutils literal notranslate"><span class="pre">x_scalar</span></code> to represent  <span class="math notranslate nohighlight">\(\theta_1\)</span>, <span class="math notranslate nohighlight">\(\theta_2\)</span>, and <span class="math notranslate nohighlight">\(x\)</span>. These are created as <code class="docutils literal notranslate"><span class="pre">dynamicsymbols</span></code> as they signifiy the time-varying variables in the figure above. This is done by:</p>
 <div class="cell docutils container">
@@ -628,9 +640,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../_images/a252d3558b96e8058dce3e95f8b6eed52da7fef17b7049f6bcd1131c3801169b.png" src="../../_images/a252d3558b96e8058dce3e95f8b6eed52da7fef17b7049f6bcd1131c3801169b.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -638,9 +647,6 @@ document.write(`
 <span class="n">B</span><span class="o">.</span><span class="n">ang_vel_in</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/a2bca10caf5b7ed08c6d4e4fc730fc990e679a695fa9a3812410956c8910d096.png" src="../../_images/a2bca10caf5b7ed08c6d4e4fc730fc990e679a695fa9a3812410956c8910d096.png" />
 </div>
 </div>
 </section>
@@ -691,9 +697,6 @@ This is shown below:</p></li>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../_images/7284d2d2b5640d18653c246f48402952048f7991c6948f9616500282f2411a08.png" src="../../_images/7284d2d2b5640d18653c246f48402952048f7991c6948f9616500282f2411a08.png" />
-</div>
 </div>
 <p>Similarlyl, we can configure the <span class="math notranslate nohighlight">\(P\)</span> by making use of the two methods described above, <code class="docutils literal notranslate"><span class="pre">set_pos</span></code> and <code class="docutils literal notranslate"><span class="pre">pos_from</span></code>, on P. Then, we can store the position vector information about P relative to Q (i.e., <span class="math notranslate nohighlight">\({\bf r}^{QP}\)</span>) in the variable name <code class="docutils literal notranslate"><span class="pre">r_QP_vector</span></code>. This is shown below:</p>
 <div class="cell docutils container">
@@ -703,9 +706,6 @@ This is shown below:</p></li>
 <span class="n">r_QP_vector</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/1fe19bf7de0199ea5dc3b04b568a91cbd19cd9e7137c617b3d8ad510858fa7df.png" src="../../_images/1fe19bf7de0199ea5dc3b04b568a91cbd19cd9e7137c617b3d8ad510858fa7df.png" />
 </div>
 </div>
 <p>Now, from out lecture notes, we know that <span class="math notranslate nohighlight">\({\bf r}^{OP}\)</span>,the position vector from <span class="math notranslate nohighlight">\(O\)</span> to <span class="math notranslate nohighlight">\(P\)</span>, is given by:</p>
@@ -720,9 +720,6 @@ This is shown below:</p></li>
 <span class="n">r_OP_vector</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/604de90ed870e09f86728756babb216609fab73855435caafd35c96933b8373a.png" src="../../_images/604de90ed870e09f86728756babb216609fab73855435caafd35c96933b8373a.png" />
 </div>
 </div>
 <p>Next, I describe how we can exploit <code class="docutils literal notranslate"><span class="pre">sympy</span></code> and our knowledge on vector calculus to compute velocities of <span class="math notranslate nohighlight">\(P\)</span> from diffrerent reference frames.</p>
@@ -745,9 +742,6 @@ This is shown below:</p></li>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../_images/f9cd8348282230ee18f70150a664c8a873a604ebd343b2e0d4434953ccb2ff3b.png" src="../../_images/f9cd8348282230ee18f70150a664c8a873a604ebd343b2e0d4434953ccb2ff3b.png" />
-</div>
 </div>
 </section>
 <section id="compute-a-bf-v-p">
@@ -759,9 +753,6 @@ This is shown below:</p></li>
 <span class="n">A_v_P_approach1</span><span class="o">.</span><span class="n">express</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/1414a87a1700a8eaa2b4112d979e9e8a1c4144629c675b3270279508f2fd2f96.png" src="../../_images/1414a87a1700a8eaa2b4112d979e9e8a1c4144629c675b3270279508f2fd2f96.png" />
 </div>
 </div>
 </section>
@@ -795,9 +786,6 @@ This is shown below:</p></li>
 <span class="n">B_v_P_vector</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/e557f98a17ef917e2f46d3f875e91167b3f5cdbfd582efcc9a11a82a1e28566b.png" src="../../_images/e557f98a17ef917e2f46d3f875e91167b3f5cdbfd582efcc9a11a82a1e28566b.png" />
 </div>
 </div>
 </section>
@@ -841,9 +829,6 @@ This is shown below:</p></li>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../_images/d7e27c487441f96f3215e048a7d39af6c5cc07854b582863bb06eabf1b630df3.png" src="../../_images/d7e27c487441f96f3215e048a7d39af6c5cc07854b582863bb06eabf1b630df3.png" />
-</div>
 </div>
 </section>
 <section id="step-3-store-n-omega-b-for-use-in-one-point-formula">
@@ -871,9 +856,6 @@ This is shown below:</p></li>
 <span class="n">N_v_P_vector_approach2</span><span class="o">.</span><span class="n">express</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/f9cd8348282230ee18f70150a664c8a873a604ebd343b2e0d4434953ccb2ff3b.png" src="../../_images/f9cd8348282230ee18f70150a664c8a873a604ebd343b2e0d4434953ccb2ff3b.png" />
 </div>
 </div>
 </section>
@@ -903,9 +885,6 @@ This is shown below:</p></li>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../_images/702ba12f4bf2cef7092842f0bdd4dc2b8bfdc07d13bc79cc481075cd1cc7c88c.png" src="../../_images/702ba12f4bf2cef7092842f0bdd4dc2b8bfdc07d13bc79cc481075cd1cc7c88c.png" />
-</div>
 </div>
 </section>
 <section id="step-2-store-a-omega-b-to-use-in-one-point-theorem">
@@ -929,19 +908,11 @@ This is shown below:</p></li>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../_images/1414a87a1700a8eaa2b4112d979e9e8a1c4144629c675b3270279508f2fd2f96.png" src="../../_images/1414a87a1700a8eaa2b4112d979e9e8a1c4144629c675b3270279508f2fd2f96.png" />
-</div>
 </div>
 <p>We can also compare that the resulting velocities are the same using either approach by comparing the <code class="docutils literal notranslate"><span class="pre">A_v_P_vector_approach2</span></code> is identical to <code class="docutils literal notranslate"><span class="pre">A_v_P_vector_approach1</span></code> as below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A_v_P_vector_approach2</span><span class="o">.</span><span class="n">express</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">==</span> <span class="n">A_v_P_approach1</span><span class="o">.</span><span class="n">express</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>

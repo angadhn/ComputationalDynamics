@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>JN5: Practice Activity 4 &#8212; Introduction to Symbolic Computational Dynamics</title>
   
@@ -570,15 +570,24 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sympy.physics.mechanics</span> <span class="kn">import</span> <span class="n">dynamicsymbols</span><span class="p">,</span> <span class="n">init_vprinting</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">init_vprinting</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">theta</span> <span class="o">=</span> <span class="n">dynamicsymbols</span><span class="p">(</span><span class="s1">&#39;theta&#39;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sympy&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">theta</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/d423f42984306275b14a76376e4f5e50b3b3a468c84516a2d8cfbc32092bbb29.png" src="../../_images/d423f42984306275b14a76376e4f5e50b3b3a468c84516a2d8cfbc32092bbb29.png" />
 </div>
 </div>
 <p>So, what you see from the above output is that <span class="math notranslate nohighlight">\(\theta\)</span> is now very clearly a funciton of time, i.e., <span class="math notranslate nohighlight">\(\theta(t)\)</span>. As we will see in the rest of this interactive discussion, time derivatives of those vectors wherein the angle <span class="math notranslate nohighlight">\(\theta\)</span> appears will automatically result in the emergence of <span class="math notranslate nohighlight">\(\dot \theta\)</span>; the computer is intelligent enough to know how to treat time-varying scalars once you (the coder) has provided it the basic informaton. Remember that the dot is just short-hand for time derivative of a scalar function, i.e., <span class="math notranslate nohighlight">\(\dot \theta \triangleq \frac{d}{dt}\theta(t)\)</span>.</p>
@@ -600,18 +609,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../_images/098a1e9f25469453fcdc5fbfa251fb59bbdc3b9af064fe7cd1a79731578d491e.png" src="../../_images/098a1e9f25469453fcdc5fbfa251fb59bbdc3b9af064fe7cd1a79731578d491e.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/e9800f127906db6e290b35591db594b856ab99eb56c6dcc30f5fdbe05e48c84b.png" src="../../_images/e9800f127906db6e290b35591db594b856ab99eb56c6dcc30f5fdbe05e48c84b.png" />
 </div>
 </div>
 </section>
@@ -658,18 +661,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../_images/a36ceaf1d8b3a07b7ac12a7bc5cbd38709beed34be82a1adf6c2ef027a900824.png" src="../../_images/a36ceaf1d8b3a07b7ac12a7bc5cbd38709beed34be82a1adf6c2ef027a900824.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r_vec</span><span class="o">.</span><span class="n">dt</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/1cbc8df83bcda2f6c632a9140d4b881178df6d2e0a00e9b4e6576f5e5f03102e.png" src="../../_images/1cbc8df83bcda2f6c632a9140d4b881178df6d2e0a00e9b4e6576f5e5f03102e.png" />
 </div>
 </div>
 </section>
@@ -683,9 +680,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../_images/ad9321dd6922a3abb5e75e613e922f7d2f09b9c7ebce0cef6d9771338d8e7c7a.png" src="../../_images/ad9321dd6922a3abb5e75e613e922f7d2f09b9c7ebce0cef6d9771338d8e7c7a.png" />
-</div>
 </div>
 </section>
 <section id="activity-re-compute-frac-a-d-dt-bf-r">
@@ -694,52 +688,6 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r_vec</span><span class="o">.</span><span class="n">dt</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">r_vec</span><span class="o">.</span><span class="n">dt</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-
-<span class="nn">File ~/opt/anaconda3/envs/computational-mechanics-example/lib/python3.8/site-packages/sympy/physics/vector/vector.py:654,</span> in <span class="ni">Vector.dt</span><span class="nt">(self, otherframe)</span>
-<span class="g g-Whitespace">    </span><span class="mi">640</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">641</span><span class="sd"> Returns a Vector which is the time derivative of</span>
-<span class="g g-Whitespace">    </span><span class="mi">642</span><span class="sd"> the self Vector, taken in frame otherframe.</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">651</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">652</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">653</span> <span class="kn">from</span> <span class="nn">sympy.physics.vector</span> <span class="kn">import</span> <span class="n">time_derivative</span>
-<span class="ne">--&gt; </span><span class="mi">654</span> <span class="k">return</span> <span class="n">time_derivative</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otherframe</span><span class="p">)</span>
-
-<span class="nn">File ~/opt/anaconda3/envs/computational-mechanics-example/lib/python3.8/site-packages/sympy/physics/vector/functions.py:207,</span> in <span class="ni">time_derivative</span><span class="nt">(expr, frame, order)</span>
-<span class="g g-Whitespace">    </span><span class="mi">203</span>         <span class="n">outlist</span> <span class="o">+=</span> <span class="p">[(</span><span class="n">express</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">frame</span><span class="p">,</span> <span class="n">variables</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">204</span>                      <span class="n">frame</span><span class="p">)]</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span>         <span class="n">outlist</span> <span class="o">+=</span> <span class="p">(</span><span class="n">time_derivative</span><span class="p">(</span><span class="n">Vector</span><span class="p">([</span><span class="n">v</span><span class="p">]),</span> <span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span>
-<span class="ne">--&gt; </span><span class="mi">207</span>                     <span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">ang_vel_in</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span> <span class="o">^</span> <span class="n">Vector</span><span class="p">([</span><span class="n">v</span><span class="p">])))</span><span class="o">.</span><span class="n">args</span>
-<span class="g g-Whitespace">    </span><span class="mi">208</span> <span class="n">outvec</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="n">outlist</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">209</span> <span class="k">return</span> <span class="n">time_derivative</span><span class="p">(</span><span class="n">outvec</span><span class="p">,</span> <span class="n">frame</span><span class="p">,</span> <span class="n">order</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="nn">File ~/opt/anaconda3/envs/computational-mechanics-example/lib/python3.8/site-packages/sympy/physics/vector/frame.py:449,</span> in <span class="ni">ReferenceFrame.ang_vel_in</span><span class="nt">(self, otherframe)</span>
-<span class="g g-Whitespace">    </span><span class="mi">420</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Returns the angular velocity Vector of the ReferenceFrame.</span>
-<span class="g g-Whitespace">    </span><span class="mi">421</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">422</span><span class="sd"> Effectively returns the Vector:</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">445</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">446</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">448</span> <span class="n">_check_frame</span><span class="p">(</span><span class="n">otherframe</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">449</span> <span class="n">flist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dict_list</span><span class="p">(</span><span class="n">otherframe</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">450</span> <span class="n">outvec</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">451</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flist</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
-
-<span class="nn">File ~/opt/anaconda3/envs/computational-mechanics-example/lib/python3.8/site-packages/sympy/physics/vector/frame.py:328,</span> in <span class="ni">ReferenceFrame._dict_list</span><span class="nt">(self, other, num)</span>
-<span class="g g-Whitespace">    </span><span class="mi">325</span>     <span class="k">return</span> <span class="n">possible_connecting_paths</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># selects the shortest path</span>
-<span class="g g-Whitespace">    </span><span class="mi">327</span> <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;No connecting </span><span class="si">{}</span><span class="s1"> path found between </span><span class="si">{}</span><span class="s1"> and </span><span class="si">{}</span><span class="s1">.&#39;</span>
-<span class="ne">--&gt; </span><span class="mi">328</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">connect_type</span><span class="p">[</span><span class="n">num</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
-
-<span class="ne">ValueError</span>: No connecting angular velocity path found between B and A.
 </pre></div>
 </div>
 </div>

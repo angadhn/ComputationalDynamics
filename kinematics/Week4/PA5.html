@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>JN6: Practice Activity 5 &#8212; Introduction to Symbolic Computational Dynamics</title>
   
@@ -563,6 +563,17 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sympy.physics.mechanics</span> <span class="kn">import</span> <span class="n">dynamicsymbols</span><span class="p">,</span> <span class="n">ReferenceFrame</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">theta</span> <span class="o">=</span> <span class="n">dynamicsymbols</span><span class="p">(</span><span class="s1">&#39;theta&#39;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sympy&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>Then, we represent <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(D\)</span> by creating two <code class="docutils literal notranslate"><span class="pre">ReferenceFrame</span></code> using the variables <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">D</span></code>, as shown below:</p>
 <div class="cell docutils container">
@@ -597,7 +608,7 @@ __ You will get an error (or incorrect result) if you do not provide the informa
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle -  \frac{d}{d t} \theta{\left(t \right)}\mathbf{\hat{a}_z}\]</div>
+\[\displaystyle -  \dot{\theta}\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 <p>In fact, <code class="docutils literal notranslate"><span class="pre">sympy</span></code> also has the power to automatically compute the angular acceleration of <code class="docutils literal notranslate"><span class="pre">D</span></code> in <code class="docutils literal notranslate"><span class="pre">A</span></code>, as shown below:</p>
@@ -609,7 +620,7 @@ __ You will get an error (or incorrect result) if you do not provide the informa
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle -  \frac{d^{2}}{d t^{2}} \theta{\left(t \right)}\mathbf{\hat{a}_z}\]</div>
+\[\displaystyle -  \ddot{\theta}\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">sympy</span></code> can also generate <span class="math notranslate nohighlight">\(^D {\bf C} ^A\)</span> the direction cosine matrix of <span class="math notranslate nohighlight">\(A\)</span> relative to <span class="math notranslate nohighlight">\(D\)</span>.</p>
@@ -694,22 +705,24 @@ __ You will get an error (or incorrect result) if you do not provide the informa
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">2</span><span class="n">cf0bbadf61d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">B</span><span class="o">.</span><span class="n">dcm</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 
-<span class="nn">File ~/opt/anaconda3/envs/computational-mechanics-example/lib/python3.8/site-packages/sympy/physics/vector/frame.py:531,</span> in <span class="ni">ReferenceFrame.dcm</span><span class="nt">(self, otherframe)</span>
-<span class="g g-Whitespace">    </span><span class="mi">529</span> <span class="k">if</span> <span class="n">otherframe</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dcm_cache</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">530</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dcm_cache</span><span class="p">[</span><span class="n">otherframe</span><span class="p">]</span>
-<span class="ne">--&gt; </span><span class="mi">531</span> <span class="n">flist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dict_list</span><span class="p">(</span><span class="n">otherframe</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">532</span> <span class="n">outdcm</span> <span class="o">=</span> <span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flist</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+<span class="nn">~/opt/anaconda3/lib/python3.7/site-packages/sympy/physics/vector/frame.py</span> in <span class="ni">dcm</span><span class="nt">(self, otherframe)</span>
+<span class="g g-Whitespace">    </span><span class="mi">426</span>         <span class="k">if</span> <span class="n">otherframe</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dcm_cache</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">427</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dcm_cache</span><span class="p">[</span><span class="n">otherframe</span><span class="p">]</span>
+<span class="ne">--&gt; </span><span class="mi">428</span>         <span class="n">flist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dict_list</span><span class="p">(</span><span class="n">otherframe</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">429</span>         <span class="n">outdcm</span> <span class="o">=</span> <span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">430</span>         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flist</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
 
-<span class="nn">File ~/opt/anaconda3/envs/computational-mechanics-example/lib/python3.8/site-packages/sympy/physics/vector/frame.py:328,</span> in <span class="ni">ReferenceFrame._dict_list</span><span class="nt">(self, other, num)</span>
-<span class="g g-Whitespace">    </span><span class="mi">325</span>     <span class="k">return</span> <span class="n">possible_connecting_paths</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># selects the shortest path</span>
-<span class="g g-Whitespace">    </span><span class="mi">327</span> <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;No connecting </span><span class="si">{}</span><span class="s1"> path found between </span><span class="si">{}</span><span class="s1"> and </span><span class="si">{}</span><span class="s1">.&#39;</span>
-<span class="ne">--&gt; </span><span class="mi">328</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">connect_type</span><span class="p">[</span><span class="n">num</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+<span class="nn">~/opt/anaconda3/lib/python3.7/site-packages/sympy/physics/vector/frame.py</span> in <span class="ni">_dict_list</span><span class="nt">(self, other, num)</span>
+<span class="g g-Whitespace">    </span><span class="mi">271</span>             <span class="k">return</span> <span class="n">outlist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">272</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;No Connecting Path found between &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span>
+<span class="ne">--&gt; </span><span class="mi">273</span>                          <span class="s1">&#39; and &#39;</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">274</span> 
+<span class="g g-Whitespace">    </span><span class="mi">275</span>     <span class="k">def</span> <span class="nf">_w_diff_dcm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otherframe</span><span class="p">):</span>
 
-<span class="ne">ValueError</span>: No connecting orientation path found between B and A.
+<span class="ne">ValueError</span>: No Connecting Path found between B and A
 </pre></div>
 </div>
 </div>

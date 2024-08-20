@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>JN4: Practice Activity 3 &#8212; Introduction to Symbolic Computational Dynamics</title>
   
@@ -582,6 +582,18 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">sympy.physics.mechanics</span> <span class="kn">import</span> <span class="n">dynamicsymbols</span><span class="p">,</span> <span class="n">ReferenceFrame</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">v</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;v e&#39;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sympy&#39;
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="creating-reference-frames">
@@ -649,10 +661,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}\cos{\left(\theta{\left(t \right)} \right)} &amp; 0 &amp; \sin{\left(\theta{\left(t \right)} \right)}\\0 &amp; 1 &amp; 0\\- \sin{\left(\theta{\left(t \right)} \right)} &amp; 0 &amp; \cos{\left(\theta{\left(t \right)} \right)}\end{matrix}\right]\end{split}\]</div>
-</div>
 </div>
 </section>
 <section id="use-b-dcm-a-and-orient-method-of-frame-a-to-rotate-b">
@@ -682,20 +690,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle -  \frac{d}{d t} \theta{\left(t \right)}\mathbf{\hat{b}_y}\]</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="o">.</span><span class="n">ang_acc_in</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle -  \frac{d^{2}}{d t^{2}} \theta{\left(t \right)}\mathbf{\hat{b}_y}\]</div>
 </div>
 </div>
 </section>
@@ -719,10 +719,6 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v_vec</span><span class="o">.</span><span class="n">express</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle v \cos{\left(\theta{\left(t \right)} \right)}\mathbf{\hat{a}_x} + v \sin{\left(\theta{\left(t \right)} \right)}\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 </section>

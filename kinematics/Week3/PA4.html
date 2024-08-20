@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>JN5: Practice Activity 4 &#8212; Introduction to Symbolic Computational Dynamics</title>
   
@@ -574,6 +574,18 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sympy.physics.mechanics</span> <span class="kn">import</span> <span class="n">dynamicsymbols</span><span class="p">,</span> <span class="n">init_vprinting</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">init_vprinting</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">theta</span> <span class="o">=</span> <span class="n">dynamicsymbols</span><span class="p">(</span><span class="s1">&#39;theta&#39;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sympy&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -582,7 +594,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d423f42984306275b14a76376e4f5e50b3b3a468c84516a2d8cfbc32092bbb29.png" src="../../_images/d423f42984306275b14a76376e4f5e50b3b3a468c84516a2d8cfbc32092bbb29.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \theta{\left(t \right)}\]</div>
 </div>
 </div>
 <p>So, what you see from the above output is that <span class="math notranslate nohighlight">\(\theta\)</span> is now very clearly a funciton of time, i.e., <span class="math notranslate nohighlight">\(\theta(t)\)</span>. As we will see in the rest of this interactive discussion, time derivatives of those vectors wherein the angle <span class="math notranslate nohighlight">\(\theta\)</span> appears will automatically result in the emergence of <span class="math notranslate nohighlight">\(\dot \theta\)</span>; the computer is intelligent enough to know how to treat time-varying scalars once you (the coder) has provided it the basic informaton. Remember that the dot is just short-hand for time derivative of a scalar function, i.e., <span class="math notranslate nohighlight">\(\dot \theta \triangleq \frac{d}{dt}\theta(t)\)</span>.</p>
@@ -605,7 +618,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/098a1e9f25469453fcdc5fbfa251fb59bbdc3b9af064fe7cd1a79731578d491e.png" src="../../_images/098a1e9f25469453fcdc5fbfa251fb59bbdc3b9af064fe7cd1a79731578d491e.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle l\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -615,7 +629,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/e9800f127906db6e290b35591db594b856ab99eb56c6dcc30f5fdbe05e48c84b.png" src="../../_images/e9800f127906db6e290b35591db594b856ab99eb56c6dcc30f5fdbe05e48c84b.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle h\]</div>
 </div>
 </div>
 </section>
@@ -663,7 +678,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/a36ceaf1d8b3a07b7ac12a7bc5cbd38709beed34be82a1adf6c2ef027a900824.png" src="../../_images/a36ceaf1d8b3a07b7ac12a7bc5cbd38709beed34be82a1adf6c2ef027a900824.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle (- l \cos{\left(\theta{\left(t \right)} \right)} + l)\mathbf{\hat{a}_x} + h\mathbf{\hat{a}_y} -  l \sin{\left(\theta{\left(t \right)} \right)}\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -673,7 +689,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/1cbc8df83bcda2f6c632a9140d4b881178df6d2e0a00e9b4e6576f5e5f03102e.png" src="../../_images/1cbc8df83bcda2f6c632a9140d4b881178df6d2e0a00e9b4e6576f5e5f03102e.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle l \sin{\left(\theta{\left(t \right)} \right)} \frac{d}{d t} \theta{\left(t \right)}\mathbf{\hat{a}_x} -  l \cos{\left(\theta{\left(t \right)} \right)} \frac{d}{d t} \theta{\left(t \right)}\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 </section>

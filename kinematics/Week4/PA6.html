@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>JN7: Practice Activity 6 &#8212; Introduction to Symbolic Computational Dynamics</title>
   
@@ -566,6 +566,18 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sympy.physics.mechanics</span> <span class="kn">import</span> <span class="n">dynamicsymbols</span><span class="p">,</span> <span class="n">ReferenceFrame</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">theta</span><span class="p">,</span> <span class="n">phi</span> <span class="o">=</span> <span class="n">dynamicsymbols</span><span class="p">(</span><span class="s1">&#39;theta phi&#39;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sympy&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>We can examine the variables <code class="docutils literal notranslate"><span class="pre">thetadot</span></code> and <code class="docutils literal notranslate"><span class="pre">phidot</span></code> to ensure that they are time derivatives of <code class="docutils literal notranslate"><span class="pre">theta</span></code> and <code class="docutils literal notranslate"><span class="pre">phi</span></code>:</p>
 <div class="cell docutils container">
@@ -584,10 +596,6 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">phidot</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{d}{d t} \phi{\left(t \right)}\]</div>
 </div>
 </div>
 </section>
@@ -615,7 +623,7 @@ document.write(`
 <img alt="../../_images/ChainRule.png" src="../../_images/ChainRule.png" />
 </figure>
 <p>The table below shows the  mapping used between math symbols and their equivalent variable names for computing with <code class="docutils literal notranslate"><span class="pre">sympy</span></code>. <strong>Please note that we append <code class="docutils literal notranslate"><span class="pre">_approach1</span></code> for good bookkeeping as we are going to use other approaches</strong>:</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Mathematical Symbol</p></th>
 <th class="head"><p>Equivalent Variable Name</p></th>
@@ -662,10 +670,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle -  \cos{\left(\theta{\left(t \right)} \right)} \frac{d}{d t} \phi{\left(t \right)}\mathbf{\hat{a}_x} -  \frac{d}{d t} \theta{\left(t \right)}\mathbf{\hat{a}_y} -  \sin{\left(\theta{\left(t \right)} \right)} \frac{d}{d t} \phi{\left(t \right)}\mathbf{\hat{a}_z}\]</div>
-</div>
 </div>
 <p>Taking the time derivative from <span class="math notranslate nohighlight">\(A\)</span> (i.e., <span class="math notranslate nohighlight">\(\frac{^Ad}{dt}\)</span>) of <code class="docutils literal notranslate"><span class="pre">A_omega_C_approach1</span></code> will give us <span class="math notranslate nohighlight">\(^A\alpha^C\)</span>, as shown below:</p>
 <div class="cell docutils container">
@@ -674,10 +678,6 @@ document.write(`
 <span class="n">A_alpha_C_approach1</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle (\sin{\left(\theta{\left(t \right)} \right)} \frac{d}{d t} \phi{\left(t \right)} \frac{d}{d t} \theta{\left(t \right)} - \cos{\left(\theta{\left(t \right)} \right)} \frac{d^{2}}{d t^{2}} \phi{\left(t \right)})\mathbf{\hat{a}_x} -  \frac{d^{2}}{d t^{2}} \theta{\left(t \right)}\mathbf{\hat{a}_y} + (- \sin{\left(\theta{\left(t \right)} \right)} \frac{d^{2}}{d t^{2}} \phi{\left(t \right)} - \cos{\left(\theta{\left(t \right)} \right)} \frac{d}{d t} \phi{\left(t \right)} \frac{d}{d t} \theta{\left(t \right)})\mathbf{\hat{a}_z}\]</div>
 </div>
 </div>
 </section>
@@ -710,10 +710,6 @@ document.write(`
 <span class="n">A_alpha_C_approach2</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle -  \frac{d^{2}}{d t^{2}} \phi{\left(t \right)}\mathbf{\hat{b}_x} -  \frac{d^{2}}{d t^{2}} \theta{\left(t \right)}\mathbf{\hat{b}_y} -  \frac{d}{d t} \phi{\left(t \right)} \frac{d}{d t} \theta{\left(t \right)}\mathbf{\hat{b}_z}\]</div>
 </div>
 </div>
 </section>
