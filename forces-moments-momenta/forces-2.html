@@ -246,6 +246,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Dynamics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../dynamics/dynamics-1.html">Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamics/rotational_dynamics.html">Rotational dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamics/six_DoF.html">Translational and Rotational Kinetics of a Rigid Body</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dynamics/Week10/Activity1_Single_Particle_Kinetics_Solution.html">Problem 1: Kinetics of a Particle</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../dynamics/Week10/Activity2_System_Of_Particles_Kinetics_Solution.html">Problem 2: Kinetics of System of Particles</a></li>
@@ -559,7 +561,7 @@ document.write(`
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>This chapter explores the concepts of linear and angular velocities for both particles and rigid bodies. These fundamental principles:</p>
 <ul class="simple">
-<li><p>Merge the conecpts covered up until this point.</p></li>
+<li><p>Merge the concepts covered up until this point.</p></li>
 <li><p>Underpin Newton’s second law of motion, which is key to deriving equations that describe the motion of engineering systems using the particle and rigid body approximations.</p></li>
 </ul>
 </section>
@@ -572,10 +574,10 @@ document.write(`
 </section>
 <section id="notation">
 <h3>Notation<a class="headerlink" href="#notation" title="Permalink to this heading">#</a></h3>
-<p>The linear momentum of a particle, <span class="math notranslate nohighlight">\(P\)</span>, in frame <span class="math notranslate nohighlight">\(N\)</span> can be displayed as shown below:
-$<span class="math notranslate nohighlight">\( {}^{N}\mathbf{L}^{P} \)</span>$</p>
-<p>The mathematical definition of this is:
-$<span class="math notranslate nohighlight">\( {}^{N}\mathbf{L}^{P} = m \, {}^{N}\mathbf{v}^{P} \)</span>$</p>
+<p>The linear momentum of a particle, <span class="math notranslate nohighlight">\(P\)</span>, in frame <span class="math notranslate nohighlight">\(N\)</span> can be displayed as: <span class="math notranslate nohighlight">\({}^{N}\mathbf{L}^{P}\)</span></p>
+<p>The mathematical definition of this is:</p>
+<div class="math notranslate nohighlight">
+\[{}^{N}\mathbf{L}^{P} = m{}^{N}\mathbf{v}^{P}\]</div>
 <p>Where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(m\)</span> is the mass of the particle.</p></li>
@@ -592,9 +594,7 @@ $<span class="math notranslate nohighlight">\( {}^{N}\mathbf{L}^{P} = m \, {}^{N
 <p>The linear momentum for a system of <span class="math notranslate nohighlight">\(n\)</span> particles is the sum of the linear momenta of the individual particles.</p>
 <section id="id2">
 <h4>Notation<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
-<p>The linear momentum of system of particles <span class="math notranslate nohighlight">\(S\)</span> in frame <span class="math notranslate nohighlight">\(N\)</span> is given by:</p>
-<div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{L}^{S}\]</div>
+<p>The linear momentum of system of particles <span class="math notranslate nohighlight">\(S\)</span> in frame <span class="math notranslate nohighlight">\(N\)</span> is given by: <span class="math notranslate nohighlight">\({}^{N}\mathbf{L}^{S}\)</span></p>
 <p>The mathematical definition of this is:</p>
 <div class="math notranslate nohighlight">
 \[ {}^{N}\mathbf{L}^{S} = \sum_{i} {}^{N}\mathbf{L}^{P_i} = \sum_{i}m_i{}^{N}\mathbf{v}^{P_i} \]</div>
@@ -612,19 +612,17 @@ $<span class="math notranslate nohighlight">\( {}^{N}\mathbf{L}^{P} = m \, {}^{N
 </ul>
 <p>This is visualised in the figure below, showing the system from before, <span class="math notranslate nohighlight">\(S\)</span>, with an added mass centre, <span class="math notranslate nohighlight">\(S^{*}\)</span>.</p>
 <figure class="align-default" id="id4">
-<img alt="forces-moments-momenta/images/14_cut.png" src="forces-moments-momenta/images/14_cut.png" />
+<img alt="../_images/14.png" src="../_images/14.png" />
 </figure>
 </section>
 </section>
 <section id="rigid-bodies">
 <h3>Rigid bodies<a class="headerlink" href="#rigid-bodies" title="Permalink to this heading">#</a></h3>
 <p>The linear momentum of a rigid body (or, more generally, a continuum) is similar to that of a system of particles; except we make use of the integral in its definition. This is due to the continuous nature of the mass throughout the body as opposed to the concentrated mass points in the system shown previously.</p>
-<p>The linear momentum of a rigid body <span class="math notranslate nohighlight">\(B\)</span> in frame <span class="math notranslate nohighlight">\(N\)</span> is given by:</p>
-<div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{L}^{B}\]</div>
+<p>The linear momentum of a rigid body <span class="math notranslate nohighlight">\(B\)</span> in frame <span class="math notranslate nohighlight">\(N\)</span> is given by: <span class="math notranslate nohighlight">\({}^{N}\mathbf{L}^{B}\)</span></p>
 <p>The mathematical definition of this is:</p>
 <div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{L}^{B} = \int_m dm({}^{N}\mathbf{v}^{P})\]</div>
+\[{}^{N}\mathbf{L}^{B} = \int_m \mathrm{d}m({}^{N}\mathbf{v}^{P})\]</div>
 <div class="math notranslate nohighlight">
 \[{}^{N}\mathbf{L}^{B} = m{}^{N}\mathbf{v}^{B^{*}}\]</div>
 <p>Where:</p>
@@ -643,9 +641,7 @@ $<span class="math notranslate nohighlight">\( {}^{N}\mathbf{L}^{P} = m \, {}^{N
 <p>Angular momentum is also a vector quantity. It is quite generally defined as the moment of the linear momentum vector. The letter <span class="math notranslate nohighlight">\(\mathbf{H}\)</span> is used to represent this quantity - typed in boldface to represent it as a vector.</p>
 <section id="id6">
 <h3>Particles<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
-<p>The angular momentum of the particle <span class="math notranslate nohighlight">\(P\)</span> with respect to the point <span class="math notranslate nohighlight">\(O\)</span> in frame <span class="math notranslate nohighlight">\(N\)</span> is given by:</p>
-<div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{H}^{P/O}\]</div>
+<p>The angular momentum of the particle <span class="math notranslate nohighlight">\(P\)</span> with respect to the point <span class="math notranslate nohighlight">\(O\)</span> in frame <span class="math notranslate nohighlight">\(N\)</span> is given by: <span class="math notranslate nohighlight">\({}^{N}\mathbf{H}^{P/O}\)</span></p>
 <p>It is quite simply the moment of about <span class="math notranslate nohighlight">\(O\)</span> of the linear momentum of <span class="math notranslate nohighlight">\(P\)</span> in <span class="math notranslate nohighlight">\(N\)</span>.</p>
 <p>The mathematical definition of this is:</p>
 <div class="math notranslate nohighlight">
@@ -662,9 +658,7 @@ $<span class="math notranslate nohighlight">\( {}^{N}\mathbf{L}^{P} = m \, {}^{N
 <section id="id8">
 <h3>Systems of Particles<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
 <p>The angular momentum of a system of particles is quite simply the sum of the angular momentum vectors of each particle in the system.</p>
-<p>The angular momentum of a system <span class="math notranslate nohighlight">\(s\)</span> of <span class="math notranslate nohighlight">\(n\)</span> particles defiend around the a point <span class="math notranslate nohighlight">\(O\)</span> is given by:</p>
-<div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{H}^{P/O}\]</div>
+<p>The angular momentum of a system <span class="math notranslate nohighlight">\(s\)</span> of <span class="math notranslate nohighlight">\(n\)</span> particles defined around the a point <span class="math notranslate nohighlight">\(O\)</span> is given by: <span class="math notranslate nohighlight">\({}^{N}\mathbf{H}^{P/O}\)</span></p>
 <p>The mathematical definition of this is:</p>
 <div class="math notranslate nohighlight">
 \[{}^{N}\mathbf{H}^{P/O} \triangleq \sum_{i} {}^{N}\mathbf{H}^{P_i/O} = \sum_{i}\mathbf{r}^{OP_i} \times m_i{}^{N}\mathbf{v}^{P_i}\]</div>
@@ -676,15 +670,13 @@ $<span class="math notranslate nohighlight">\( {}^{N}\mathbf{L}^{P} = m \, {}^{N
 </section>
 <section id="id10">
 <h3>Rigid bodies<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
-<p>We can derive the angular momentum of a rigid body (or, more generally, a continuum) relative to <span class="math notranslate nohighlight">\(O\)</span> in a similar fashion. This is done using <span class="math notranslate nohighlight">\(P\)</span>, a generic point of <span class="math notranslate nohighlight">\(B\)</span> with an elementary mass <span class="math notranslate nohighlight">\(dm\)</span>.</p>
-<p>The angular momentum of a rigid body is given by:</p>
+<p>We can derive the angular momentum of a rigid body (or, more generally, a continuum) relative to <span class="math notranslate nohighlight">\(O\)</span> in a similar fashion. This is done using <span class="math notranslate nohighlight">\(P\)</span>, a generic point of <span class="math notranslate nohighlight">\(B\)</span> with an elementary mass <span class="math notranslate nohighlight">\(\mathrm{d}m\)</span>.</p>
+<p>The angular momentum of a rigid body is given by: <span class="math notranslate nohighlight">\({}^{N}\mathbf{H}^{P/O}\)</span></p>
+<p>The mathematical definition of this is:</p>
 <div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{H}^{P/O}\]</div>
-<p>The mathmatical definition of this is:</p>
+\[{}^{N}\mathbf{H}^{P/O} \triangleq \int_m \mathbf{r}^{OP} \times \mathrm{d}m({}^{N}\mathbf{v}^{P})\]</div>
 <div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{H}^{P/O} \triangleq \int_m \mathbf{r}^{OP} \times dm({}^{N}\mathbf{v}^{P})\]</div>
-<div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{H}^{P/O} = \int_m (\mathbf{r}^{OP} \times {}^{N}\mathbf{v}^{P})dm\]</div>
+\[{}^{N}\mathbf{H}^{P/O} = \int_m (\mathbf{r}^{OP} \times {}^{N}\mathbf{v}^{P})\mathrm{d}m\]</div>
 <figure class="align-default" id="id11">
 <img alt="../_images/18_cut.png" src="../_images/18_cut.png" />
 </figure>
@@ -692,65 +684,66 @@ $<span class="math notranslate nohighlight">\( {}^{N}\mathbf{L}^{P} = m \, {}^{N
 <p class="admonition-title">Attention</p>
 <p>Evaluating this integral can be quite challenging, so is there a simpler way to express the angular momentum of a body? Fortunately, yes! Let’s explore how we can achieve this<span class="math notranslate nohighlight">\(\ldots\)</span></p>
 </div>
-<p>First, we make use of the two-point theorem to rewrite the velocity of <span class="math notranslate nohighlight">\(P\)</span> in terms of the mass centre of the rigid body. This is complted in two steps, resulting in equation <span class="math notranslate nohighlight">\(10.1\)</span>.</p>
+<p>First, we make use of the two-point theorem to rewrite the velocity of <span class="math notranslate nohighlight">\(P\)</span> in terms of the mass centre of the rigid body. This is completed in two steps, resulting in equation <span class="math notranslate nohighlight">\(10.1\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{H}^{B/O} = \int_m (\mathbf{r}^{OP} \times ({}^{N}\mathbf{v}^{B^*}+{}^{N}\mathbf{\omega}^{B}\times\mathbf{r}))dm\]</div>
+\[{}^{N}\mathbf{H}^{B/O} = \int_m (\mathbf{r}^{OP} \times ({}^{N}\mathbf{v}^{B^*}+{}^{N}\boldsymbol{\omega}^{B}\times\mathbf{r}))\mathrm{d}m\]</div>
 <div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{H}^{B/O} = \int_m (\mathbf{r}^{OP} \times {}^{N}\mathbf{v}^{B^*})dm+\int_m(\mathbf{r}^{OP}\times({}^{N}\mathbf{\omega}^{B}\times\mathbf{r}))dm\tag{10.1}\]</div>
+\[{}^{N}\mathbf{H}^{B/O} = \int_m (\mathbf{r}^{OP} \times {}^{N}\mathbf{v}^{B^*})\mathrm{d}m+\int_m(\mathbf{r}^{OP}\times({}^{N}\boldsymbol{\omega}^{B}\times\mathbf{r}))\mathrm{d}m\tag{10.1}\]</div>
 <p>So, we can now see that the angular momentum is the vector sum of two integrals. We will now examine the implication of each of these terms.</p>
 <p>We start with the first term which is given by:</p>
 <div class="math notranslate nohighlight">
-\[\int_m (\mathbf{r}^{OP} \times {}^{N}\mathbf{v}^{B^*})dm\]</div>
+\[\int_m (\mathbf{r}^{OP} \times {}^{N}\mathbf{v}^{B^*})\mathrm{d}m\]</div>
 <p>This term can be dealt with as follows:</p>
 <div class="math notranslate nohighlight">
-\[\int_m (\mathbf{r}^{OP} \times {}^{N}\mathbf{v}^{B^*})dm = \int_m (\mathbf{r}^{OP} \times {}^{N}\mathbf{v}^{B^*})dm\]</div>
+\[\int_m (\mathbf{r}^{OP} \times {}^{N}\mathbf{v}^{B^*})\mathrm{d}m = \int_m (\mathbf{r}^{OP} \times {}^{N}\mathbf{v}^{B^*})\mathrm{d}m\]</div>
 <div class="math notranslate nohighlight">
-\[=\int_m (\mathbf{r}^{OP})dm \times {}^{N}\mathbf{v}^{B^*}\]</div>
+\[=\int_m (\mathbf{r}^{OP})\mathrm{d}m \times {}^{N}\mathbf{v}^{B^*}\]</div>
 <div class="math notranslate nohighlight">
 \[=\mathbf{r}^{*}m \times {}^{N}\mathbf{v}^{B^*}\]</div>
 <div class="math notranslate nohighlight">
 \[=\mathbf{r}^{*} \times m{}^{N}\mathbf{v}^{B^*}\]</div>
 <p>Now, we can quite easily observe that this cross product is, in fact, the angular momentum of the mass centre <span class="math notranslate nohighlight">\(B^*\)</span> about the point <span class="math notranslate nohighlight">\(O\)</span> in the frame <span class="math notranslate nohighlight">\(N\)</span>. In other words,</p>
 <div class="math notranslate nohighlight">
-\[\int_m (\mathbf{r}^{OP} \times {}^{N}\mathbf{v}^{B^*})dm = {}^{N}\mathbf{H}^{B^*/O}\tag{10.2}\]</div>
+\[\int_m (\mathbf{r}^{OP} \times {}^{N}\mathbf{v}^{B^*})\mathrm{d}m = {}^{N}\mathbf{H}^{B^*/O}\tag{10.2}\]</div>
 <p>Next we can examine the second term, given by:</p>
 <div class="math notranslate nohighlight">
-\[\int_m(\mathbf{r}^{OP}\times({}^{N}\mathbf{\omega}^{B}\times\mathbf{r}))dm\]</div>
+\[\int_m(\mathbf{r}^{OP}\times({}^{N}\boldsymbol{\omega}^{B}\times\mathbf{r}))\mathrm{d}m\]</div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>Prior to dealing with this term, note:</p>
 <div class="math notranslate nohighlight">
-\[\int_m{\vec{r}dm} = 0\]</div>
+\[\int_m{\mathbf{{r}}\mathrm{d}m} = 0\]</div>
+<div style="text-align: center;"> and, </div>
 <div class="math notranslate nohighlight">
-\[\mathbf{r}$ is $\mathbf{r}^{OP}\]</div>
+\[{\mathbf{r}} = {\mathbf{r}}^{OP}\]</div>
 </div>
 <p>Therefore,</p>
 <div class="math notranslate nohighlight">
-\[\int_m(\mathbf{r}^{OP}\times({}^{N}\mathbf{\omega}^{B}\times\mathbf{r}))dm = \int_m(\mathbf{r}^{*}+\mathbf{r})\times({}^{N}\mathbf{\omega}^{B}\times\mathbf{r})dm\]</div>
+\[\int_m(\mathbf{r}^{OP}\times({}^{N}\boldsymbol{\omega}^{B}\times\mathbf{r}))\mathrm{d}m = \int_m(\mathbf{r}^{*}+\mathbf{r})\times({}^{N}\boldsymbol{\omega}^{B}\times\mathbf{r})\mathrm{d}m\]</div>
 <div class="math notranslate nohighlight">
-\[=\int_m(\mathbf{r}^{*}\times({}^{N}\mathbf{\omega}^{B}\times\mathbf{r}))dm + \int_m(\mathbf{r}\times({}^{N}\mathbf{\omega}^{B}\times\mathbf{r}))dm\]</div>
+\[=\int_m(\mathbf{r}^{*}\times({}^{N}\boldsymbol{\omega}^{B}\times\mathbf{r}))\mathrm{d}m + \int_m(\mathbf{r}\times({}^{N}\boldsymbol{\omega}^{B}\times\mathbf{r}))\mathrm{d}m\]</div>
 <div class="math notranslate nohighlight">
-\[=\mathbf{r}^{*}\times({}^{N}\mathbf{\omega}^{B}\times\int_m\mathbf{r}dm) + \int_m(\mathbf{r}\times({}^{N}\mathbf{\omega}^{B}\times\mathbf{r}))dm\]</div>
-<p>Since <span class="math notranslate nohighlight">\(\int_m{\vec{r}dm} = 0\)</span>, the first term can be set to zero.</p>
+\[=\mathbf{r}^{*}\times({}^{N}\boldsymbol{\omega}^{B}\times\int_m\mathbf{r}\mathrm{d}m) + \int_m(\mathbf{r}\times({}^{N}\boldsymbol{\omega}^{B}\times\mathbf{r}))\mathrm{d}m\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\int_m{\vec{r}\mathrm{d}m} = 0\)</span>, the first term can be set to zero.</p>
 <div class="math notranslate nohighlight">
-\[\int_m(\mathbf{r}^{OP}\times({}^{N}\mathbf{\omega}^{B}\times\mathbf{r}))dm=\cancel{\mathbf{r}^{*}\times({}^{N}\mathbf{\omega}^{B}\times\int_m\mathbf{r}dm)} + \int_m(\mathbf{r}\times({}^{N}\mathbf{\omega}^{B}\times\mathbf{r}))dm\]</div>
+\[\int_m(\mathbf{r}^{OP}\times({}^{N}\boldsymbol{\omega}^{B}\times\mathbf{r}))\mathrm{d}m=\cancel{\mathbf{r}^{*}\times({}^{N}\boldsymbol{\omega}^{B}\times\int_m\mathbf{r}\mathrm{d}m)} + \int_m(\mathbf{r}\times({}^{N}\boldsymbol{\omega}^{B}\times\mathbf{r}))\mathrm{d}m\]</div>
 <p>By definition of a mass centre:</p>
 <div class="math notranslate nohighlight">
-\[\int_m(\mathbf{r}^{OP}\times({}^{N}\mathbf{\omega}^{B}\times\mathbf{r}))dm = \int_m(\mathbf{r}\times({}^{N}\mathbf{\omega}^{B}\times\mathbf{r}))dm\]</div>
+\[\int_m(\mathbf{r}^{OP}\times({}^{N}\boldsymbol{\omega}^{B}\times\mathbf{r}))\mathrm{d}m = \int_m(\mathbf{r}\times({}^{N}\boldsymbol{\omega}^{B}\times\mathbf{r}))\mathrm{d}m\]</div>
 <p>Now, if we examine the above cross product on the right-hand side and compare it to the definition of angular momentum of a rigid body, we can see that this is the angular momentum of the body <span class="math notranslate nohighlight">\(B\)</span> about the mass centre <span class="math notranslate nohighlight">\(B^{*}\)</span>. In other words:</p>
 <div class="math notranslate nohighlight">
-\[\int_m(\mathbf{r}\times({}^{N}\mathbf{\omega}^{B}\times\mathbf{r}))dm = {}^{N}\mathbf{H}^{B/B^*}\]</div>
+\[\int_m(\mathbf{r}\times({}^{N}\boldsymbol{\omega}^{B}\times\mathbf{r}))\mathrm{d}m = {}^{N}\mathbf{H}^{B/B^*}\]</div>
 <p><span class="math notranslate nohighlight">\({}^{N}\mathbf{H}^{B/B^*}\)</span> is frequently called the central angular momentum; central refers to the calculation of angular momentum about the mass centre. Further, the central angular momentum is easily calculated by the following formula:</p>
 <div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{H}^{B/B^*} = [I]^{B/B^*}{}^{N}\mathbf{\omega}^{B}\]</div>
+\[{}^{N}\mathbf{H}^{B/B^*} = [I]^{B/B^*}\cdot{}^{N}\boldsymbol{\omega}^{B}\]</div>
 <p>Where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\([I]^{B/B^*}\)</span> is the inertia matrix of <span class="math notranslate nohighlight">\(B\)</span> about <span class="math notranslate nohighlight">\(B^*\)</span>; it is also called the <strong>central inertia matrix</strong>.</p></li>
-<li><p><span class="math notranslate nohighlight">\({}^{N}\mathbf{\omega}^{B}\)</span> is the angular velocity of <span class="math notranslate nohighlight">\(B\)</span> in <span class="math notranslate nohighlight">\(N\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\({}^{N}\boldsymbol{\omega}^{B}\)</span> is the angular velocity of <span class="math notranslate nohighlight">\(B\)</span> in <span class="math notranslate nohighlight">\(N\)</span>.</p></li>
 </ul>
 <p>This says that the central angular momentum is given by the product of the inertia matrix of <span class="math notranslate nohighlight">\(B\)</span> about <span class="math notranslate nohighlight">\(B^*\)</span> and the angular velocity of <span class="math notranslate nohighlight">\(B\)</span> in <span class="math notranslate nohighlight">\(N\)</span>; this proof is not shown here. In summary, we can see that this second integral eventually yields:</p>
 <div class="math notranslate nohighlight">
-\[\int_m(\mathbf{r}\times({}^{N}\mathbf{\omega}^{B}\times\mathbf{r}))dm = [I]^{B/B^*}{}^{N}\mathbf{\omega}^{B} = {}^{N}\mathbf{H}^{B/B^*}\tag{10.3}\]</div>
+\[\int_m(\mathbf{r}\times({}^{N}\boldsymbol{\omega}^{B}\times\mathbf{r}))\mathrm{d}m = [I]^{B/B^*}\cdot{}^{N}\boldsymbol{\omega}^{B} = {}^{N}\mathbf{H}^{B/B^*}\tag{10.3}\]</div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>Indeed, one must be careful in ensuring that the the inertia matrix and the angular velocity were expressed in the same reference frames BEFORE taking the product.</p>
@@ -765,34 +758,34 @@ $<span class="math notranslate nohighlight">\( {}^{N}\mathbf{L}^{P} = m \, {}^{N
 <h3>Special case<a class="headerlink" href="#special-case" title="Permalink to this heading">#</a></h3>
 <p>Say that we want to evaluate <span class="math notranslate nohighlight">\(^{N}H^{B/Q}\)</span>, where <span class="math notranslate nohighlight">\(Q\)</span> is an arbitrary point rigidly fixed on the rigid body. <span class="math notranslate nohighlight">\(Q\)</span> is not an elementary particle of the body. This is given and visualised as follows:</p>
 <div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{H}^{B/Q} \triangleq \int_m \mathbf{r}^{QP} \times dm({}^{N}\mathbf{v}^{P})\]</div>
+\[{}^{N}\mathbf{H}^{B/Q} \triangleq \int_m \mathbf{r}^{QP} \times \mathrm{d}m({}^{N}\mathbf{v}^{P})\]</div>
 <figure class="align-default" id="id12">
 <img alt="../_images/28_cut.png" src="../_images/28_cut.png" />
 </figure>
 <p>Again, we make use of the two-point theorem to rewrite the velocity of <span class="math notranslate nohighlight">\(P\)</span> in terms of <span class="math notranslate nohighlight">\(Q\)</span>. So, the
 expression for angular momentum above is now:</p>
 <div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{H}^{B/Q} = \int_m (\mathbf{r}^{QP}\times({}^{N}\mathbf{v}^{Q}+{}^{N}\mathbf{\omega}^{B}\times\mathbf{r}^{QP}))dm\]</div>
+\[{}^{N}\mathbf{H}^{B/Q} = \int_m (\mathbf{r}^{QP}\times({}^{N}\mathbf{v}^{Q}+{}^{N}\boldsymbol{\omega}^{B}\times\mathbf{r}^{QP}))\mathrm{d}m\]</div>
 <p>Which then becomes:</p>
 <div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{H}^{B/Q} = \int_m (\mathbf{r}^{QP}\times{}^{N}\mathbf{v}^{Q})dm+ \int_m (\mathbf{r}^{QP}\times({}^{N}\mathbf{\omega}^{B}\times\mathbf{r}^{QP}))dm\]</div>
+\[{}^{N}\mathbf{H}^{B/Q} = \int_m (\mathbf{r}^{QP}\times{}^{N}\mathbf{v}^{Q})\mathrm{d}m+ \int_m (\mathbf{r}^{QP}\times({}^{N}\boldsymbol{\omega}^{B}\times\mathbf{r}^{QP}))\mathrm{d}m\]</div>
 <div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{H}^{B/Q} = \left[\int_m (\mathbf{r}^{QP}dm)\times{}^{N}\mathbf{v}^{Q}\right]+ \int_m (\mathbf{r}^{QP}\times({}^{N}\mathbf{\omega}^{B}\times\mathbf{r}^{QP}))dm\]</div>
+\[{}^{N}\mathbf{H}^{B/Q} = \left[\int_m (\mathbf{r}^{QP}\mathrm{d}m)\times{}^{N}\mathbf{v}^{Q}\right]+ \int_m (\mathbf{r}^{QP}\times({}^{N}\boldsymbol{\omega}^{B}\times\mathbf{r}^{QP}))\mathrm{d}m\]</div>
 <div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{H}^{B/Q} = \left[\mathbf{r}^{*}m\times{}^{N}\mathbf{v}^{Q}\right]+ \int_m (\mathbf{r}^{QP}\times({}^{N}\mathbf{\omega}^{B}\times\mathbf{r}^{QP}))dm\]</div>
+\[{}^{N}\mathbf{H}^{B/Q} = \left[\mathbf{r}^{*}m\times{}^{N}\mathbf{v}^{Q}\right]+ \int_m (\mathbf{r}^{QP}\times({}^{N}\boldsymbol{\omega}^{B}\times\mathbf{r}^{QP}))\mathrm{d}m\]</div>
 <p>The second term in the final expression, which is the integral, simplifies to a more straightforward result. Specifically, it is the product of the inertia matrix of <span class="math notranslate nohighlight">\(B\)</span> about <span class="math notranslate nohighlight">\(Q\)</span> and the angular velocity of <span class="math notranslate nohighlight">\(B\)</span> in <span class="math notranslate nohighlight">\(N\)</span>. Although the proof of this simplification is not included here, it can be derived with relative ease. Thus, the equation above can be written more concisely as follows:</p>
 <div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{H}^{B/Q} = \left[\mathbf{r}^{*}m\times{}^{N}\mathbf{v}^{Q}\right]+[I]^{B/Q}{}^{N}\mathbf{\omega}^{B}\tag{10.5}\]</div>
+\[{}^{N}\mathbf{H}^{B/Q} = \left[\mathbf{r}^{*}m\times{}^{N}\mathbf{v}^{Q}\right]+[I]^{B/Q}\cdot{}^{N}\boldsymbol{\omega}^{B}\tag{10.5}\]</div>
 <p>Two key observations may now be made to simplify equation <span class="math notranslate nohighlight">\(10.5\)</span>:</p>
 <p><strong>Observation 1</strong>: If <span class="math notranslate nohighlight">\(Q\)</span> is coincident with the mass centre <span class="math notranslate nohighlight">\(B^*\)</span>, then <span class="math notranslate nohighlight">\(\mathbf{r}^{*} = 0\)</span>. Thus:</p>
 <div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{H}^{B/Q} = [I]^{B/Q}{}^{N}\mathbf{\omega}^{B}\]</div>
+\[{}^{N}\mathbf{H}^{B/Q} = [I]^{B/Q}\cdot{}^{N}\boldsymbol{\omega}^{B}\]</div>
 <p><strong>Observation 2</strong>: If <span class="math notranslate nohighlight">\(Q\)</span> is not the mass centre, but is a point that is fixed in both <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(N\)</span>, then we have the following circumstance where:</p>
 <div class="math notranslate nohighlight">
 \[{}^{N}\mathbf{v}^{Q}=0\]</div>
 <p>In this case, we end up with the same result as case 1:</p>
 <div class="math notranslate nohighlight">
-\[{}^{N}\mathbf{H}^{B/Q} = [I]^{B/Q}{}^{N}\mathbf{\omega}^{B}\]</div>
+\[{}^{N}\mathbf{H}^{B/Q} = [I]^{B/Q}\cdot{}^{N}\boldsymbol{\omega}^{B}\]</div>
 </section>
 <section id="composite-theorem-for-angular-momentum">
 <h3>Composite theorem for Angular Momentum<a class="headerlink" href="#composite-theorem-for-angular-momentum" title="Permalink to this heading">#</a></h3>

@@ -246,6 +246,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Dynamics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../dynamics/dynamics-1.html">Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamics/rotational_dynamics.html">Rotational dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamics/six_DoF.html">Translational and Rotational Kinetics of a Rigid Body</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dynamics/Week10/Activity1_Single_Particle_Kinetics_Solution.html">Problem 1: Kinetics of a Particle</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../dynamics/Week10/Activity2_System_Of_Particles_Kinetics_Solution.html">Problem 2: Kinetics of System of Particles</a></li>
@@ -685,7 +687,10 @@ I
 \end{bmatrix}^{R/O}
 ({}^R\begin{bmatrix}C\end{bmatrix}^N)^T\]</div>
 <p>where <span class="math notranslate nohighlight">\(({}^R\begin{bmatrix}C\end{bmatrix}^N)^T\)</span> is the transpose of the DCM of N in R. Equation <a class="reference internal" href="#equation-rotationtheoreminertia">(34)</a> is known the `Rotation Theorem for computing inertia matrix’.</p>
-<div class="highlight-{admonition}Hand-calculations notranslate"><div class="highlight"><pre><span></span>:class: tip, dropdown
+<!--
+
+:::{admonition}Hand-calculations to derive {eq}`rotationTheoremInertia`
+:class: tip, dropdown
 
 ```{figure} ./images/33.png
 ---
@@ -709,8 +714,7 @@ name: 35
 name: 36
 ---
 ```
-</pre></div>
-</div>
+:::-->
 </div>
 </section>
 <section id="parallel-axes-theorem">
